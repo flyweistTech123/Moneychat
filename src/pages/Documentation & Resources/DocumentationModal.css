@@ -1,0 +1,65 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align items to the bottom of the viewport */
+    z-index: 1000;
+}
+
+.modal-content1 {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 0;
+    /* Place the modal at the bottom of the viewport */
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    z-index: 1100;
+    transition: transform 0.3s ease-out;
+    transform: translateY(100%);
+}
+
+.modal-overlay.active .modal-content1 {
+    transform: translateY(0);
+}
+
+.close-btn {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    color: #333;
+}
+
+.documentation {
+    padding: 30px;
+    overflow-y: auto;
+    /* Add vertical scrollbar when content exceeds modal height */
+    max-height: 80vh;
+    /* Set a maximum height for the content to make the scrollbar appear */
+    padding-right: 20px;
+}
+
+.documentation h5 {
+    font-weight: 500;
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.documentation hr {
+    color: #000000B2;
+    margin-bottom: 30px;
+}
+
+.documentation p {
+    margin-top: 30px;
+}

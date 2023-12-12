@@ -1,0 +1,228 @@
+.searchbox{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 13px;
+    width: 1003px;
+    margin-top: 20px;
+}
+
+.searchbox input{
+    outline: none;
+    width: 90%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1E1E1E99;
+}
+
+
+
+
+
+
+
+.left_side{
+  margin-top: 20px;
+}
+
+.left_side h5{
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.app1 {
+  margin-top: 30px;
+  position: relative;
+  width: 583px;
+  height: 221px;
+  cursor: pointer;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+.image-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+.card1{
+  margin-top: 30px;
+  width: 90%;
+}
+
+.card1 h5{
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000;
+
+}
+
+.intakecards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.small-card {
+  width: calc(50% - 10px); /* Adjust the width to fit two cards with a small gap */
+  max-width: 273.76px; /* Set the maximum width of each card */
+  height: 225px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  width: 91.86px;
+  height: 101px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.small-card p {
+  text-align: center;
+  margin: 10px;
+  flex-grow: 1;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.small-card span {
+  color: #00000099;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  padding-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+.right_side{
+  margin-top: 20px;
+}
+.right_side h5{
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+
+
+.article-container {
+  width: 342px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px
+}
+
+.article img {
+  width: 84px;
+  height: 100px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.article p{
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000B2;
+}
+
+
+
+.view-more {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.view-more-text {
+  background: linear-gradient(180deg, #FEA82F 0%, #FD575B 100%);
+  color: transparent;
+  -webkit-background-clip: text; /* Apply the gradient to text */
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.view-more svg {
+  margin-left: 5px; /* Adjust the spacing between text and arrow */
+}

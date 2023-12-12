@@ -1,0 +1,57 @@
+.card2{
+    margin-top: 30px;
+}
+
+.card2 h5{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+
+
+  .intakecards1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .small-card1 {
+    width: 308.37px; /* Set the maximum width of each card */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .card-icon1 {
+    width: 110px;
+    height: 110px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .small-card1 p {
+    text-align: center;
+    margin: 10px;
+    flex-grow: 1;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .small-card1 span {
+    color: #00000099;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  
+  

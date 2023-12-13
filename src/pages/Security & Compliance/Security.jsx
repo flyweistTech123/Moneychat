@@ -4,6 +4,7 @@ import './Security.css'
 import security from '../../Images/security.png'
 import security1 from '../../Images/security1.png'
 import security2 from '../../Images/security2.png'
+import { Link } from 'react-router-dom';
 
 const Security = () => {
   return (
@@ -14,11 +15,13 @@ const Security = () => {
         </div>
         <div className='card2'>
               <div className='intakecards1'>
+                <Link to={'/role-basedaccesscontrol'}>
                 <div className="small-card1">
                   <img src={security} alt="Icon" className="card-icon1" />
                   <p>Role-Based Access Control</p>
                   <span>Manage Permissons & Details of your Employees</span>
                 </div>
+                </Link>
                 <div className="small-card1">
                   <img src={security2} alt="Icon" className="card-icon1" />
                   <p>Flagged Transactions</p>

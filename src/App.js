@@ -25,6 +25,7 @@ import Analytics from "./pages/Analytics/Analytics";
 import Resources from "./pages/Documentation & Resources/Resources";
 import Security from "./pages/Security & Compliance/Security";
 import Financial from "./pages/Financial Overview/Financial";
+import AccessControl from "./pages/Security & Compliance/AccessControl";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         <Route path ='/service'element={<Resources/>}/>
         <Route path="/gallery" element={<Security/>} />
         <Route path="/getblog" element={<Financial/>} />
+        <Route path="//role-basedaccesscontrol" element={<AccessControl/>} />
       </Routes> 
     </>
   );

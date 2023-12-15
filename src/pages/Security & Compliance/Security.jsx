@@ -22,16 +22,20 @@ const Security = () => {
                   <span>Manage Permissons & Details of your Employees</span>
                 </div>
                 </Link>
+                <Link to={'/flaggedtransactions'}>
                 <div className="small-card1">
                   <img src={security2} alt="Icon" className="card-icon1" />
                   <p>Flagged Transactions</p>
                   <span>View & Manage all your Flagged Transactions</span>
                 </div>
+                </Link>
+                <Link to={'/compliancerecords'}>
                 <div className="small-card1">
                   <img src={security1} alt="Icon" className="card-icon1" />
                   <p>Compliance Records</p>
                   <span>Store & Manage all your Comliance Records</span>
                 </div>
+                </Link>
               </div>
             </div>
     </section>

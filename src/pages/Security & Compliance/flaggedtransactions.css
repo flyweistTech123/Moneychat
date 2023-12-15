@@ -1,0 +1,34 @@
+.Flaggedtable th {
+
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+.Flaggedtable td {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000B2;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.profilediv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Flaggedtable td p {
+    color: #0070BC;
+    font-size: 18px;
+    font-weight: 500;
+    margin:0;
+}
+
+.Flaggedtable select {
+    color: #000000B2;
+}

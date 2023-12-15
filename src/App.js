@@ -26,6 +26,8 @@ import Resources from "./pages/Documentation & Resources/Resources";
 import Security from "./pages/Security & Compliance/Security";
 import Financial from "./pages/Financial Overview/Financial";
 import AccessControl from "./pages/Security & Compliance/AccessControl";
+import Flaggedtransactions from "./pages/Security & Compliance/flaggedtransactions";
+import Compliancerecords from "./pages/Security & Compliance/Compliancerecords";
 
 function App() {
   return (
@@ -52,7 +54,10 @@ function App() {
         <Route path ='/service'element={<Resources/>}/>
         <Route path="/gallery" element={<Security/>} />
         <Route path="/getblog" element={<Financial/>} />
-        <Route path="//role-basedaccesscontrol" element={<AccessControl/>} />
+        <Route path="/role-basedaccesscontrol" element={<AccessControl/>} />
+        <Route path="/flaggedtransactions" element={<Flaggedtransactions/>} />
+        <Route path="/flaggedtransactions" element={<Flaggedtransactions/>} />
+        <Route path="/compliancerecords" element={<Compliancerecords/>} />
       </Routes> 
     </>
   );

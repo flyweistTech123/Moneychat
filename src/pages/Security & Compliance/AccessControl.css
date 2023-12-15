@@ -24,6 +24,7 @@
   }
   .pages h5 span:nth-child(1) {
     color: #0070BC;
+    cursor: pointer;
 }
 
 
@@ -91,3 +92,43 @@
     font-weight: 500;
   }
   
+
+
+
+  .employeetable th{
+
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .employeetable td{
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000B2;
+    text-align: center;
+    cursor: pointer;
+    /* padding: 20px; */
+  }
+.profilediv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employeetable td p{
+  color: #3BB54A;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.employeetable select{
+  color: #000000B2;
+}
+
+.options{
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000B2;
+}

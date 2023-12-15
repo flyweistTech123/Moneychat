@@ -28,6 +28,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
+  .intakecards1 a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+
 
   .card-icon1 {
     width: 110px;
@@ -53,5 +59,7 @@
     padding-bottom: 25px;
     text-align: center;
   }
+  
+
   
   

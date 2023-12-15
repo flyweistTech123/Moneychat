@@ -10,6 +10,8 @@ import {
 } from "../../Component/TransactionModal";
 import FullScreenLoader from "../../Component/FullScreenLoader";
 import { IoSearch } from "react-icons/io5";
+import { FaChevronRight, FaChevronLeft  } from "react-icons/fa";
+
 
 
 const data = [
@@ -233,13 +235,13 @@ const Transaction = () => {
         <div className="pagination">
           <button>
             {" "}
-            <i className="fa-solid fa-chevron-left"></i>PREVIOUS
+            <i><FaChevronLeft /></i>PREVIOUS
           </button>
           <button>1</button>
           <button>2</button>
           <button>3</button>
           <button>
-            NEXT <i className="fa-solid fa-chevron-right"></i>
+          NEXT <i><FaChevronRight /></i>
           </button>
         </div>
       </section>

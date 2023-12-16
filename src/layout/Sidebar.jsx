@@ -3,6 +3,18 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import icon1 from '../Images/icon1.png'
+import activeicon1 from '../Images/activeicon1.png'
+import icon2 from '../Images/icon2.png'
+import activeicon2 from '../Images/activeicon2.png'
+import icon3 from '../Images/icon3.png'
+import activeicon3 from '../Images/activeicon3.png'
+import icon4 from '../Images/icon4.png'
+import activeicon4 from '../Images/activeicon4.png'
+import icon5 from '../Images/icon5.png'
+import activeicon5 from '../Images/activeicon5.png'
+import icon6 from '../Images/icon6.png'
+
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -23,38 +35,38 @@ const Sidebar = () => {
     },
 
     {
-      img: "./Image/Analytics.svg",
-      activeImg: "./Image/Analyticsactive.svg",
+      img: icon1,
+      activeImg: activeicon1,
       link: "/service",
       name: "Documentation & Resources",
     },
     {
-      img: "./Image/Analytics.svg",
-      activeImg: "./Image/Analyticsactive.svg",
+      img: icon2,
+      activeImg: activeicon2,
       link: "/gallery",
       name: "Security & Compliance",
     },
     {
-      img: "./Image/Analytics.svg",
-      activeImg: "./Image/Analyticsactive.svg",
+      img: icon3,
+      activeImg: activeicon3,
       link: "/getblog",
       name: "Financial Overview",
     },
     {
-      img: "./Image/Analytics.svg",
-      activeImg: "./Image/Analyticsactive.svg",
+      img: icon4,
+      activeImg: activeicon4,
       link: "/privacy-policy",
       name: "Recipient’s Management",
     },
     {
-      img: "./Image/Analytics.svg",
-      activeImg: "./Image/Analyticsactive.svg",
+      img: icon5,
+      activeImg: activeicon5,
       link: "/terms",
       name: "Communication Tools",
     },
     {
-      img: "./Image/Analytics.svg",
-      activeImg: "./Image/Analyticsactive.svg",
+      img: icon6,
+      activeImg: "./Image/Monitoring.svg",
       link: "/brand",
       name: "Review Interface",
     },

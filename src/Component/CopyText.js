@@ -1,6 +1,8 @@
 /** @format */
 
 import React from "react";
+import { MdContentCopy } from "react-icons/md";
+
 
 const CopyText = ({ text }) => {
   const handleCopyToClipboard = async () => {
@@ -13,7 +15,7 @@ const CopyText = ({ text }) => {
   };
   return (
     <button onClick={handleCopyToClipboard} className="copy_text_btn">
-      <i className="fa-solid fa-copy"></i>
+      <i><MdContentCopy /></i>
       COPY ID{" "}
     </button>
   );

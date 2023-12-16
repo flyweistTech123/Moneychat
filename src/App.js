@@ -28,6 +28,9 @@ import Financial from "./pages/Financial Overview/Financial";
 import AccessControl from "./pages/Security & Compliance/AccessControl";
 import Flaggedtransactions from "./pages/Security & Compliance/flaggedtransactions";
 import Compliancerecords from "./pages/Security & Compliance/Compliancerecords";
+import RecipientSManagement from "./pages/Recipient’s Management/Recipient’sManagement";
+import ReviewInterface from "./pages/Review Interface/ReviewInterface";
+import CommunicationTools from "./pages/Communication Tools/CommunicationTools";
 
 function App() {
   return (
@@ -58,6 +61,9 @@ function App() {
         <Route path="/flaggedtransactions" element={<Flaggedtransactions/>} />
         <Route path="/flaggedtransactions" element={<Flaggedtransactions/>} />
         <Route path="/compliancerecords" element={<Compliancerecords/>} />
+        <Route path="/privacy-policy" element={<RecipientSManagement/>} />
+        <Route path="/brand" element={<ReviewInterface/>} />
+        <Route path="/terms" element={<CommunicationTools/>} />
       </Routes> 
     </>
   );

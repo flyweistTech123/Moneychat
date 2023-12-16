@@ -10,7 +10,8 @@ import {
 } from "../../Component/TransactionModal";
 import FullScreenLoader from "../../Component/FullScreenLoader";
 import { IoSearch } from "react-icons/io5";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight, FaChevronLeft  } from "react-icons/fa";
+import './ReviewInterface.css'
 
 
 
@@ -22,7 +23,7 @@ const data = [
     time: " (6:30 AM)",
     sender: "Lorem Ipsum",
     receiver: "Lorem Ipsum",
-    status: "complete",
+    // status: "complete",
   },
   {
     amount: " £500",
@@ -47,7 +48,7 @@ const data = [
     time: " (6:30 AM)",
     sender: "Lorem Ipsum",
     receiver: "Lorem Ipsum",
-    status: "complete",
+    // status: "complete",
   },
   {
     amount: " £500",
@@ -56,11 +57,11 @@ const data = [
     time: " (6:30 AM)",
     sender: "Lorem Ipsum",
     receiver: "Lorem Ipsum",
-    status: "complete",
+    // status: "complete",
   },
 ];
 
-const Transaction = () => {
+const ReviewInterface = () => {
   const [modalStates, setModalStates] = useState({});
   const [modalStates2, setModalStates2] = useState({});
   const [modalStates3, setModalStates3] = useState({});
@@ -132,12 +133,12 @@ const Transaction = () => {
     <>
       <FullScreenLoader show={show} handleClose={handleClose} />
       <section className="pages">
-        <div className="Headingall">
-          <h5>Transactions</h5>
+        <div className="Headingall12">
+          <h5>Review Interface</h5>
           <div className="search">
             <img src="./Image/15.png" alt="" onClick={() => handleShow()} />
             <div>
-              <i><IoSearch /></i>
+            <i><IoSearch /></i>
               <input type="search" placeholder="Search Transaction" />
             </div>
           </div>
@@ -147,97 +148,87 @@ const Transaction = () => {
               <img src="./Image/16.png" alt="" />
               <span>FILTERS</span>
             </button>
-            <button className="report">
-              <img src="./Image/17.png" alt="" />
-              <span>REPORT</span>
-            </button>
           </div>
         </div>
         <div className="reviewtable">
-          <table>
-            <thead>
-              <tr>
-                <th>Amount</th>
-                <th>Ref. ID</th>
-                <th>Date & Time</th>
-                <th>Sender</th>
-                <th>Reciever</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data?.map((i, index) => (
-                <tr key={index}>
-                  <td >
-                    <span className="amount_td" >
-                      <span style={{ color: '#000000', fontSize: '25px' }}> {i.amount} </span>
-                      <img
-                        src="./Image/18.png"
-                        alt=""
-                        onClick={() => handleModalOpen(i.id)}
-                      />
-                      <TransactionModal
-                        isOpen={modalStates[i.id] || false}
-                        onClose={() => handleModalClose(i.id)}
-                      />
-                    </span>{" "}
-                  </td>
-                  <td
-                    onMouseEnter={() => setHoveredId(i.id)}
-                    onMouseLeave={() => setHoveredId(null)}
-                  >
-                    {hoveredId === i.id ? <CopyText text={i.id} /> : i.id}
-                  </td>
-                  <td>
-                    {i.date} <span style={{ color: "#0070BC", fontSize: '18px' }}> {i.time} </span>
-                  </td>
-                  <td>
-                    <span className="cursor_class">
-                      <span onClick={() => handleSenderModal(i.id)}>
-                        {i.sender}
-                      </span>
-                      <SenderModal
-                        isOpen={modalStates2[i.id] || false}
-                        onClose={() => handleSenderModalClose(i.id)}
-                      />
-                    </span>{" "}
-                  </td>
-                  <td>
-
-                    <span className="cursor_class">
-                      <span onClick={() => handleReciverModal(i.id)}>
-                        {i.receiver}{" "}
-                      </span>
-                      <ReciverModal
-                        isOpen={modalStates3[i.id] || false}
-                        onClose={() => handlerReciverModalClose(i.id)}
-                      />
+        <table>
+          <thead>
+            <tr>
+              <th>Amount</th>
+              <th>Ref. ID</th>
+              <th>Date & Time</th>
+              <th>Sender</th>
+              <th>Reciever</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data?.map((i, index) => (
+              <tr key={index}>
+                <td>
+                  <span className="amount_td">
+                    <span style={{color:'#0070BC', fontSize:'25px'}}> {i.amount} </span>
+                    <img
+                      src="./Image/18.png"
+                      alt=""
+                      onClick={() => handleModalOpen(i.id)}
+                    />
+                    <TransactionModal
+                      isOpen={modalStates[i.id] || false}
+                      onClose={() => handleModalClose(i.id)}
+                    />
+                  </span>
+                </td>
+                <td
+                  onMouseEnter={() => setHoveredId(i.id)}
+                  onMouseLeave={() => setHoveredId(null)}
+                >
+                  {hoveredId === i.id ? <CopyText text={i.id} /> : i.id}
+                </td>
+                <td>
+                  {i.date} <span style={{ color: "#0070BC" }}> {i.time} </span>
+                </td>
+                <td>
+                  <span className="cursor_class">
+                    <span onClick={() => handleSenderModal(i.id)}>
+                      {i.sender}
                     </span>
-                  </td>
-
-                  <td>
-                    {i.status ? (
-                      <span className="status complete">COMPLETED</span>
-                    ) : (
-                      <select>
-                        <option>Select Status</option>
-                        <option className="complete">COMPLETED</option>
-                        <option className="pending">PENDING</option>
-                        <option className="failed">FAILED</option>
-                        <option className="under_review">UNDER REVIEW</option>
-                        <option className="onHold">ON HOLD</option>
-                      </select>
-                    )}
-                  </td>
-                </tr>
-
-              ))}
-
-            </tbody>
-
-          </table>
+                    <SenderModal
+                      isOpen={modalStates2[i.id] || false}
+                      onClose={() => handleSenderModalClose(i.id)}
+                    />
+                  </span>{" "}
+                </td>
+                <td>
+                  <span className="cursor_class">
+                    <span onClick={() => handleReciverModal(i.id)}>
+                      {i.receiver}{" "}
+                    </span>
+                    <ReciverModal
+                      isOpen={modalStates3[i.id] || false}
+                      onClose={() => handlerReciverModalClose(i.id)}
+                    />
+                  </span>
+                </td>
+                <td>
+                  {i.status ? (
+                    <span className="status complete">COMPLETED</span>
+                  ) : (
+                    <select >
+                      <option style={{textAlign:'center'}}>Select</option>
+                      <option className="complete">APPROVE</option>
+                      <option className="pending">REJECT</option>
+                      <option className="failed">ESCALATE</option>
+                      <option className="under_review">ON-HOLD</option>
+                      <option className="onHold">audit & Accountability</option>
+                    </select>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         </div>
-
         <div className="pagination">
           <button>
             {" "}
@@ -247,7 +238,7 @@ const Transaction = () => {
           <button>2</button>
           <button>3</button>
           <button>
-            NEXT <i><FaChevronRight /></i>
+          NEXT <i><FaChevronRight /></i>
           </button>
         </div>
       </section>
@@ -255,4 +246,4 @@ const Transaction = () => {
   );
 };
 
-export default HOC(Transaction);
+export default HOC(ReviewInterface);

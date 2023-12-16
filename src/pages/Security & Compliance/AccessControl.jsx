@@ -131,7 +131,7 @@ const AccessControl = () => {
                   <td>
                     <div>{i.lastLoggedin}</div>
                     <p style={{ display: 'flex', alignItems: 'center', margin: 0 }}>
-                      <MdOutlineHistory style={{ marginRight: '4px' }} /> {i.time}
+                      <MdOutlineHistory style={{ marginRight: '4px',  marginLeft:'50px'}} /> {i.time}
                     </p>
                   </td>
                   <td>

@@ -1,0 +1,139 @@
+.Headingall12 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+
+
+.Headingall12 h5 {
+  color: #000;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* .pages h5{
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  } */
+
+
+
+.Headingall12 .search {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+  justify-content: end;
+
+}
+
+.Headingall12 .search img {
+  width: 40px;
+  cursor: pointer;
+  /* margin-right: 10px; */
+}
+
+.Headingall12 .search div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 13px;
+  /* width: 497px; */
+}
+
+.Headingall12 .search input {
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Headingall12 .button_container {
+  display: flex;
+  max-width: 150px;
+  width: 100%;
+  align-items: center;
+}
+
+.Headingall12 .button_container button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.Headingall12 .button_container button img {
+  width: 25px;
+}
+
+.Headingall12 .button_container button span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Headingall12 .button_container button.filter span {
+  color: #0070bc;
+}
+
+
+
+
+
+.reviewtable th {
+
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.reviewtable td {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000B2;
+  text-align: center;
+  cursor: pointer;
+  /* padding: 20px; */
+}
+
+.profilediv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviewtable td p span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+}
+
+.reviewtable td p {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+
+
+
+.reviewtable select {
+  color: #1E1E1E99;
+  width: 152px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+
+}
+
+.options {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000B2;
+}

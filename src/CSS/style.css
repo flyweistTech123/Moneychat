@@ -337,7 +337,7 @@
   padding: 20px;
   width: 100%;
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
 }
 .Navbar .logo {
   width: 206px;

@@ -11,8 +11,9 @@ import {
 import FullScreenLoader from "../../Component/FullScreenLoader";
 import { IoSearch } from "react-icons/io5";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-
-
+import TransactionsFilter from "../../Component/Modals/FilterModals/TransactionsFilter";
+import serndername from '../../Images/sendername.png'
+import Currencies from '../../Images/Currencies.png'
 
 const data = [
   {
@@ -61,6 +62,7 @@ const data = [
 ];
 
 const Transaction = () => {
+  const [isfilterModalOpen, setFilterModaOpen] = useState(false);
   const [modalStates, setModalStates] = useState({});
   const [modalStates2, setModalStates2] = useState({});
   const [modalStates3, setModalStates3] = useState({});
@@ -128,6 +130,53 @@ const Transaction = () => {
   };
   // ---
 
+
+  const openFilterModal = () => {
+    setFilterModaOpen(true);
+  };
+
+  const closeFilterModal = () => {
+    setFilterModaOpen(false);
+  };
+
+  const [minPrice, setMinPrice] = useState(2500);
+  const [maxPrice, setMaxPrice] = useState(7500);
+  const priceGap = 1000;
+
+  const handlePriceInputChange = (e) => {
+    let value = parseInt(e.target.value, 10);
+
+    if (e.target.className === "input-min" && (maxPrice - value >= priceGap) && maxPrice <= 10000) {
+      setMinPrice(value);
+    } else if (e.target.className === "input-max" && (value - minPrice >= priceGap) && value <= 10000) {
+      setMaxPrice(value);
+    }
+  };
+
+  const handleRangeInputChange = (e) => {
+    let value = parseInt(e.target.value, 10);
+
+    if (e.target.className === "range-min" && (maxPrice - value) >= priceGap) {
+      setMinPrice(value);
+    } else if (e.target.className === "range-max" && (value - minPrice) >= priceGap) {
+      setMaxPrice(value);
+    }
+  };
+
+
+  // const [options, setOptions] = useState({
+  //   option1: false,
+  //   option2: false,
+  //   option3: false,
+  // });
+
+  // const handleCheckboxChange = (option) => {
+  //   setOptions((prevOptions) => ({
+  //     ...prevOptions,
+  //     [option]: !prevOptions[option],
+  //   }));
+  // };
+
   return (
     <>
       <FullScreenLoader show={show} handleClose={handleClose} />
@@ -145,7 +194,7 @@ const Transaction = () => {
           <div className="button_container">
             <button className="filter">
               <img src="./Image/16.png" alt="" />
-              <span>FILTERS</span>
+              <span onClick={openFilterModal}>FILTERS</span>
             </button>
             <button className="report">
               <img src="./Image/17.png" alt="" />
@@ -250,6 +299,235 @@ const Transaction = () => {
             NEXT <i><FaChevronRight /></i>
           </button>
         </div>
+
+
+
+        {/* Notification Modal */}
+        {isfilterModalOpen && (
+          <TransactionsFilter onClose={closeFilterModal} isfilterModalOpen={isfilterModalOpen}>
+            <div className="transactionfilter">
+              <h2>Filter</h2>
+              <div className="lines2">
+                <hr />
+              </div>
+              <div className="content">
+                <h3>Amount Range</h3>
+                <div className="rangebox">
+                  <div className="slider">
+                    <div className="progress" style={{ left: `${(minPrice / 10000) * 100}%`, right: `${100 - (maxPrice / 10000) * 100}%` }}></div>
+                  </div>
+                  <div className="range-input">
+                    <input type="range" className="range-min" min="0" max="10000" value={minPrice} step="100" onChange={handleRangeInputChange} />
+                    <input type="range" className="range-max" min="0" max="10000" value={maxPrice} step="100" onChange={handleRangeInputChange} />
+                  </div>
+                </div>
+                <div className="values">
+                  <span>0</span>
+                  <span>300</span>
+                  <span>500</span>
+                  <span>&gt;1000</span>
+                  <span>&gt;5000</span>
+                </div>
+                <div className="price-input">
+                  <div className="field">
+                    <span>From</span>
+                    <input type="number" className="input-min" value={minPrice} onChange={handlePriceInputChange} />
+                  </div>
+                  <div className="field">
+                    <span>To</span>
+                    <input type="number" className="input-max" value={maxPrice} onChange={handlePriceInputChange} />
+                  </div>
+                </div>
+
+                <div className="datarange">
+                  <h3>Date Range</h3>
+
+                  <div>
+                    <select>
+                      <option>CUSTOM</option>
+                      <option >COMPLETED</option>
+                      <option>PENDING</option>
+                      <option>FAILED</option>
+                      <option >UNDER REVIEW</option>
+                      <option>ON HOLD</option>
+                    </select>
+                  </div>
+
+                  <div className="date-input">
+                    <div className="date-field">
+                      <span>From</span>
+                      <input type="date" className="input-min" />
+                    </div>
+                    <div className="date-field">
+                      <span>To</span>
+                      <input type="date" className="input-max" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className='Status'>
+                  <h3>Status</h3>
+                  <div className="selectoption">
+                    <div className="label1">
+                      <input
+                        type="checkbox"
+                      />
+                      <label style={{ color: '#3BB54A' }}>COMPLETED</label>
+                    </div>
+                    <div className="label1">
+                      <input
+                        type="checkbox"
+                      />
+                      <label style={{ color: '#FEA82F' }}>PENDING</label>
+                    </div>
+                    <div className="label1">
+                      <input
+                        type="checkbox"
+                      />
+                      <label style={{ color: '#FD575B' }}>FAILED</label>
+                    </div>
+                    <div className="label1">
+                      <input
+                        id="checkbox1"
+                        type="checkbox"
+                        role="checkbox" />
+                      <label style={{ color: '#0070BC' }}>UNDER REVIEW</label>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className="sender">
+                  <h3>Add Senders</h3>
+                    <div className="searchbar">
+                      <i><IoSearch style={{width:'30px', height:'30px' , color:'#00000080'}} /></i>
+                      <input type="search" placeholder="Search"  />
+                  </div>
+                  <div className="sendername">
+                    <img src={serndername}></img>
+                    <img src={serndername}></img>
+                  </div>
+                </div>
+
+
+                <div className="sender">
+                  <h3>Add Receiver</h3>
+                    <div className="searchbar">
+                      <i><IoSearch style={{width:'30px', height:'30px' , color:'#00000080'}} /></i>
+                      <input type="search" placeholder="Search"  />
+                  </div>
+                  <div className="sendername">
+                    <img src={serndername}></img>
+                    <img src={serndername}></img>
+                  </div>
+                </div>
+
+
+                <div className="modetransaction">
+                    <h3>Mode of Transactions</h3>
+                    <div className="selectoption1">
+                      <div className="mode">
+                    <div className="label12">
+                      <input
+                        type="checkbox"
+                      />
+                      <label>Bank Transfer</label>
+                    </div>
+                    <div className="label12">
+                      <input
+                        type="checkbox"
+                      />
+                      <label>Mobile Wallet</label>
+                    </div>
+                    </div>
+                    <div className="mode">
+                    <div className="label12">
+                      <input
+                        type="checkbox"
+                      />
+                      <label >Cash Pickup</label>
+                    </div>
+                    <div className="label12">
+                      <input
+                        type="checkbox"
+                      />
+                      <label>Credit Card</label>
+                    </div>
+                    </div>
+                    <div className="mode">
+                    <div className="label12">
+                      <input
+                        type="checkbox"
+                      />
+                      <label >Cash Pickup</label>
+                    </div>
+                    <div className="label12">
+                      <input
+                        type="checkbox"
+                      />
+                      <label>Credit Card</label>
+                    </div>
+                    </div>
+                    <div className="mode">
+                    <div className="label12">
+                      <input
+                        type="checkbox"
+                      />
+                      <label >Cash Pickup</label>
+                    </div>
+                    <div className="label12">
+                      <input
+                        type="checkbox"
+                      />
+                      <label>Credit Card</label>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+
+
+                  <div className="sender">
+                  <h3>Currencies</h3>
+                    <div className="searchbar">
+                      <i><IoSearch style={{width:'30px', height:'30px' , color:'#00000080'}} /></i>
+                      <input type="search" placeholder="Search"  />
+                  </div>
+                  <div className="sendername">
+                    <img src={Currencies}></img>
+                    <img src={Currencies}></img>
+                    <img src={Currencies}></img>
+                  </div>
+                </div>
+
+                <div className="datarange">
+                  <h3>Sort By</h3>
+
+                  <div>
+                    <select>
+                    <option>Select</option>
+                      <option>Date</option>
+                      <option >Date</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="datarange">
+                  <h3>Order</h3>
+
+                  <div>
+                    <select>
+                    <option>Select</option>
+                      <option>Ascending</option>
+                      <option >Descending</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </TransactionsFilter>
+        )}
       </section>
     </>
   );

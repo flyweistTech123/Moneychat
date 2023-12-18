@@ -112,7 +112,7 @@ const RecipientSManagement = () => {
                                             <div className="profilediv">
                                                 <img src={i.image} alt="Profile" style={{ marginRight: "8px" }} />
                                                 <span style={{ display: 'flex', textAlign: 'center' }}>{i.recipientsName}</span>
-                                                <img src={info} alt="Profile" style={{ marginLeft: "8px",  }} />
+                                                {/* <img src={info} alt="Profile" style={{ marginLeft: "8px",  }} /> */}
                                             </div>
                                         ) : (<div className="profilediv">
                                             <img src={i.image} alt="Profile" style={{ marginRight: "8px",border:'1px solid #FD575B', borderRadius:'50px'}} />

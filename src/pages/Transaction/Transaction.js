@@ -14,6 +14,17 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import TransactionsFilter from "../../Component/Modals/FilterModals/TransactionsFilter";
 import serndername from '../../Images/sendername.png'
 import Currencies from '../../Images/Currencies.png'
+import SenderList from "../../Component/Modals/FilterModals/SenderList";
+import senderprofile from '../../Images/profilesender.png'
+import Us from '../../Images/U.S.png'
+import India from '../../Images/Indian.png'
+import British from '../../Images/British.png'
+import ascending from '../../Images/Ascending.png'
+import Repost from "../../Component/Modals/TransactionRepost/Repost";
+import smallcross from '../../Images/smallcross.png'
+
+import setting from '../../Images/setting.png'
+import arrowbtn from '../../Images/arrowbtn.png'
 
 const data = [
   {
@@ -63,6 +74,9 @@ const data = [
 
 const Transaction = () => {
   const [isfilterModalOpen, setFilterModaOpen] = useState(false);
+  const [isSenderModallist, setSenderModallist] = useState(false);
+  const [isRepostOpen, setRepostOpen] = useState(false)
+  const [isCurrenciesModallist, setCurrenciesModallist] = useState(false)
   const [modalStates, setModalStates] = useState({});
   const [modalStates2, setModalStates2] = useState({});
   const [modalStates3, setModalStates3] = useState({});
@@ -139,6 +153,33 @@ const Transaction = () => {
     setFilterModaOpen(false);
   };
 
+
+  const openSenderModallist = () => {
+    setSenderModallist(true);
+  }
+
+  const closeSenderModallist = () => {
+    setSenderModallist(false);
+  }
+
+
+  const openCurrenciesModallist = () => {
+    setCurrenciesModallist(true);
+  }
+
+  const closeCurrenciesModallist = () => {
+    setCurrenciesModallist(false);
+  }
+
+  const openRepostModal = () => {
+    setRepostOpen(true);
+  }
+
+  const closeRepostModal = () => {
+    setRepostOpen(false);
+  }
+
+
   const [minPrice, setMinPrice] = useState(2500);
   const [maxPrice, setMaxPrice] = useState(7500);
   const priceGap = 1000;
@@ -193,12 +234,12 @@ const Transaction = () => {
 
           <div className="button_container">
             <button className="filter">
-              <img src="./Image/16.png" alt="" />
+              <img src="./Image/16.png" alt="" onClick={openFilterModal} />
               <span onClick={openFilterModal}>FILTERS</span>
             </button>
-            <button className="report">
+            <button className="report" onClick={openRepostModal}>
               <img src="./Image/17.png" alt="" />
-              <span>REPORT</span>
+              <span >REPORT</span>
             </button>
           </div>
         </div>
@@ -338,7 +379,6 @@ const Transaction = () => {
                     <input type="number" className="input-max" value={maxPrice} onChange={handlePriceInputChange} />
                   </div>
                 </div>
-
                 <div className="datarange">
                   <h3>Date Range</h3>
 
@@ -364,7 +404,6 @@ const Transaction = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className='Status'>
                   <h3>Status</h3>
                   <div className="selectoption">
@@ -395,102 +434,94 @@ const Transaction = () => {
                     </div>
                   </div>
                 </div>
-
-
                 <div className="sender">
                   <h3>Add Senders</h3>
-                    <div className="searchbar">
-                      <i><IoSearch style={{width:'30px', height:'30px' , color:'#00000080'}} /></i>
-                      <input type="search" placeholder="Search"  />
+                  <div className="searchbar">
+                    <i><IoSearch style={{ width: '30px', height: '30px', color: '#00000080' }} /></i>
+                    <input type="search" placeholder="Search" onClick={openSenderModallist} />
                   </div>
                   <div className="sendername">
                     <img src={serndername}></img>
                     <img src={serndername}></img>
                   </div>
                 </div>
-
-
                 <div className="sender">
                   <h3>Add Receiver</h3>
-                    <div className="searchbar">
-                      <i><IoSearch style={{width:'30px', height:'30px' , color:'#00000080'}} /></i>
-                      <input type="search" placeholder="Search"  />
+                  <div className="searchbar">
+                    <i><IoSearch style={{ width: '30px', height: '30px', color: '#00000080' }} /></i>
+                    <input type="search" placeholder="Search" onClick={openSenderModallist} />
                   </div>
                   <div className="sendername">
                     <img src={serndername}></img>
                     <img src={serndername}></img>
                   </div>
                 </div>
-
-
                 <div className="modetransaction">
-                    <h3>Mode of Transactions</h3>
-                    <div className="selectoption1">
-                      <div className="mode">
-                    <div className="label12">
-                      <input
-                        type="checkbox"
-                      />
-                      <label>Bank Transfer</label>
-                    </div>
-                    <div className="label12">
-                      <input
-                        type="checkbox"
-                      />
-                      <label>Mobile Wallet</label>
-                    </div>
+                  <h3>Mode of Transactions</h3>
+                  <div className="selectoption1">
+                    <div className="mode">
+                      <div className="label12">
+                        <input
+                          type="checkbox"
+                        />
+                        <label>Bank Transfer</label>
+                      </div>
+                      <div className="label12">
+                        <input
+                          type="checkbox"
+                        />
+                        <label>Mobile Wallet</label>
+                      </div>
                     </div>
                     <div className="mode">
-                    <div className="label12">
-                      <input
-                        type="checkbox"
-                      />
-                      <label >Cash Pickup</label>
-                    </div>
-                    <div className="label12">
-                      <input
-                        type="checkbox"
-                      />
-                      <label>Credit Card</label>
-                    </div>
-                    </div>
-                    <div className="mode">
-                    <div className="label12">
-                      <input
-                        type="checkbox"
-                      />
-                      <label >Cash Pickup</label>
-                    </div>
-                    <div className="label12">
-                      <input
-                        type="checkbox"
-                      />
-                      <label>Credit Card</label>
-                    </div>
+                      <div className="label12">
+                        <input
+                          type="checkbox"
+                        />
+                        <label >Cash Pickup</label>
+                      </div>
+                      <div className="label12">
+                        <input
+                          type="checkbox"
+                        />
+                        <label>Credit Card</label>
+                      </div>
                     </div>
                     <div className="mode">
-                    <div className="label12">
-                      <input
-                        type="checkbox"
-                      />
-                      <label >Cash Pickup</label>
+                      <div className="label12">
+                        <input
+                          type="checkbox"
+                        />
+                        <label >Cash Pickup</label>
+                      </div>
+                      <div className="label12">
+                        <input
+                          type="checkbox"
+                        />
+                        <label>Credit Card</label>
+                      </div>
                     </div>
-                    <div className="label12">
-                      <input
-                        type="checkbox"
-                      />
-                      <label>Credit Card</label>
-                    </div>
+                    <div className="mode">
+                      <div className="label12">
+                        <input
+                          type="checkbox"
+                        />
+                        <label >Cash Pickup</label>
+                      </div>
+                      <div className="label12">
+                        <input
+                          type="checkbox"
+                        />
+                        <label>Credit Card</label>
+                      </div>
                     </div>
                   </div>
-                  </div>
-
-
-                  <div className="sender">
+                </div>
+                <div className="sender">
                   <h3>Currencies</h3>
-                    <div className="searchbar">
-                      <i><IoSearch style={{width:'30px', height:'30px' , color:'#00000080'}} /></i>
-                      <input type="search" placeholder="Search"  />
+                  <div className="searchbar">
+                    <i><IoSearch style={{ width: '30px', height: '30px', color: '#00000080' }} /></i>
+                    <input type="search" placeholder="Search" onClick={openCurrenciesModallist} />
                   </div>
                   <div className="sendername">
                     <img src={Currencies}></img>
@@ -498,36 +529,236 @@ const Transaction = () => {
                     <img src={Currencies}></img>
                   </div>
                 </div>
-
                 <div className="datarange">
                   <h3>Sort By</h3>
 
                   <div>
                     <select>
-                    <option>Select</option>
+                      <option>Select</option>
                       <option>Date</option>
-                      <option >Date</option>
+                      <option >Amount</option>
                     </select>
                   </div>
                 </div>
-
                 <div className="datarange">
                   <h3>Order</h3>
 
                   <div>
                     <select>
-                    <option>Select</option>
-                      <option>Ascending</option>
+                      <option>Select</option>
+                      <option data-image={ascending}> <img src={ascending}></img>Ascending</option>
                       <option >Descending</option>
                     </select>
                   </div>
                 </div>
+
+                <div className="btn1">
+                  <button className="searchbtn" onClick={closeFilterModal}>SEARCH</button>
+                  <button className="resetbtn">RESET</button>
+                </div>
+
 
               </div>
 
             </div>
           </TransactionsFilter>
         )}
+
+        {/* SenderModallist */}
+        {isSenderModallist && (
+          <SenderList onClose={closeSenderModallist}>
+            <div className="senderlist">
+              <div className="searchbarlist">
+                <i><IoSearch style={{ width: '30px', height: '30px', color: '#00000080' }} /></i>
+                <input type="search" placeholder="Search" />
+              </div>
+              <div className="senders2" onClick={closeSenderModallist}>
+                <div className="serders1">
+                  <img src={senderprofile} alt="1"></img>
+                  <span>Lorem Ipsum</span>
+                </div>
+                <div className="serders1">
+                  <img src={senderprofile} alt="1"></img>
+                  <span>Lorem Ipsum</span>
+                </div>
+                <div className="serders1">
+                  <img src={senderprofile} alt="1"></img>
+                  <span>Lorem Ipsum</span>
+                </div>
+                <div className="serders1">
+                  <img src={senderprofile} alt="1"></img>
+                  <span>Lorem Ipsum</span>
+                </div>   <div className="serders1">
+                  <img src={senderprofile} alt="1"></img>
+                  <span>Lorem Ipsum</span>
+                </div>
+                <div className="serders1">
+                  <img src={senderprofile} alt="1"></img>
+                  <span>Lorem Ipsum</span>
+                </div>
+                <div className="serders1">
+                  <img src={senderprofile} alt="1"></img>
+                  <span>Lorem Ipsum</span>
+                </div>
+              </div>
+            </div>
+          </SenderList>
+        )}
+
+
+
+
+
+        {/* CurrenciesrModallist */}
+        {isCurrenciesModallist && (
+          <SenderList onClose={closeCurrenciesModallist}>
+            <div className="senderlist">
+              <div className="searchbarlist">
+                <i><IoSearch style={{ width: '30px', height: '30px', color: '#00000080' }} /></i>
+                <input type="search" placeholder="Search" />
+              </div>
+              <div className="senders2" onClick={closeCurrenciesModallist}>
+                <div className="serders1">
+                  <img src={India} alt="1"></img>
+                  <span>Indian Rupees ( ₹ INR )</span>
+                </div>
+                <div className="serders1">
+                  <img src={Us} alt="1"></img>
+                  <span>U.S Dollar ( $ USD )</span>
+                </div>
+                <div className="serders1">
+                  <img src={British} alt="1"></img>
+                  <span>British Pound ( £ USD )</span>
+                </div>
+                <div className="serders1">
+                  <img src={India} alt="1"></img>
+                  <span>Indian Rupees ( ₹ INR )</span>
+                </div>
+                <div className="serders1">
+                  <img src={British} alt="1"></img>
+                  <span>British Pound ( £ USD )</span>
+                </div>
+                <div className="serders1">
+                  <img src={Us} alt="1"></img>
+                  <span>U.S Dollar ( $ USD )</span>
+                </div>
+                <div className="serders1">
+                  <img src={India} alt="1"></img>
+                  <span>Indian Rupees ( ₹ INR )</span>
+                </div>
+              </div>
+            </div>
+          </SenderList>
+        )}
+
+
+
+
+        {/* CurrenciesrModallist */}
+        {isRepostOpen && (
+          <Repost onClose={closeRepostModal}>
+
+            <div className="repostconatiner">
+              <div className="repostheder">
+                <div>
+                  <h3>Generate Transactional Report</h3>
+                </div>
+                <div className="repostimg">
+                  <img src={setting}></img>
+                  <img src={smallcross} onClick={closeRepostModal}></img>
+                </div>
+              </div>
+              <div className="repostline">
+                <hr />
+              </div>
+              <div className="switchbtn">
+                <label className="switch">
+                  <input type="checkbox" />
+                    <span className="slider1 round"></span>
+                </label>
+                <p>Match Customization Settings with my Filter</p>
+              </div>
+              <div className="repostselect">
+                  <div>
+                  <span>Range</span>
+                    <select>
+                      <option>CUSTOM</option>
+                      <option >WEEKLY</option>
+                      <option>MONTHLY</option>
+                      <option>MONTHLY</option>
+                      <option >HALF-YEARLY ( 6 MONTHS )</option>
+                      <option>YEARLY</option>
+                    </select>
+                  </div>
+
+                  <div className="repost-date">
+                    <div className="repost-field">
+                      <span>From</span>
+                      <input type="date" className="input-min" />
+                    </div>
+                    <div className="repost-field">
+                      <span>To</span>
+                      <input type="date" className="input-max" />
+                    </div>
+                  </div>
+                </div>
+                <div className="repostStatus">
+                  <h3>Status</h3>
+                  <div className="selectoption11">
+                    <div className="mode1">
+                      <div className="label13">
+                        <input
+                          type="checkbox"
+                        />
+                        <label style={{color:'#3BB54A'}}>COMPLETED</label>
+                      </div>
+                      <div className="label13">
+                        <input
+                          type="checkbox"
+                        />
+                        <label style={{color:'#FEA82F'}}>PENDING</label>
+                      </div>
+                    </div>
+                    <div className="mode1">
+                      <div className="label13">
+                        <input
+                          type="checkbox"
+                        />
+                        <label style={{color:'#FD575B'}}>FAILED</label>
+                      </div>
+                      <div className="label13">
+                        <input
+                          type="checkbox"
+                        />
+                        <label style={{color:'#0070BC'}}>UNDER REVIEW</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="repostselect">
+                <h3>Export As :</h3>
+                  <div>
+                    <select>
+                      <option>PDF</option>
+                      <option >EXCEL SHEET</option>
+                    </select>
+                  </div>
+                </div>
+            </div>
+            
+            <div className="btn12">
+                  <button className="exportbtn" onClick={closeRepostModal}>EXPORT</button>
+                  <div className="cancelbtn1">
+                  <img src={arrowbtn}></img>
+                  <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+                  </div>
+                </div>
+            
+          </Repost>
+        )}
+
+
       </section>
     </>
   );

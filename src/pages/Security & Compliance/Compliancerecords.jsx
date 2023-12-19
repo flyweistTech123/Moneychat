@@ -4,10 +4,17 @@ import HOC from "../../layout/HOC";
 import { IoSearch } from "react-icons/io5";
 import './Compliancerecords.css'
 import upload from '../../Images/upload.png'
-import { FaChevronRight, FaChevronLeft  } from "react-icons/fa";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import dot from '../../Images/dot.png'
+import Repost from "../../Component/Modals/TransactionRepost/Repost";
+import smallcross from '../../Images/smallcross.png'
 
+import setting from '../../Images/setting.png'
+import arrowbtn from '../../Images/arrowbtn.png'
+import { useState } from "react";
+import text from '../../Images/text.png'
+import uplbtn from '../../Images/uploadbtn.png'
 
 
 
@@ -45,11 +52,22 @@ const data = [
 ];
 
 const Compliancerecords = () => {
+  const [isRepostOpen, setRepostOpen] = useState(false)
+  const openRepostModal = () => {
+    setRepostOpen(true);
+  }
+
+  const closeRepostModal = () => {
+    setRepostOpen(false);
+  }
+  const triggerFileInput = () => {
+    document.getElementById('fileInput').click();
+  };
   const navigate = useNavigate()
   return (
     <>
       <section className="pages">
-        <h5><span onClick={()=>navigate('/gallery')}>Security & Compliance</span> / Compliance Records</h5>
+        <h5><span onClick={() => navigate('/gallery')}>Security & Compliance</span> / Compliance Records</h5>
         <div className="Headingall">
           <div className="search">
             <div>
@@ -63,7 +81,7 @@ const Compliancerecords = () => {
               <img src="./Image/16.png" alt="" />
               <span>FILTERS</span>
             </button>
-            <button className="report">
+            <button className="report" onClick={openRepostModal}>
               <img src={upload} alt="" />
               <span>UPLOAD</span>
             </button>
@@ -84,7 +102,7 @@ const Compliancerecords = () => {
               {data?.map((i, index) => (
                 <tr key={index}>
                   <td>
-                    <span style={{color:'#000000'}}> {i.title} </span>
+                    <span style={{ color: '#000000' }}> {i.title} </span>
                   </td>
                   <td>
                     <p>{i.description}</p>
@@ -116,6 +134,69 @@ const Compliancerecords = () => {
             NEXT <i><FaChevronRight /></i>
           </button>
         </div>
+
+
+        {isRepostOpen && (
+          <Repost onClose={closeRepostModal}>
+
+            <div className="repostconatiner">
+              <div className="repostheder">
+                <div>
+                  <h3>Upload Document / Resource</h3>
+                </div>
+                <div className="repostimg">
+                  {/* <img src={setting}></img> */}
+                  <img src={smallcross} onClick={closeRepostModal}></img>
+                </div>
+              </div>
+              <div className="repostline">
+                <hr />
+              </div>
+              <div className="sender">
+                <div className="searchbar" style={{ width: '660px' }}>
+                  <i><img style={{ width: '30px', height: '30px', color: '#00000080' }} src={text}></img></i>
+                  <input type="text" placeholder="Add Title" />
+                </div>
+              </div>
+              <div className="repostselect">
+                <div>
+                  <select>
+                    <option>Select Category</option>
+                    <option >WEEKLY</option>
+                    <option>MONTHLY</option>
+                    <option>MONTHLY</option>
+                    <option >HALF-YEARLY ( 6 MONTHS )</option>
+                    <option>YEARLY</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <div className="upload-box" onClick={triggerFileInput}>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
+                <div className="icon"><img src={uplbtn} alt="" /></div>
+                <div>
+                  <p>CLICK TO UPLOAD</p>
+                  <span className="text">*Docx , Pdf , Txt etc.</span>
+                </div>
+
+              </div>
+
+              <div className="textarea1">
+                <textarea rows="6" cols="30" placeholder="Add Description..............."></textarea>
+              </div>
+            </div>
+
+            <div className="btn12">
+              <button className="exportbtn" onClick={closeRepostModal}>EXPORT</button>
+              <div className="cancelbtn1">
+                <img src={arrowbtn}></img>
+                <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+              </div>
+            </div>
+
+          </Repost>
+        )}
       </section>
     </>
   );

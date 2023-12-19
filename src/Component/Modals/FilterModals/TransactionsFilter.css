@@ -27,13 +27,11 @@
     transition: right 0.3s ease;
 }
 
-/* Add a class to the modal-overlay to make it visible */
 .filtermodal-overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
-/* Add a class to the modal-content to slide it in */
 .filtermodal-content.active {
     right: 0;
 }
@@ -54,7 +52,6 @@
 .transactionfilter {
     overflow-y: auto;
     max-height: 80vh;
-    /* padding-right: 20px; */
 }
 
 .transactionfilter h2 {
@@ -71,7 +68,6 @@
 .lines2 {
     display: flex;
     justify-content: center;
-    /* Center the items horizontally */
     align-items: center;
     margin-top: 20px;
 }
@@ -83,9 +79,7 @@
 
 
 .content {
-    /* margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 30px; */
+ 
     margin: 30px;
 }
 
@@ -167,7 +161,6 @@
     text-align: center;
     border: 1px solid #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    /* Adjust the shadow as needed */
     -moz-appearance: textfield;
 }
 
@@ -218,16 +211,7 @@ input[type="range"]::-webkit-slider-thumb {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
-/* input[type="range"]::-moz-range-thumb{
-  height: 17px;
-  width: 30px;
-  border: none;
-  border-radius: 50%;
-  background: #17A2B8;
-  pointer-events: auto;
-  -moz-appearance: none;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
-} */
+
 
 
 
@@ -328,7 +312,6 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
 
-/* Change the color of the checkbox when checked */
 
 
 
@@ -372,7 +355,7 @@ input[type="range"]::-webkit-slider-thumb {
     font-weight: 600;
     font-size: 18px;
   }
-  
+
 
 
 
@@ -425,3 +408,259 @@ input[type="range"]::-webkit-slider-thumb {
     width: 30px;
     margin-right: 8px;
   }
+
+
+  .searchbtn{
+    width: 230px;
+    height: 70px;
+    border: 1px solid;
+    background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+    border-radius: 10px;
+  }
+
+  .btn1{
+    display: flex;
+    gap: 50px;
+    margin-top: 4rem;
+  }
+
+  .resetbtn{
+    width: 230px;
+    height: 70px;
+    border: 1px solid #FD575B;
+    background: transparent;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FD575B;
+    border-radius: 10px;
+  }
+
+
+ 
+  
+
+
+
+  /* Security & Compliance / Role-Based Access Control  */
+
+
+
+  
+.Designation{
+    margin-top: 4rem;
+}
+
+
+
+
+
+.selectdesignation{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.selectdesignation .label1{
+    width: 445px;
+    height: 60px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.selectdesignation .label1 label{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000B2;
+}
+
+.selectdesignation .label1 input {
+
+    height: 30px;
+    width: 30px;
+  }
+
+
+
+
+  .employdatials {
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+
+.employdatials {
+    display: block;
+    margin-top: 4rem;
+}
+
+.employdatials .employ-datials {
+    display: block;
+    margin-top: 20px ;
+}
+
+.employdatials .employ-datials span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000B2;
+}
+
+
+
+.employ-datials input {
+    
+    width: 100%;
+    height: 60px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #00000080;
+    border-radius: 9px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    -moz-appearance: textfield;
+}
+
+
+
+
+
+
+
+.permission{
+    margin-top: 4rem;
+}
+
+.permission h3{
+    font-weight: 600;
+    font-size: 20px;
+    color: #0070BC;
+}
+
+
+.profile-image122 {
+    margin: auto;
+  }
+
+  .profile-image122 img{
+    margin: auto;
+  }
+
+
+
+
+
+
+  /* Flagged Transactions */
+
+  .range-input12 {
+    position: relative;
+}
+
+.range-input12 input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.range-input12 input[type="range"]::-webkit-slider-thumb {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #FD575B;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+
+.rangebox h3{
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Compliance Records */
+
+
+
+
+
+.upload-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    cursor: pointer;
+    margin-top: 4rem;
+    background-color: #FEA82F33;
+    border-radius: 10px;
+    width: 661px;
+    height: 161px;
+  }
+
+  .upload-box p{
+    font-weight: 800;
+    font-size: 24px;
+    background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+    -webkit-background-clip: text; /* For WebKit (Chrome, Safari) browsers */
+    color: transparent;
+  }
+
+  .upload-box span {
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000B2;
+  }
+  
+  .icon {
+    font-size: 30px;
+  }
+  
+
+ .upload-box .text{
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000B2;
+  }
+
+
+
+.textarea1{
+    margin-top: 4rem;
+}
+
+  textarea {
+    width: 100%; /* Make the textarea fill the entire width of its container */
+    padding: 10px; /* Add padding for better visual appearance */
+    resize: none; /* Prevent resizing by the user */
+    outline: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    border-radius: 9px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  

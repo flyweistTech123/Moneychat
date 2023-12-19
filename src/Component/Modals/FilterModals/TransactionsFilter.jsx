@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './TransactionsFilter.css';
-import { IoMdClose } from 'react-icons/io';
-import { AiOutlineCloseCircle } from "react-icons/ai";
 import closeicon from '../../../Images/closeicon.png'
 
 const TransactionsFilter = ({ onClose, children }) => {

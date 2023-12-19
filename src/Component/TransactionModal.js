@@ -272,3 +272,5 @@ export const ReciverModal = ({ isOpen, onClose }) => {
     </motion.div>
   );
 };
+
+

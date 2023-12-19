@@ -7,9 +7,15 @@ import plus from '../../Images/plu.png'
 import profile from '../../Images/profile.png'
 import staff from '../../Images/staf.png'
 import { MdOutlineHistory } from "react-icons/md";
-import { FaChevronRight, FaChevronLeft  } from "react-icons/fa";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import lines from '../../Images/lines.png'
 import { useNavigate } from "react-router-dom";
+import TransactionsFilter from "../../Component/Modals/FilterModals/TransactionsFilter";
+import { useState } from "react";
+import Repost from "../../Component/Modals/TransactionRepost/Repost";
+import smallcross from '../../Images/smallcross.png'
+import arrowbtn from '../../Images/arrowbtn.png'
+import profileimg from '../../Images/profilerepost.png'
 
 
 
@@ -73,12 +79,35 @@ const data = [
   },
 ];
 
+
+
+
+
 const AccessControl = () => {
+  const [isfilterModalOpen, setFilterModaOpen] = useState(false);
+  const [isRepostOpen, setRepostOpen] = useState(false)
+
+
+  const openFilterModal = () => {
+    setFilterModaOpen(true);
+  };
+
+  const closeFilterModal = () => {
+    setFilterModaOpen(false);
+  };
+
+  const openRepostModal = () => {
+    setRepostOpen(true);
+  }
+
+  const closeRepostModal = () => {
+    setRepostOpen(false);
+  }
   const navigate = useNavigate()
   return (
     <>
       <section className="pages">
-        <h5><span onClick={()=>navigate('/gallery')}>Security & Compliance</span> / Role-Based Access Control</h5>
+        <h5><span onClick={() => navigate('/gallery')}>Security & Compliance</span> / Role-Based Access Control</h5>
         <div className="Headingall">
           <div className="search">
             <div>
@@ -89,10 +118,10 @@ const AccessControl = () => {
 
           <div className="button_container">
             <button className="filter">
-              <img src="./Image/16.png" alt="" />
-              <span>FILTERS</span>
+              <img src="./Image/16.png" alt="" onClick={openFilterModal} />
+              <span onClick={openFilterModal}>FILTERS</span>
             </button>
-            <button className="report">
+            <button className="report" onClick={openRepostModal}>
               <img src={plus} alt="" />
               <span>ADD EMPLOYEE</span>
             </button>
@@ -131,7 +160,7 @@ const AccessControl = () => {
                   <td>
                     <div>{i.lastLoggedin}</div>
                     <p style={{ display: 'flex', alignItems: 'center', margin: 0 }}>
-                      <MdOutlineHistory style={{ marginRight: '4px',  marginLeft:'50px'}} /> {i.time}
+                      <MdOutlineHistory style={{ marginRight: '4px', marginLeft: '50px' }} /> {i.time}
                     </p>
                   </td>
                   <td>
@@ -168,6 +197,177 @@ const AccessControl = () => {
             NEXT <i><FaChevronRight /></i>
           </button>
         </div>
+
+
+
+        {/* Notification Modal */}
+        {isfilterModalOpen && (
+          <TransactionsFilter onClose={closeFilterModal} isfilterModalOpen={isfilterModalOpen}>
+            <div className="transactionfilter">
+              <h2>Filter</h2>
+              <div className="lines2">
+                <hr />
+              </div>
+              <div className="content">
+                <div className='Designation'>
+                  <h3>Designation</h3>
+                  <div className="selectdesignation">
+                    <div className="label1">
+                      <input
+                        type="checkbox"
+                      />
+                      <label>Staff Member</label>
+                    </div>
+                    <div className="label1">
+                      <input
+                        type="checkbox"
+                      />
+                      <label >Manager</label>
+                    </div>
+                    <div className="label1">
+                      <input
+                        type="checkbox"
+                      />
+                      <label>Lorem Ipsum</label>
+                    </div>
+                    <div className="label1">
+                      <input
+                        id="checkbox1"
+                        type="checkbox"
+                        role="checkbox" />
+                      <label>Lorem Ipsum</label>
+                    </div>
+                  </div>
+                </div>
+                <div className='Designation'>
+                  <h3>Permissions</h3>
+                  <div className="selectdesignation">
+                    <div className="label1">
+                      <input
+                        type="checkbox"
+                      />
+                      <label>Super-Admin</label>
+                    </div>
+                    <div className="label1">
+                      <input
+                        type="checkbox"
+                      />
+                      <label >Admin</label>
+                    </div>
+                    <div className="label1">
+                      <input
+                        type="checkbox"
+                      />
+                      <label>Manager</label>
+                    </div>
+                    <div className="label1">
+                      <input
+                        id="checkbox1"
+                        type="checkbox"
+                        role="checkbox" />
+                      <label>Lorem Ipsum</label>
+                    </div>
+                  </div>
+                </div>
+                <div className="datarange">
+                  <h3>Order</h3>
+
+                  <div>
+                    <select>
+                      <option>Select</option>
+                      <option >Ascending</option>
+                      <option >Descending</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="btn1">
+                  <button className="searchbtn" onClick={closeFilterModal}>SEARCH</button>
+                  <button className="resetbtn">RESET</button>
+                </div>
+
+
+              </div>
+
+            </div>
+          </TransactionsFilter>
+        )}
+
+
+         {/* CurrenciesrModallist */}
+         {isRepostOpen && (
+          <Repost onClose={closeRepostModal}>
+
+            <div className="repostconatiner">
+              <div className="repostheder">
+                <div>
+                  <h3>Add Employee</h3>
+                </div>
+                <div className="repostimg">
+                  <img src={smallcross} onClick={closeRepostModal}></img>
+                </div>
+              </div>
+              <div className="repostline">
+                <hr />
+              </div>
+
+              <div className="profile-image122">
+                <img src={profileimg} alt="" />
+              </div>
+                  <div className="employdatials">
+                    <div className="employ-datials">
+                      <span>Full Name</span>
+                      <input type="text" className="input-min"  placeholder="Enter Lorem Ipsum"/>
+                    </div>
+                    <div className="employ-datials">
+                      <span>Email</span>
+                      <input type="text" className="input-max" placeholder="Enter Lorem Ipsum"/>
+                    </div>
+                    <div className="employ-datials">
+                      <span>Contact Number</span>
+                      <input type="text" className="input-max" placeholder="Enter Lorem Ipsum"/>
+                    </div>
+                  </div>
+
+                  <div className="permission">
+                    <h3>permission</h3>
+                  <div className="switchbtn">
+                <label className="switch">
+                  <input type="checkbox" />
+                    <span className="slider1 round"></span>
+                </label>
+                <p>Super-Admin</p>
+                <label className="switch">
+                  <input type="checkbox" />
+                    <span className="slider1 round"></span>
+                </label>
+                <p>Lorem Ipsum</p>
+              </div>
+              <div className="switchbtn">
+                <label className="switch">
+                  <input type="checkbox" />
+                    <span className="slider1 round"></span>
+                </label>
+                <p>Manager</p>
+                <label className="switch">
+                  <input type="checkbox" />
+                    <span className="slider1 round"></span>
+                </label>
+                <p>Admin</p>
+              </div>
+              </div>
+            </div>
+            
+            <div className="btn12">
+                  <button className="exportbtn" onClick={closeRepostModal}>EXPORT</button>
+                  <div className="cancelbtn1">
+                  <img src={arrowbtn}></img>
+                  <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+                  </div>
+                </div>
+            
+          </Repost>
+        )}
       </section>
     </>
   );

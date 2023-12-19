@@ -1,0 +1,343 @@
+.Repostmodal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.Repostmodal-content {
+    position: relative;
+    top: 50px;
+    background: #fff;
+    bottom: 20px;
+    width: 761px;
+    height: 600px;
+    border-radius: 10px;
+    padding: 40px;
+    overflow: auto; /* Enable scrolling */
+    scrollbar-width: thin; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 11 */
+  }
+  
+  .Repostmodal-content::-webkit-scrollbar {
+    width: 5px; /* Adjust the width as needed */
+    display: none;
+  }
+  
+  .Repostmodal-content::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Hide the thumb */
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* repsot */
+
+
+.repostheder{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.repostheder h3{
+    font-weight: 600;
+    font-size: 26px;
+    color: #000000;
+}
+
+.repostimg{
+    display: flex;
+    gap: 20px;
+}
+
+.repostimg img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.repostline hr{
+    border: 1px solid #00000099;
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+
+/* The switch - the box around the slider */
+
+.switchbtn{
+    margin-top: 2rem;
+    display: flex;
+    gap: 60px;
+}
+
+.switchbtn p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000B2;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #848484;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider1:before {
+    position: absolute;
+    content: "";
+    height: 27px;
+    width: 27px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #D9D9D9;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input[type="checkbox"]:checked ~ .slider1:before {
+    background-color: #3BB54A; /* Change this to the desired color */
+  }
+  input:checked + .slider1 {
+    background-color: #3BB54A4D;
+  }
+  
+  input:focus + .slider1 {
+    box-shadow: 0 0 1px #3BB54A;
+  }
+  
+  input:checked + .slider1:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(50px);
+  }
+  
+  /* Rounded sliders */
+  .slider1.round {
+    border-radius: 21px;
+    width: 89px;
+  }
+  
+  .slider1.round:before {
+    border-radius: 50%;
+  }
+
+
+
+
+
+
+
+  .repostselect {
+    margin-top: 3rem;
+}
+
+.repostselect h3{
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+
+
+.repostselect select {
+    width: 654px;
+    height: 60px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 20px;
+    color: #000000B2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 9px;
+    border:none;
+    margin-top: 20px;
+}
+
+
+
+
+.repost-date {
+    display: flex;
+    gap: 90px;
+    margin-top: 4rem;
+}
+
+.repost-date .repost-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.repost-date .repost-field span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000B2;
+}
+
+
+.repost-field {
+    position: relative;
+}
+
+.repost-field input {
+    
+    width: 283px;
+    height: 60px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #00000080;
+    border-radius: 9px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Adjust the shadow as needed */
+    -moz-appearance: textfield;
+}
+
+
+
+
+
+
+
+.repostStatus{
+    margin-top: 4rem;
+  }
+
+  .repostStatus h3{
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+  }
+
+  
+.selectoption11{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.mode1{
+    display: flex;
+    gap: 30px;
+}
+
+
+.selectoption11 .label13{
+    width: 215px;
+    height: 60px;
+    /* border-radius: 5px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); */
+    padding: 20px;
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.selectoption11 .label13 label{
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #00000099;
+}
+
+.selectoption11 .label13 input {
+
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+  }
+
+
+
+
+
+
+
+
+
+
+  .exportbtn{
+    width: 230px;
+    height: 70px;
+    border: 1px solid;
+    background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+    border-radius: 10px;
+  }
+  .btn12 {
+    top: 0; 
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 4rem;
+    z-index: 999;
+  }
+  
+
+  .cancelbtn {
+    font-weight: 600;
+    font-size: 24px;
+    color: transparent;
+    border: none;
+    background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+    -webkit-background-clip: text; /* For WebKit (Chrome, Safari) browsers */
+    background-clip: text;
+  }
+  
+
+  .cancelbtn1{
+    display: flex;
+    gap: 20px;
+  }
+ 
+  
+ 
+  

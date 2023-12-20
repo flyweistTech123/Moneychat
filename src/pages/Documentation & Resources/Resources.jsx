@@ -88,10 +88,10 @@ const Resources = () => {
         <div style={{ display: "flex", justifyContent: 'space-between', marginTop: "20px" }}>
           <div className='left_side'>
             <h5>Updates & Newsletters</h5>
-            <div className="app1">
+            <div className="app">
               <div className="carousel">
                 <div
-                  className="slider"
+                  className="slider12"
                   style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
                   {images.map((image, index) => (

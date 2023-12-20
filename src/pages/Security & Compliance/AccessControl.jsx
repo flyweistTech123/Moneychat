@@ -16,13 +16,14 @@ import Repost from "../../Component/Modals/TransactionRepost/Repost";
 import smallcross from '../../Images/smallcross.png'
 import arrowbtn from '../../Images/arrowbtn.png'
 import profileimg from '../../Images/profilerepost.png'
+import { Threeline1 } from "../../Component/TransactionModal";
 
 
 
 
 const data = [
   {
-    id: "012345",
+    id: "012341",
     name: "Lorem Ipsum",
     image: profile,
     designation: "Staff Member",
@@ -33,7 +34,7 @@ const data = [
     // status: "complete",
   },
   {
-    id: "012345",
+    id: "012342",
     name: "Lorem Ipsum",
     image: profile,
     designation: "Staff Member",
@@ -44,7 +45,7 @@ const data = [
     // status: "complete",
   },
   {
-    id: "012345",
+    id: "012343",
     name: "Lorem Ipsum",
     image: profile,
     designation: "Staff Member",
@@ -55,7 +56,7 @@ const data = [
     // status: "complete",
   },
   {
-    id: "012345",
+    id: "012344",
     name: "Lorem Ipsum",
     image: profile,
     designation: "Staff Member",
@@ -86,6 +87,22 @@ const data = [
 const AccessControl = () => {
   const [isfilterModalOpen, setFilterModaOpen] = useState(false);
   const [isRepostOpen, setRepostOpen] = useState(false)
+  const [modalStates2, setModalStates2] = useState({});
+  const handleSenderModal = (id) => {
+    const updatedStates = Object.fromEntries(
+      Object.entries(modalStates2).map(([modalId]) => [modalId, false])
+    );
+    setModalStates2({
+      ...updatedStates,
+      [id]: true,
+    });
+  };
+  const handleSenderModalClose = (id) => {
+    setModalStates2((prevStates) => ({
+      ...prevStates,
+      [id]: false,
+    }));
+  };
 
 
   const openFilterModal = () => {
@@ -103,6 +120,8 @@ const AccessControl = () => {
   const closeRepostModal = () => {
     setRepostOpen(false);
   }
+
+
   const navigate = useNavigate()
   return (
     <>
@@ -117,9 +136,9 @@ const AccessControl = () => {
           </div>
 
           <div className="button_container">
-            <button className="filter">
-              <img src="./Image/16.png" alt="" onClick={openFilterModal} />
-              <span onClick={openFilterModal}>FILTERS</span>
+            <button className="filter" onClick={openFilterModal}>
+              <img src="./Image/16.png" alt="" />
+              <span >FILTERS</span>
             </button>
             <button className="report" onClick={openRepostModal}>
               <img src={plus} alt="" />
@@ -177,7 +196,15 @@ const AccessControl = () => {
                     )}
                   </td>
                   <td>
-                    <img src={lines} alt="" />
+                    <span className="cursor_class">
+                      <span onClick={() => handleSenderModal(i.id)}>
+                      <img src={lines} alt="" />
+                      </span>
+                      <Threeline1
+                        isOpen={modalStates2[i.id] || false}
+                        onClose={() => handleSenderModalClose(i.id)}
+                      />
+                    </span>{" "}
                   </td>
                 </tr>
               ))}
@@ -294,8 +321,8 @@ const AccessControl = () => {
         )}
 
 
-         {/* CurrenciesrModallist */}
-         {isRepostOpen && (
+        {/* CurrenciesrModallist */}
+        {isRepostOpen && (
           <Repost onClose={closeRepostModal}>
 
             <div className="repostconatiner">
@@ -314,58 +341,58 @@ const AccessControl = () => {
               <div className="profile-image122">
                 <img src={profileimg} alt="" />
               </div>
-                  <div className="employdatials">
-                    <div className="employ-datials">
-                      <span>Full Name</span>
-                      <input type="text" className="input-min"  placeholder="Enter Lorem Ipsum"/>
-                    </div>
-                    <div className="employ-datials">
-                      <span>Email</span>
-                      <input type="text" className="input-max" placeholder="Enter Lorem Ipsum"/>
-                    </div>
-                    <div className="employ-datials">
-                      <span>Contact Number</span>
-                      <input type="text" className="input-max" placeholder="Enter Lorem Ipsum"/>
-                    </div>
-                  </div>
+              <div className="employdatials">
+                <div className="employ-datials">
+                  <span>Full Name</span>
+                  <input type="text" className="input-min" placeholder="Enter Lorem Ipsum" />
+                </div>
+                <div className="employ-datials">
+                  <span>Email</span>
+                  <input type="text" className="input-max" placeholder="Enter Lorem Ipsum" />
+                </div>
+                <div className="employ-datials">
+                  <span>Contact Number</span>
+                  <input type="text" className="input-max" placeholder="Enter Lorem Ipsum" />
+                </div>
+              </div>
 
-                  <div className="permission">
-                    <h3>permission</h3>
-                  <div className="switchbtn">
-                <label className="switch">
-                  <input type="checkbox" />
+              <div className="permission">
+                <h3>Permission</h3>
+                <div className="switchbtn">
+                  <label className="switch">
+                    <input type="checkbox" />
                     <span className="slider1 round"></span>
-                </label>
-                <p>Super-Admin</p>
-                <label className="switch">
-                  <input type="checkbox" />
+                  </label>
+                  <p>Super-Admin</p>
+                  <label className="switch">
+                    <input type="checkbox" />
                     <span className="slider1 round"></span>
-                </label>
-                <p>Lorem Ipsum</p>
-              </div>
-              <div className="switchbtn">
-                <label className="switch">
-                  <input type="checkbox" />
+                  </label>
+                  <p>Lorem Ipsum</p>
+                </div>
+                <div className="switchbtn">
+                  <label className="switch">
+                    <input type="checkbox" />
                     <span className="slider1 round"></span>
-                </label>
-                <p>Manager</p>
-                <label className="switch">
-                  <input type="checkbox" />
+                  </label>
+                  <p>Manager</p>
+                  <label className="switch">
+                    <input type="checkbox" />
                     <span className="slider1 round"></span>
-                </label>
-                <p>Admin</p>
-              </div>
+                  </label>
+                  <p>Admin</p>
+                </div>
               </div>
             </div>
-            
+
             <div className="btn12">
-                  <button className="exportbtn" onClick={closeRepostModal}>EXPORT</button>
-                  <div className="cancelbtn1">
-                  <img src={arrowbtn}></img>
-                  <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
-                  </div>
-                </div>
-            
+              <button className="exportbtn" onClick={closeRepostModal}>SAVE & ADD</button>
+              <div className="cancelbtn1">
+                <img src={arrowbtn}></img>
+                <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+              </div>
+            </div>
+
           </Repost>
         )}
       </section>

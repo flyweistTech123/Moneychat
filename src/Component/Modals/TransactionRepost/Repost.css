@@ -340,4 +340,55 @@
  
   
  
+
+
+
+
+  /* Analytics */
+
+
+  .analyticsrepost h6{
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 3rem;
+
+  }
   
+  .analyticsrepost label{
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    margin-top: 2rem;
+
+  }
+
+  .analyticsrepost label span{
+    color: #000000B2;
+  }
+
+  .analyticsrepost input{
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+  }
+
+  .analticsvalume{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .analticsvalume p {
+    font-weight: 600;
+    font-size: 18px;
+    color: #0070BC;
+  }
+
+  .analticsvalume span{
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000B2;
+    margin-right: 10px;
+  }

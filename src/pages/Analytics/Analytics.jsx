@@ -6,7 +6,10 @@ import { IoSearch } from "react-icons/io5";
 import './Analytics.css';
 import increase from '../../Images/Mask group.png'
 import Chart from "react-apexcharts";
-
+import smallcross from '../../Images/smallcross.png'
+import setting from '../../Images/setting.png'
+import arrowbtn from '../../Images/arrowbtn.png'
+import Repost from '../../Component/Modals/TransactionRepost/Repost';
 
 
 
@@ -67,7 +70,7 @@ const Analytics = () => {
     const [barstate, barsetState] = useState({
         series: [{
             name: 'Net Profit',
-            data: [44, 55, 57, 56, 61, 58, 63,50,90,10,5,40]
+            data: [44, 55, 57, 56, 61, 58, 63, 50, 90, 10, 5, 40]
         },
         ],
         options: {
@@ -114,6 +117,19 @@ const Analytics = () => {
     });
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [isRepostOpen, setRepostOpen] = useState(false)
+
+    const openRepostModal = () => {
+        setRepostOpen(true);
+    }
+
+    const closeRepostModal = () => {
+        setRepostOpen(false);
+    }
+
+
+
+
     return (
         <>
             <FullScreenLoader show={show} handleClose={handleClose} />
@@ -129,7 +145,7 @@ const Analytics = () => {
                     </div>
 
                     <div className="button_container">
-                        <button className="report">
+                        <button className="report" onClick={openRepostModal}>
                             <img src="./Image/17.png" alt="" />
                             <span>REPORT</span>
                         </button>
@@ -235,6 +251,139 @@ const Analytics = () => {
                     </div>
                 </div>
 
+                {isRepostOpen && (
+                    <Repost onClose={closeRepostModal}>
+
+                        <div className="repostconatiner">
+                            <div className="repostheder">
+                                <div>
+                                    <h3>Generate Analytics Report</h3>
+                                </div>
+                                <div className="repostimg">
+                                    <img src={setting}></img>
+                                    <img src={smallcross} onClick={closeRepostModal}></img>
+                                </div>
+                            </div>
+                            <div className="repostline">
+                                <hr />
+                            </div>
+                            <div className='analyticsrepost'>
+                                <h6>Select the Sections which you want to include in the Report</h6>
+                                <input type="checkbox" id="sectionCheckbox" name="sectionCheckbox" />
+                                <label for="sectionCheckbox">Match <span>the Date Range in all</span> Selected Sections</label>
+                            </div>
+
+                            <div className="switchbtn">
+                                <label className="switch">
+                                    <input type="checkbox" />
+                                    <span className="slider1 round"></span>
+                                </label>
+                                <div className='analticsvalume'>
+                                    <p>TRANSACTIONAL VOLUMES</p>
+                                    <div>
+                                    <span>Range</span>
+                                        <select id="timeRange">
+                                            <option value="This Week">THIS WEEK</option>
+                                            <option value="This Month">THIS MONTH</option>
+                                            <option value="Custom">CUSTOM</option>
+                                            <option value="All Time">ALL TIME</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="switchbtn">
+                                <label className="switch">
+                                    <input type="checkbox" />
+                                    <span className="slider1 round"></span>
+                                </label>
+                                <div className='analticsvalume'>
+                                    <p>TRENDS</p>
+                                    <div>
+                                    <span>Range</span>
+                                        <select id="timeRange">
+                                            <option value="This Week">THIS WEEK</option>
+                                            <option value="This Month">THIS MONTH</option>
+                                            <option value="Custom">CUSTOM</option>
+                                            <option value="All Time">ALL TIME</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="switchbtn">
+                                <label className="switch">
+                                    <input type="checkbox" />
+                                    <span className="slider1 round"></span>
+                                </label>
+                                <div className='analticsvalume'>
+                                    <p>COMPARATIVE ANALYSIS</p>
+                                    <div>
+                                    <span>Range</span>
+                                        <select id="timeRange">
+                                            <option value="This Week">THIS WEEK</option>
+                                            <option value="This Month">THIS MONTH</option>
+                                            <option value="Custom">CUSTOM</option>
+                                            <option value="All Time">ALL TIME</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="switchbtn">
+                                <label className="switch">
+                                    <input type="checkbox" />
+                                    <span className="slider1 round"></span>
+                                </label>
+                                <div className='analticsvalume'>
+                                    <p>GEOGRAPHICAL DATA</p>
+                                    <div>
+                                    <span>Range</span>
+                                        <select id="timeRange">
+                                            <option value="This Week">THIS WEEK</option>
+                                            <option value="This Month">THIS MONTH</option>
+                                            <option value="Custom">CUSTOM</option>
+                                            <option value="All Time">ALL TIME</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="switchbtn">
+                                <label className="switch">
+                                    <input type="checkbox" />
+                                    <span className="slider1 round"></span>
+                                </label>
+                                <div className='analticsvalume'>
+                                    <p>TIME BASED ANALYSIS</p>
+                                    <div>
+                                    <span>Range</span>
+                                        <select id="timeRange">
+                                            <option value="This Week">THIS WEEK</option>
+                                            <option value="This Month">THIS MONTH</option>
+                                            <option value="Custom">CUSTOM</option>
+                                            <option value="All Time">ALL TIME</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="repostselect">
+                                <h3>Export As :</h3>
+                                <div>
+                                    <select>
+                                        <option>PDF</option>
+                                        <option >EXCEL SHEET</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="btn12">
+                            <button className="exportbtn" onClick={closeRepostModal}>EXPORT</button>
+                            <div className="cancelbtn1">
+                                <img src={arrowbtn}></img>
+                                <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+                            </div>
+                        </div>
+
+                    </Repost>
+                )}
             </section>
         </>
     )

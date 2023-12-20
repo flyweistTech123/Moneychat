@@ -436,7 +436,7 @@
 }
 .sidebar ul li span.link {
   color: rgba(0, 0, 0, 0.6);
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -889,3 +889,114 @@ table tbody tr:last-child td:first-child {
   opacity: 0.8 !important;
 }
 /* ----- */
+
+
+
+
+
+
+
+
+
+
+
+/*  Threeline*/
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal {
+  position: absolute;
+  right: 0 !important;
+  top: 50px;
+  left: -250px;
+}
+
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .threeline_content {
+  width: 269px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  padding: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .threeline_content .heading {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  
+}
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .threeline_content .heading img {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal
+  .Inffo_content
+  .heading
+  span.description
+  span.name {
+  color: #000000B2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .threeline_content .details {
+  margin-top: 20px;
+}
+
+
+
+
+
+/*  Info*/
+.payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal {
+  position: absolute;
+  right: 0 !important;
+  top: 50px;
+  left: -250px;
+}
+
+.payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal .Inffo_content {
+  width: 269px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  padding: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal .Inffo_content .heading {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  
+}
+.payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal .Inffo_content .heading img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+
+
+.payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal
+  .Inffo_content
+  .heading
+  span.description
+  span.name {
+  color: #000000B2;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal
+  .Inffo_content
+  .heading
+  .description {
+    display: flex;
+}
+.payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal .Inffo_content .details {
+  margin-top: 20px;
+}

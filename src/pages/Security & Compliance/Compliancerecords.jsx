@@ -15,35 +15,41 @@ import arrowbtn from '../../Images/arrowbtn.png'
 import { useState } from "react";
 import text from '../../Images/text.png'
 import uplbtn from '../../Images/uploadbtn.png'
+import { Threeline3 } from "../../Component/TransactionModal";
 
 
 
 const data = [
   {
+    id: "012341",
     title: "Lorem Ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non rhoncus risus. Mauris aliquet lectus ut leo scelerisque ",
     category: "Lorem Ipsum",
     status: "__",
   },
   {
+    id: "012342",
     title: "Lorem Ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non rhoncus risus. Mauris aliquet lectus ut leo scelerisque ",
     category: "Lorem Ipsum",
     status: "__",
   },
   {
+    id: "012343",
     title: "Lorem Ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non rhoncus risus. Mauris aliquet lectus ut leo scelerisque ",
     category: "Lorem Ipsum",
     status: "__",
   },
   {
+    id: "012344",
     title: "Lorem Ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non rhoncus risus. Mauris aliquet lectus ut leo scelerisque ",
     category: "Lorem Ipsum",
     status: "__",
   },
   {
+    id: "012345",
     title: "Lorem Ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non rhoncus risus. Mauris aliquet lectus ut leo scelerisque ",
     category: "Lorem Ipsum",
@@ -53,6 +59,24 @@ const data = [
 
 const Compliancerecords = () => {
   const [isRepostOpen, setRepostOpen] = useState(false)
+  const [modalStates2, setModalStates2] = useState({});
+  const handleSenderModal = (id) => {
+    const updatedStates = Object.fromEntries(
+      Object.entries(modalStates2).map(([modalId]) => [modalId, false])
+    );
+    setModalStates2({
+      ...updatedStates,
+      [id]: true,
+    });
+  };
+  const handleSenderModalClose = (id) => {
+    setModalStates2((prevStates) => ({
+      ...prevStates,
+      [id]: false,
+    }));
+  };
+
+
   const openRepostModal = () => {
     setRepostOpen(true);
   }
@@ -114,7 +138,15 @@ const Compliancerecords = () => {
                     <span>{i.status}</span>
                   </td>
                   <td>
-                    <img src={dot} alt="" />
+                    <span className="cursor_class">
+                      <span onClick={() => handleSenderModal(i.id)}>
+                        <img src={dot} alt="" />
+                      </span>
+                      <Threeline3
+                        isOpen={modalStates2[i.id] || false}
+                        onClose={() => handleSenderModalClose(i.id)}
+                      />
+                    </span>{" "}
                   </td>
                 </tr>
               ))}
@@ -188,7 +220,7 @@ const Compliancerecords = () => {
             </div>
 
             <div className="btn12">
-              <button className="exportbtn" onClick={closeRepostModal}>EXPORT</button>
+              <button className="exportbtn" onClick={closeRepostModal}>SUBMIT</button>
               <div className="cancelbtn1">
                 <img src={arrowbtn}></img>
                 <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>

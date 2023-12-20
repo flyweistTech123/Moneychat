@@ -1,0 +1,64 @@
+.Inffomodal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.Inffomodal-content {
+    position: relative;
+    top: 50px;
+    background: #fff;
+    bottom: 20px;
+    width: 930px;
+    height: 600px;
+    border-radius: 10px;
+    padding: 40px;
+    overflow: auto; /* Enable scrolling */
+    scrollbar-width: thin; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 11 */
+  }
+  
+  .Inffomodal-content::-webkit-scrollbar {
+    width: 5px; /* Adjust the width as needed */
+    display: none;
+  }
+  
+  .Inffomodal-content::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Hide the thumb */
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  

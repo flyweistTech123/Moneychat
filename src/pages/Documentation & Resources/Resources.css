@@ -35,7 +35,7 @@
   color: #000000;
 }
 
-.app1 {
+.app {
   margin-top: 30px;
   position: relative;
   width: 583px;
@@ -47,13 +47,19 @@
   overflow: hidden;
 }
 
-.slider {
+.slider12 {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
 .slide {
   flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' depending on your preference */
 }
 
 .dots {

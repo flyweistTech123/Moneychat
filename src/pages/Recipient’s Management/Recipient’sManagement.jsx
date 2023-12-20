@@ -3,17 +3,24 @@
 import HOC from "../../layout/HOC";
 import { IoSearch } from "react-icons/io5";
 import './Recipient’s Management.css'
-import plus from '../../Images/plu.png'
 import profile from '../../Images/profile.png'
-import staff from '../../Images/staf.png'
-import { MdOutlineHistory } from "react-icons/md";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import lines from '../../Images/lines.png'
 import { useNavigate } from "react-router-dom";
-import { IoMdInformationCircleOutline } from "react-icons/io";
 import info from '../../Images/information.png'
 import { useState } from "react";
 import TransactionsFilter from "../../Component/Modals/FilterModals/TransactionsFilter";
+import { Inffo, Threeline4, Threeline5 } from "../../Component/TransactionModal";
+import Infffo from "../../Component/Modals/InfforModal/InfoModal"
+import closeicon from '../../Images/closeicon.png'
+
+
+import CopyText from "../../Component/CopyText";
+import {
+    SenderModal,
+    TransactionModal,
+    ReciverModal,
+} from "../../Component/TransactionModal";
 
 
 
@@ -21,7 +28,10 @@ import TransactionsFilter from "../../Component/Modals/FilterModals/Transactions
 
 const data = [
     {
-        // recipientsName: "Lorem Ipsum",
+        id: "ABCD123451",
+        date: "DD/MM/YYYY",
+        time: " (6:30 AM)",
+        receiver: "Lorem Ipsum",
         redrecipientsName: "Lorem Ipsum",
         image: profile,
         phonenumber: "+41 1234567890",
@@ -32,6 +42,10 @@ const data = [
         amount: '£ 500'
     },
     {
+        id: "ABCD12342",
+        date: "DD/MM/YYYY",
+        time: " (6:30 AM)",
+        receiver: "Lorem Ipsum",
         recipientsName: "Lorem Ipsum",
         image: profile,
         phonenumber: "+41 1234567890",
@@ -42,6 +56,10 @@ const data = [
         amount: '£ 500'
     },
     {
+        id: "ABCD12343",
+        date: "DD/MM/YYYY",
+        time: " (6:30 AM)",
+        receiver: "Lorem Ipsum",
         redrecipientsName: "Lorem Ipsum",
         image: profile,
         phonenumber: "+41 1234567890",
@@ -52,6 +70,10 @@ const data = [
         amount: '£ 500'
     },
     {
+        id: "ABCD12344",
+        date: "DD/MM/YYYY",
+        time: " (6:30 AM)",
+        receiver: "Lorem Ipsum",
         recipientsName: "Lorem Ipsum",
         image: profile,
         phonenumber: "+41 1234567890",
@@ -62,6 +84,10 @@ const data = [
         amount: '£ 500'
     },
     {
+        id: "ABCD12345",
+        date: "DD/MM/YYYY",
+        time: " (6:30 AM)",
+        receiver: "Lorem Ipsum",
         redrecipientsName: "Lorem Ipsum",
         image: profile,
         phonenumber: "+41 1234567890",
@@ -75,6 +101,84 @@ const data = [
 
 const RecipientSManagement = () => {
     const [isfilterModalOpen, setFilterModaOpen] = useState(false);
+    const [modalStates3, setModalStates3] = useState({});
+    const [isRepostOpen, setRepostOpen] = useState(false)
+    const [modalStates, setModalStates] = useState({});
+    const [receviermodalStates, setrecevierSenderModalStates] = useState({});
+    const [hoveredId, setHoveredId] = useState(null);
+
+    // For Transaction Modal
+    const handleModalOpen = (id) => {
+        const updatedStates = Object.fromEntries(
+            Object.entries(modalStates).map(([modalId]) => [modalId, false])
+        );
+        setModalStates({
+            ...updatedStates,
+            [id]: true,
+        });
+    };
+
+    const handleModalClose = (id) => {
+        setModalStates((prevStates) => ({
+            ...prevStates,
+            [id]: false,
+        }));
+    };
+
+
+
+
+    // for reciever
+    const handleReciverModal = (id) => {
+        const updatedStates = Object.fromEntries(
+            Object.entries(receviermodalStates).map(([modalId]) => [modalId, false])
+        );
+        setrecevierSenderModalStates({
+            ...updatedStates,
+            [id]: true,
+        });
+    };
+
+    const handlerReciverModalClose = (id) => {
+        setrecevierSenderModalStates((prevStates) => ({
+            ...prevStates,
+            [id]: false,
+        }));
+    };
+
+
+    const handleinfoModal = (id) => {
+        const updatedStates = Object.fromEntries(
+            Object.entries(modalStates2).map(([modalId]) => [modalId, false])
+        );
+        setModalStates3({
+            ...updatedStates,
+            [id]: true,
+        });
+    };
+    const handleinfoModalClose = (id) => {
+        setModalStates3((prevStates) => ({
+            ...prevStates,
+            [id]: false,
+        }));
+    };
+
+    const [modalStates2, setModalStates2] = useState({});
+    const handleThreeModal = (id) => {
+        const updatedStates = Object.fromEntries(
+            Object.entries(modalStates2).map(([modalId]) => [modalId, false])
+        );
+        setModalStates2({
+            ...updatedStates,
+            [id]: true,
+        });
+    };
+    const handleThreeModalClose = (id) => {
+        setModalStates2((prevStates) => ({
+            ...prevStates,
+            [id]: false,
+        }));
+    };
 
 
     const openFilterModal = () => {
@@ -84,6 +188,14 @@ const RecipientSManagement = () => {
     const closeFilterModal = () => {
         setFilterModaOpen(false);
     };
+
+    const openRepostModal = () => {
+        setRepostOpen(true);
+    }
+
+    const closeRepostModal = () => {
+        setRepostOpen(false);
+    }
     const [minPrice, setMinPrice] = useState(2500);
     const [maxPrice, setMaxPrice] = useState(7500);
     const priceGap = 1000;
@@ -152,7 +264,15 @@ const RecipientSManagement = () => {
                                         ) : (<div className="profilediv">
                                             <img src={i.image} alt="Profile" style={{ marginRight: "8px", border: '1px solid #FD575B', borderRadius: '50px' }} />
                                             <span style={{ display: 'flex', textAlign: 'center', color: '#FD575B' }}>{i.redrecipientsName}</span>
-                                            <img src={info} alt="Profile" style={{ marginLeft: "8px" }} />
+                                            <span className="cursor_class">
+                                                <span onClick={() => handleinfoModal(i.id)}>
+                                                    <img src={info} alt="" />
+                                                </span>
+                                                <Inffo
+                                                    isOpen={modalStates3[i.id] || false}
+                                                    onClose={() => handleinfoModalClose(i.id)}
+                                                />
+                                            </span>{" "}
                                         </div>
                                         )}
                                     </td>
@@ -172,13 +292,23 @@ const RecipientSManagement = () => {
                                                 style={{ marginLeft: "8px" }}
                                                 src="./Image/18.png"
                                                 alt=""
-                                            />                    </div>
+                                                onClick={openRepostModal}
+                                            />
+                                        </div>
                                         <p style={{ margin: 0 }}>
                                             <span>{i.amount}</span>{i.time}
                                         </p>
                                     </td>
                                     <td>
-                                        <img src={lines} alt="" />
+                                        <span className="cursor_class">
+                                            <span onClick={() => handleThreeModal(i.id)}>
+                                                <img src={lines} alt="" />
+                                            </span>
+                                            <Threeline4
+                                                isOpen={modalStates2[i.id] || false}
+                                                onClose={() => handleThreeModalClose(i.id)}
+                                            />
+                                        </span>{" "}
                                     </td>
                                 </tr>
                             ))}
@@ -287,6 +417,80 @@ const RecipientSManagement = () => {
 
                         </div>
                     </TransactionsFilter>
+                )}
+                {isRepostOpen && (
+                    <Infffo onClose={closeRepostModal}>
+                        <div className="repostheder">
+                            <div>
+                                <h3>All Transactions</h3>
+                            </div>
+                            <div className="repostimg">
+                                <img src={closeicon} onClick={closeRepostModal}></img>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="reviewtable">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Date & Time</th>
+                                            <th>Amount</th>
+                                            <th>Ref. ID</th>
+                                            <th>Payment Method</th>
+                                            <th>From / To</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {data?.map((i, index) => (
+                                            <tr key={index}>
+                                                <td >
+                                                    {i.date} <span style={{ color: "#0070BC", fontSize: '18px' }}> {i.time} </span>
+                                                </td>
+                                                <td>
+                                                    <span className="amount_td" >
+                                                        <span style={{ color: '#000000', fontSize: '25px' }}> {i.amount} </span>
+                                                        <img
+                                                            src="./Image/18.png"
+                                                            alt=""
+                                                            onClick={() => handleModalOpen(i.id)}
+                                                        />
+                                                        <TransactionModal
+                                                            isOpen={modalStates[i.id] || false}
+                                                            onClose={() => handleModalClose(i.id)}
+                                                        />
+                                                    </span>{" "}
+                                                </td>
+                                                <td
+                                                    onMouseEnter={() => setHoveredId(i.id)}
+                                                    onMouseLeave={() => setHoveredId(null)}
+                                                >
+                                                    {hoveredId === i.id ? <CopyText text={i.id} /> : i.id}
+                                                </td>
+                                                <td>
+                                                    <span>{i.deliverymethod}</span>
+                                                </td>
+                                                <td>
+
+                                                    <span className="cursor_class">
+                                                        <span onClick={() => handleReciverModal(i.id)}>
+                                                            {i.receiver}{" "}
+                                                        </span>
+                                                        <ReciverModal
+                                                            isOpen={receviermodalStates[i.id] || false}
+                                                            onClose={() => handlerReciverModalClose(i.id)}
+                                                        />
+                                                    </span>
+                                                </td>
+                                            </tr>
+
+                                        ))}
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </Infffo>
                 )}
             </section>
         </>

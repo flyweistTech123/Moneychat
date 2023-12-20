@@ -222,7 +222,7 @@ const Transaction = () => {
     <>
       <FullScreenLoader show={show} handleClose={handleClose} />
       <section className="pages">
-        <div className="Headingall">
+        <div className="Heading_all">
           <h5>Transactions</h5>
           <div className="search">
             <img src="./Image/15.png" alt="" onClick={() => handleShow()} />
@@ -233,9 +233,9 @@ const Transaction = () => {
           </div>
 
           <div className="button_container">
-            <button className="filter">
-              <img src="./Image/16.png" alt="" onClick={openFilterModal} />
-              <span onClick={openFilterModal}>FILTERS</span>
+            <button className="filter"  onClick={openFilterModal}>
+              <img src="./Image/16.png" alt="" />
+              <span>FILTERS</span>
             </button>
             <button className="report" onClick={openRepostModal}>
               <img src="./Image/17.png" alt="" />
@@ -654,7 +654,6 @@ const Transaction = () => {
 
 
 
-        {/* CurrenciesrModallist */}
         {isRepostOpen && (
           <Repost onClose={closeRepostModal}>
 

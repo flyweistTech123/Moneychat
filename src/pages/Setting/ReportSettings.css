@@ -1,0 +1,243 @@
+.Report-container {
+    width: 1003px;
+    height: 1390px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    padding: 50px;
+    margin-top: 3rem;
+}
+
+
+.Report-content span {
+    font-weight: 600;
+    font-size: 20px;
+    color: #0070BC;
+}
+
+.reportlocation {
+    margin-top: 4rem;
+}
+
+.reportlocation label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000B2;
+    margin-bottom: 1rem;
+
+}
+
+.reportlocation-datials {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    /* Center the content */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-min {
+    flex: 3;
+    /* Take more space */
+    border: none;
+    padding: 8px;
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.reportlocation-datials img {
+    cursor: pointer;
+}
+
+.automaticreport {
+    margin-top: 3rem;
+}
+
+
+.automaticreport p {
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000B2;
+    margin-top: 1rem;
+}
+
+
+
+
+.reportselect select {
+    width: 526px;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000B2;
+}
+
+.reportselect label{
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000B2;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+.sendreport {
+    margin-top: 3rem;
+}
+
+.sendreport label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000B2;
+    margin-bottom: 1rem;
+}
+
+
+.report-searchbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #EEEEEE80;
+    padding: 10px;
+    border-radius: 10px;
+    width: 525px;
+    height: 60px;
+    margin-top: 20px;
+    padding: 15px;
+    /* Adjust padding as needed */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    /* Box shadow properties */
+}
+
+.report-searchbox input {
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e1e1e99;
+    background: transparent;
+}
+
+.report-searchbox input::placeholder {
+    font-weight: 600;
+    font-size: 18px;
+    color: #00000080;
+}
+
+
+.reportprofilecards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.report-profile-card{
+    width: 276px;
+    height: 60px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.report-profile-card img:nth-child(1){
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.report-profile-card img:nth-child(3){
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.report-profile-card p{
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+}
+
+.AddReport {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    width: 276px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.AddReport p{
+    font-weight: 600;
+    font-size: 24px;
+    color: #0070BC;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.AddReport img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px; /* Adjust margin as needed for spacing between image and text */
+}
+
+
+.reportTrigers{
+    margin-top: 3rem;
+}
+
+.reportTrigers h6{
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+
+.switchbtn1{
+    margin-top: 3rem;
+    display: flex;
+    gap: 80px;
+}
+
+.switchbtn1 h5{
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+
+  .switchbtn1 input:last-child{
+    width: 660px;
+    height: 60px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+  }
+
+
+  .switchbtn1 input:last-child::placeholder{
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 20px;
+  }

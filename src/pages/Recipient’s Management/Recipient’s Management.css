@@ -1,21 +1,21 @@
-.Headingall1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
+.Headingall1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
 }
 
 
 
 .Headingall1 h5 {
-    color: #000;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
+  color: #000;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 
-  /* .pages h5{
+/* .pages h5{
     color: #000;
     font-size: 25px;
     font-style: normal;
@@ -25,90 +25,96 @@
 
 
 
-  .Headingall1 .search {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .Headingall1 .search img {
-    width: 40px;
-    cursor: pointer;
-  }
-  
-  .Headingall1 .search div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 13px;
-    width: 497px;
-  }
-  .Headingall1 .search input {
-    outline: none;
-    /* width: 90%; */
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
-  .Headingall1 .button_container {
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
-    max-width: 400px;
-    /* width: 100%; */
-    align-items: center;
-  }
-  .Headingall1 .button_container button {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  .Headingall1 .button_container button img {
-    width: 25px;
-  }
-  .Headingall1 .button_container button span {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  .Headingall1 .button_container button.filter span {
-    color: #0070bc;
-  }
+.Headingall1 .search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
-  
+.Headingall1 .search img {
+  width: 40px;
+  cursor: pointer;
+}
+
+.Headingall1 .search div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 13px;
+  width: 497px;
+}
+
+.Headingall1 .search input {
+  outline: none;
+  /* width: 90%; */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Headingall1 .button_container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 400px;
+  /* width: 100%; */
+  align-items: center;
+}
+
+.Headingall1 .button_container button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.Headingall1 .button_container button img {
+  width: 25px;
+}
+
+.Headingall1 .button_container button span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Headingall1 .button_container button.filter span {
+  color: #0070bc;
+}
 
 
 
-  .racipienttable th{
 
-    font-weight: 500;
-    font-size: 18px;
-    color: #FFFFFF;
-    text-align: center;
-  }
 
-  .racipienttable td{
-    font-weight: 600;
-    font-size: 16px;
-    color: #000000B2;
-    text-align: center;
-    cursor: pointer;
-    /* padding: 20px; */
-  }
-.profilediv{
+.racipienttable th {
+
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.racipienttable td {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000B2;
+  text-align: center;
+  cursor: pointer;
+  /* padding: 20px; */
+}
+
+.profilediv {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.racipienttable td p span{
-    font-weight: 700;
-    font-size: 18px;
-    color: #000000;
+.racipienttable td p span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
 }
 
-.racipienttable td p{
-    font-weight: 400;
-    font-size: 12px;
+.racipienttable td p {
+  font-weight: 400;
+  font-size: 12px;
 }

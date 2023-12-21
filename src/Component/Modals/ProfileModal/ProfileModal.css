@@ -1,0 +1,141 @@
+.Profilemodal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.Profilemodal-content {
+    position: fixed;
+    top: 0;
+    right: -553px;
+    background: #ffffff;
+    padding: 20px;
+    width: 521px;
+    height: 100%;
+    transition: right 0.3s ease;
+}
+
+.Profilemodal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Profilemodal-content.active {
+    right: 0;
+}
+
+
+.close-icon-container img {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+
+.profile-container1 {
+    text-align: center;
+    margin: auto;
+}
+  
+  .profile-info1{
+    margin-bottom: 20px;
+  }
+
+  .profile-info1 h2{
+    font-weight: 600;
+    font-size: 22px;
+    color: #000000;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile-info1 span{
+    font-weight: 600;
+    font-size: 18px;
+    color: #0070BC;
+  }
+  
+
+  .profile-info1 p{
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000B2;
+
+  }
+  .user-image1 {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+
+  .signout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .signout p {
+    font-weight: 700;
+    font-size: 22px;
+    color: #FD575B;
+    text-align: center;
+    width: auto;
+    height: 20px;
+  }
+  
+  .signout-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    
+  }
+  
+  .profileline {
+    margin: auto;
+  }
+
+  .profileline hr{
+    width: 429px;
+    border: 1px solid #00000099;
+    margin: auto;
+
+  }
+  
+  .profile-sections1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  
+  .profile-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+
+  .profile-content img{
+    margin-right: 4px;
+  }
+  .profile-content h3{
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000B2;
+    cursor: pointer;
+  }
+  

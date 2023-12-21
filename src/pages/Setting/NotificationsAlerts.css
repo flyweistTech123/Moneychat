@@ -1,0 +1,62 @@
+.Notificatoncontainer{
+    width: 1003px;
+    height: 589px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    padding: 50px;
+    margin-top: 3rem;
+}
+
+.notification-content{
+
+}
+
+.notification-content span{
+    font-weight: 600;
+    font-size: 20px;
+    color: #0070BC;
+}
+
+.notification-content p{
+    font-weight: 500;
+    font-size: 22px;
+    color: #000000B2;
+    margin-top: 2rem;
+}
+
+.notification-content p span{
+    color: #000000;
+}
+
+
+.Notificationselector{
+    margin-top: 2rem;
+
+}
+
+.Notificationselector .input11{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+
+.Notificationselector label {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #000000B2;
+}
+
+.Notificationselector input{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+
+.downnotifiaction{
+    margin-top: 2rem;
+
+}

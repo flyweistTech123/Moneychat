@@ -31,6 +31,9 @@ import Compliancerecords from "./pages/Security & Compliance/Compliancerecords";
 import RecipientSManagement from "./pages/Recipient’s Management/Recipient’sManagement";
 import ReviewInterface from "./pages/Review Interface/ReviewInterface";
 import CommunicationTools from "./pages/Communication Tools/CommunicationTools";
+import Setting from "./pages/Setting/Setting";
+import NotificationsAlerts from "./pages/Setting/NotificationsAlerts";
+import ReportSettings from "./pages/Setting/ReportSettings";
 
 function App() {
   return (
@@ -64,6 +67,9 @@ function App() {
         <Route path="/privacy-policy" element={<RecipientSManagement/>} />
         <Route path="/brand" element={<ReviewInterface/>} />
         <Route path="/terms" element={<CommunicationTools/>} />
+        <Route path="/setting" element={<Setting/>} />
+        <Route path="/notification" element={<NotificationsAlerts/>} />
+        <Route path="/reportSettings" element={<ReportSettings/>} />
       </Routes> 
     </>
   );

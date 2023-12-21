@@ -11,6 +11,7 @@ import edit from '../Images/notethree.png'
 import download from '../Images/dowloadthree.png'
 import idthree from '../Images/idthree.png'
 import redinfo from '../Images/redinfomodal.png'
+import AddNote from "./Modals/TransactionRepost/AddNote";
 import Repost from "./Modals/TransactionRepost/Repost";
 import smallcross from '../Images/smallcross.png'
 import arrowbtn from '../Images/arrowbtn.png'
@@ -18,6 +19,7 @@ import flag from '../Images/falg.png'
 import btnlearn from '../Images/btnlearnmore.png'
 import uplbtn from '../Images/uploadbtn.png'
 import text from '../Images/text.png'
+import Flag from "./Modals/TransactionRepost/Flag";
 
 
 
@@ -138,83 +140,13 @@ export const TransactionModal = ({ isOpen, onClose }) => {
 
         {/* CurrenciesrModallist */}
      {isRepostOpen && (
-      <Repost onClose={closeRepostModal}>
-
-        <div className="repostconatiner">
-          <div className="repostheder">
-            <div>
-              <h3>Add Note</h3>
-            </div>
-            <div className="repostimg">
-              <img src={smallcross} onClick={closeRepostModal}></img>
-            </div>
-          </div>
-          <div className="repostline">
-            <hr />
-          </div>
-          <div className="textarea1">
-            <textarea rows="6" cols="30" placeholder="Type Here.........."></textarea>
-          </div>
-        </div>
-        <div className="btn12">
-          <button className="exportbtn" onClick={closeRepostModal}>SAVE</button>
-          <div className="cancelbtn1">
-            <img src={arrowbtn}></img>
-            <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
-          </div>
-        </div>
-
-      </Repost>
+      <AddNote onClose={closeRepostModal}>
+      </AddNote>
     )}
 
     {isFlagOpen && (
-      <Repost onClose={closeFlagModal}>
-
-        <div className="repostconatiner">
-          <div className="repostheder">
-            <div style={{display:'flex', gap:'20px'}}>
-            <img src={flag} style={{width:'39px', height:'39px'}}></img>
-              <h3>Flag Transaction</h3>
-            </div>
-            <div className="repostimg">
-              <img src={smallcross} onClick={closeFlagModal}></img>
-            </div>
-          </div>
-          <div className="repostline">
-            <hr />
-          </div>
-
-          <div className="repostselect">
-            <div>
-              <span>Reason</span>
-              <select style={{ width: '100%' }}>
-                <option>Select your Reason</option>
-                <option >WEEKLY</option>
-                <option>MONTHLY</option>
-                <option>MONTHLY</option>
-                <option >HALF-YEARLY ( 6 MONTHS )</option>
-                <option>YEARLY</option>
-              </select>
-            </div>
-
-          </div>
-
-          <div style={{marginTop:'2rem'}}><span>Please provide the Required Document & describe your Reason below :</span></div>
-          
-
-          <div className="textarea1">
-            <textarea rows="6" cols="30" placeholder="Type Here.........."></textarea>
-          </div>
-        </div>
-        <div className="btn12">
-          <button className="exportbtn" onClick={closeFlagModal}>SUBMIT</button>
-          <div className="cancelbtn1">
-            <img src={arrowbtn}></img>
-            <button className="cancelbtn" onClick={closeFlagModal}>Cancel</button>
-          </div>
-        </div>
-
-      </Repost>
+      <Flag onClose={closeFlagModal}>
+      </Flag>
     )}
     </motion.div>
 
@@ -535,53 +467,8 @@ export const Threeline2 = ({ isOpen, onClose }) => {
 
       </div>
       {isFlagOpen && (
-      <Repost onClose={closeFlagModal}>
-
-        <div className="repostconatiner">
-          <div className="repostheder">
-            <div style={{display:'flex', gap:'20px'}}>
-            <img src={flag} style={{width:'39px'}}></img>
-            <h3>Flag Transaction</h3>
-            </div>
-            <div className="repostimg">
-              <img src={smallcross} onClick={closeFlagModal}></img>
-            </div>
-          </div>
-          <div className="repostline">
-            <hr />
-          </div>
-
-          <div className="repostselect">
-            <div>
-              <span>Reason</span>
-              <select style={{ width: '100%' }}>
-                <option>Select your Reason</option>
-                <option >WEEKLY</option>
-                <option>MONTHLY</option>
-                <option>MONTHLY</option>
-                <option >HALF-YEARLY ( 6 MONTHS )</option>
-                <option>YEARLY</option>
-              </select>
-            </div>
-
-          </div>
-
-          <div style={{marginTop:'2rem'}}><span>Please provide the Required Document & describe your Reason below :</span></div>
-          
-
-          <div className="textarea1">
-            <textarea rows="6" cols="30" placeholder="Type Here.........."></textarea>
-          </div>
-        </div>
-        <div className="btn12">
-          <button className="exportbtn" onClick={closeFlagModal}>SUBMIT</button>
-          <div className="cancelbtn1">
-            <img src={arrowbtn}></img>
-            <button className="cancelbtn" onClick={closeFlagModal}>Cancel</button>
-          </div>
-        </div>
-
-      </Repost>
+      <Flag onClose={closeFlagModal}>
+      </Flag>
     )}
     </motion.div>
   );

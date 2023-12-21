@@ -17,7 +17,6 @@ import closeicon from '../../Images/closeicon.png'
 
 import CopyText from "../../Component/CopyText";
 import {
-    SenderModal,
     TransactionModal,
     ReciverModal,
 } from "../../Component/TransactionModal";
@@ -28,76 +27,88 @@ import {
 
 const data = [
     {
-        id: "ABCD123451",
-        date: "DD/MM/YYYY",
-        time: " (6:30 AM)",
-        receiver: "Lorem Ipsum",
+        id: "ABCD12341",
         redrecipientsName: "Lorem Ipsum",
         image: profile,
         phonenumber: "+41 1234567890",
         email: "loremipsum@gmail.com",
         deliverymethod: 'Bank Transfer',
         transaction: "LAST TRANSACTION ",
-        time: '( DD/MM/YYYY )',
+        Date: '( DD/MM/YYYY )',
         amount: '£ 500'
+    },
+    {
+        id: "ABCD12342",
+        recipientsName: "Lorem Ipsum",
+        image: profile,
+        phonenumber: "+41 1234567890",
+        email: "loremipsum@gmail.com",
+        deliverymethod: 'Bank Transfer',
+        transaction: "LAST TRANSACTION ",
+        Date: '( DD/MM/YYYY )',
+        amount: '£ 500'
+    },
+    {
+        id: "ABCD12343",
+        redrecipientsName: "Lorem Ipsum",
+        image: profile,
+        phonenumber: "+41 1234567890",
+        email: "loremipsum@gmail.com",
+        deliverymethod: 'Bank Transfer',
+        transaction: "LAST TRANSACTION ",
+        Date: '( DD/MM/YYYY )',
+        amount: '£ 500'
+    },
+    {
+        id: "ABCD12344",
+        recipientsName: "Lorem Ipsum",
+        image: profile,
+        phonenumber: "+41 1234567890",
+        email: "loremipsum@gmail.com",
+        deliverymethod: 'Bank Transfer',
+        transaction: "LAST TRANSACTION ",
+        Date: '( DD/MM/YYYY )',
+        amount: '£ 500'
+    },
+    {
+        id: "ABCD12345",
+        redrecipientsName: "Lorem Ipsum",
+        image: profile,
+        phonenumber: "+41 1234567890",
+        email: "loremipsum@gmail.com",
+        deliverymethod: 'Bank Transfer',
+        transaction: "LAST TRANSACTION ",
+        Date: '( DD/MM/YYYY )',
+        amount: '£ 500'
+    },
+];
+
+const data1 =[
+    {
+        id: "ABCD12341",
+        date: "DD/MM/YYYY",
+        time: " (6:30 AM)",
+        amount: '£ 500',
+        deliverymethod: 'Bank Transfer',
+        receiver: "Lorem Ipsum"
     },
     {
         id: "ABCD12342",
         date: "DD/MM/YYYY",
         time: " (6:30 AM)",
-        receiver: "Lorem Ipsum",
-        recipientsName: "Lorem Ipsum",
-        image: profile,
-        phonenumber: "+41 1234567890",
-        email: "loremipsum@gmail.com",
+        amount: '£ 500',
         deliverymethod: 'Bank Transfer',
-        transaction: "LAST TRANSACTION ",
-        time: '( DD/MM/YYYY )',
-        amount: '£ 500'
+        receiver: "Lorem Ipsum"
     },
     {
         id: "ABCD12343",
         date: "DD/MM/YYYY",
         time: " (6:30 AM)",
-        receiver: "Lorem Ipsum",
-        redrecipientsName: "Lorem Ipsum",
-        image: profile,
-        phonenumber: "+41 1234567890",
-        email: "loremipsum@gmail.com",
+        amount: '£ 500',
         deliverymethod: 'Bank Transfer',
-        transaction: "LAST TRANSACTION ",
-        time: '( DD/MM/YYYY )',
-        amount: '£ 500'
+        receiver: "Lorem Ipsum"
     },
-    {
-        id: "ABCD12344",
-        date: "DD/MM/YYYY",
-        time: " (6:30 AM)",
-        receiver: "Lorem Ipsum",
-        recipientsName: "Lorem Ipsum",
-        image: profile,
-        phonenumber: "+41 1234567890",
-        email: "loremipsum@gmail.com",
-        deliverymethod: 'Bank Transfer',
-        transaction: "LAST TRANSACTION ",
-        time: '( DD/MM/YYYY )',
-        amount: '£ 500'
-    },
-    {
-        id: "ABCD12345",
-        date: "DD/MM/YYYY",
-        time: " (6:30 AM)",
-        receiver: "Lorem Ipsum",
-        redrecipientsName: "Lorem Ipsum",
-        image: profile,
-        phonenumber: "+41 1234567890",
-        email: "loremipsum@gmail.com",
-        deliverymethod: 'Bank Transfer',
-        transaction: "LAST TRANSACTION ",
-        time: '( DD/MM/YYYY )',
-        amount: '£ 500'
-    },
-];
+]
 
 const RecipientSManagement = () => {
     const [isfilterModalOpen, setFilterModaOpen] = useState(false);
@@ -259,14 +270,14 @@ const RecipientSManagement = () => {
                                             <div className="profilediv">
                                                 <img src={i.image} alt="Profile" style={{ marginRight: "8px" }} />
                                                 <span style={{ display: 'flex', textAlign: 'center' }}>{i.recipientsName}</span>
-                                                {/* <img src={info} alt="Profile" style={{ marginLeft: "8px",  }} /> */}
+                                                <img src={info} alt="" style={{ width: '20px', height: '20px', visibility: 'hidden', marginLeft: '2px' }} />
                                             </div>
                                         ) : (<div className="profilediv">
                                             <img src={i.image} alt="Profile" style={{ marginRight: "8px", border: '1px solid #FD575B', borderRadius: '50px' }} />
                                             <span style={{ display: 'flex', textAlign: 'center', color: '#FD575B' }}>{i.redrecipientsName}</span>
                                             <span className="cursor_class">
                                                 <span onClick={() => handleinfoModal(i.id)}>
-                                                    <img src={info} alt="" />
+                                                    <img src={info} alt="" style={{ width: '20px', height: '20px', marginLeft: '2px' }} />
                                                 </span>
                                                 <Inffo
                                                     isOpen={modalStates3[i.id] || false}
@@ -296,7 +307,7 @@ const RecipientSManagement = () => {
                                             />
                                         </div>
                                         <p style={{ margin: 0 }}>
-                                            <span>{i.amount}</span>{i.time}
+                                            <span>{i.amount}</span>{i.Date}
                                         </p>
                                     </td>
                                     <td>
@@ -428,7 +439,13 @@ const RecipientSManagement = () => {
                                 <img src={closeicon} onClick={closeRepostModal}></img>
                             </div>
                         </div>
-                        <div>
+                        <div className="recipient-searchbox">
+                                <i>
+                                    <IoSearch />
+                                </i>
+                                <input type="search" placeholder="Search" />
+                            </div>
+                        <div className="conatainerabless">
                             <div className="reviewtable">
                                 <table>
                                     <thead>
@@ -441,7 +458,7 @@ const RecipientSManagement = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {data?.map((i, index) => (
+                                        {data1?.map((i, index) => (
                                             <tr key={index}>
                                                 <td >
                                                     {i.date} <span style={{ color: "#0070BC", fontSize: '18px' }}> {i.time} </span>
@@ -467,7 +484,7 @@ const RecipientSManagement = () => {
                                                     {hoveredId === i.id ? <CopyText text={i.id} /> : i.id}
                                                 </td>
                                                 <td>
-                                                    <span>{i.deliverymethod}</span>
+                                                    <span style={{color:'#000000'}}>{i.deliverymethod}</span>
                                                 </td>
                                                 <td>
 

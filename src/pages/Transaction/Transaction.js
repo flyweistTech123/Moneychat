@@ -25,6 +25,8 @@ import smallcross from '../../Images/smallcross.png'
 
 import setting from '../../Images/setting.png'
 import arrowbtn from '../../Images/arrowbtn.png'
+import { Link } from "react-router-dom";
+
 
 const data = [
   {
@@ -180,29 +182,29 @@ const Transaction = () => {
   }
 
 
-  const [minPrice, setMinPrice] = useState(2500);
-  const [maxPrice, setMaxPrice] = useState(7500);
-  const priceGap = 1000;
+    const [minPrice, setMinPrice] = useState(2500);
+    const [maxPrice, setMaxPrice] = useState(7500);
+    const priceGap = 1000;
 
-  const handlePriceInputChange = (e) => {
-    let value = parseInt(e.target.value, 10);
+    const handlePriceInputChange = (e) => {
+      let value = parseInt(e.target.value, 10);
 
-    if (e.target.className === "input-min" && (maxPrice - value >= priceGap) && maxPrice <= 10000) {
-      setMinPrice(value);
-    } else if (e.target.className === "input-max" && (value - minPrice >= priceGap) && value <= 10000) {
-      setMaxPrice(value);
-    }
-  };
+      if (e.target.className === "input-min" && (maxPrice - value >= priceGap) && maxPrice <= 10000) {
+        setMinPrice(value);
+      } else if (e.target.className === "input-max" && (value - minPrice >= priceGap) && value <= 10000) {
+        setMaxPrice(value);
+      }
+    };
 
-  const handleRangeInputChange = (e) => {
-    let value = parseInt(e.target.value, 10);
+    const handleRangeInputChange = (e) => {
+      let value = parseInt(e.target.value, 10);
 
-    if (e.target.className === "range-min" && (maxPrice - value) >= priceGap) {
-      setMinPrice(value);
-    } else if (e.target.className === "range-max" && (value - minPrice) >= priceGap) {
-      setMaxPrice(value);
-    }
-  };
+      if (e.target.className === "range-min" && (maxPrice - value) >= priceGap) {
+        setMinPrice(value);
+      } else if (e.target.className === "range-max" && (value - minPrice) >= priceGap) {
+        setMaxPrice(value);
+      }
+    };
 
 
   // const [options, setOptions] = useState({
@@ -663,7 +665,9 @@ const Transaction = () => {
                   <h3>Generate Transactional Report</h3>
                 </div>
                 <div className="repostimg">
+                <Link to={'/setting'}>
                   <img src={setting}></img>
+                  </Link>
                   <img src={smallcross} onClick={closeRepostModal}></img>
                 </div>
               </div>

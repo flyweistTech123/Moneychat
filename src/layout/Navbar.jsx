@@ -1,10 +1,26 @@
 /** @format */
+import { useState } from "react";
 import logo from "../Images/logo.png";
 import { IoSearch } from "react-icons/io5";
-
-
+import ProfileModal from "../Component/Modals/ProfileModal/ProfileModal";
+import profile from '../Images/profilmodal.png'
+import signout from '../Images/signout.png'
+import manageacc from '../Images/profilemodal3.png'
+import setting from '../Images/profilemodel2.png'
+import help from '../Images/profilemodal1.png'
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [isProfileModalOpen, setProfileModalOpen] = useState(false);
+
+  const openProfileModal = () => {
+    setProfileModalOpen(true);
+  };
+
+  const closeProfileModal = () => {
+    setProfileModalOpen(false);
+  };
   return (
     <>
       <div className="Navbar">
@@ -24,7 +40,7 @@ const Navbar = () => {
             <img src="./Image/12.png" alt="" />
             <div>
               <p className="head">Dave Smith</p>
-              <a href='/'>VIEW MORE </a>
+              <a onClick={openProfileModal} >VIEW MORE </a>
             </div>
           </div>
 
@@ -32,6 +48,39 @@ const Navbar = () => {
 
 
       </div>
+      {/* Notification Modal */}
+      {isProfileModalOpen && (
+        <ProfileModal onClose={closeProfileModal} isProfileModalOpen={isProfileModalOpen}>
+          <div className="profile-container1">
+            <div className="profile-info1">
+              <img src={profile} alt="User" className="user-image1" />
+              <h2>Dave Smith</h2>
+              <p><span>USER ID -</span> ABC2345</p>
+              <div className="signout" onClick={()=>navigate('/')}>
+                <img src={signout} alt="Sign Out" className="signout-icon" />
+                <p >SIGN OUT</p>
+              </div>
+            </div>
+
+            <div className="profileline"><hr /></div>
+
+            <div className="profile-sections1">
+              <div className="profile-content">
+                <img src={manageacc} alt="" />
+                <h3>Manage Account</h3>
+              </div>
+              <div className="profile-content">
+              <img src={setting} alt="" />
+                <h3>Change Settings</h3>
+              </div>
+              <div className="profile-content">
+              <img src={help} alt="" />
+                <h3>Support & Help</h3>
+              </div>
+            </div>
+          </div>
+        </ProfileModal>
+      )}
     </>
   );
 };

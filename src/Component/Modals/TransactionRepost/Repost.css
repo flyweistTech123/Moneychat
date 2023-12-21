@@ -16,7 +16,7 @@
     background: #fff;
     bottom: 20px;
     width: 761px;
-    height: 600px;
+    height: 550px;
     border-radius: 10px;
     padding: 40px;
     overflow: auto; /* Enable scrolling */
@@ -169,7 +169,46 @@
 
 
 
+/* flag */
 
+.textarea1 {
+  position: relative;
+}
+
+.custom-textarea {
+  position: relative;
+}
+
+.custom-textarea textarea {
+  padding-left: 30px; /* Adjust the padding to make space for the image */
+  /* background-image: url('../../../Images/fileupload.png'); Replace with your image path */
+  background-size: 20px; /* Adjust the size of the background image */
+  background-repeat: no-repeat;
+  background-position: 5px center; /* Adjust the position of the image */
+  border: 1px solid #ccc; /* Add border or customize as needed */
+}
+
+.custom-textarea img {
+  position: absolute;
+  left: 10px; /* Adjust the left position of the image */
+  top: 80%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  width: 20px; /* Adjust the size of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+.custom-textarea h6 {
+  position: absolute;
+  left: 50px; /* Adjust the left position of the image */
+  top: 80%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  font-weight: 600;
+  font-size: 18px;
+  color: #FD575B;
+}
+
+
+
+/* flagend */
 
 
 
@@ -183,6 +222,11 @@
     color: #000000;
 }
 
+.repostselect div span{
+  font-weight: 600;
+  font-size: 18px;
+  float: inline-start;
+}
 
 .repostselect select {
     width: 654px;
@@ -318,7 +362,6 @@
     align-items: center;
     gap: 60px;
     margin-top: 4rem;
-    z-index: 999;
   }
   
 
@@ -328,7 +371,7 @@
     color: transparent;
     border: none;
     background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
-    -webkit-background-clip: text; /* For WebKit (Chrome, Safari) browsers */
+    -webkit-background-clip: text; 
     background-clip: text;
   }
   
@@ -337,6 +380,13 @@
     display: flex;
     gap: 20px;
   }
+
+  .cancelbtn1 img{
+    width: 40px;
+    height: 40px;
+  }
+
+
  
   
  

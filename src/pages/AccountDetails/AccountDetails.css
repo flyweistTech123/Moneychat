@@ -1,0 +1,245 @@
+
+/* PROFILE INFORMATION */
+
+.Acccount-details-PROFILE-INFORMATION {
+    width: 1003px;
+    height: 3191px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    padding: 50px;
+    margin-top: 4rem;
+}
+
+
+
+.Profile-inputs {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #EEEEEE80;
+    padding: 10px;
+    border-radius: 10px;
+    width: 660px;
+    height: 60px;
+    margin-top: 20px;
+    padding: 15px;
+    /* Adjust padding as needed */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Box shadow properties */
+}
+
+.Profile-inputs select{
+    outline: none;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000B2;
+}
+
+.Profile-inputs input {
+    outline: none;
+    width: 100%;
+    background: transparent;
+}
+
+.Profile-inputs input::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000B2;
+}
+
+
+.profile-infomation span{
+    font-weight: 600;
+    font-size: 20px;
+    color: #0070BC;
+}
+
+.acc-contact{
+    margin-top: 4rem;
+}
+
+.acc-contact label{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+}
+
+
+.profile-documents{
+    margin-top: 4rem;
+}
+
+.profile-documents label{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+}
+
+.profile-documents .missing-document {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.profile-documents .missing-document p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000B2;
+    margin-top: 1rem;
+}
+
+.bussiness-registration{
+    margin-top: 4rem;
+}
+
+.bussiness-registration label{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+}
+
+.docupload1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 186px;
+    margin-top: 1rem;
+    height: 55.3px;
+    border-radius: 13px;
+    background-color: #00AAEA80;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btnuploaddoc{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.legal{
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 10rem;
+}
+
+
+
+
+/* BUSINESS INFORMATION */
+
+
+.Acccount-details-BUSINESS-INFORMATION{
+    width: 1003px;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    padding: 50px;
+    margin-top: 4rem;
+}
+
+
+/* BANK DETAILS & PAYMENT INFORMATION */
+
+
+.Acccount-details-PAYMENT-INFORMATION{
+    width: 1003px;
+    height: 1271px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    padding: 50px;
+    margin-top: 4rem;
+}
+
+.Acccount-details-PAYMENT-INFORMATION p{
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 2rem;
+}
+
+.paymentchecked{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+   
+
+.paymentchecked input{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.paymentchecked span{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000B2;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
+.debit-card{
+    display: flex;
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+
+.Profile-inputs-months {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #EEEEEE80;
+    padding: 10px;
+    border-radius: 10px;
+    width: 314px;
+    height: 60px;
+    margin-top: 20px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.Profile-inputs-months select{
+    outline: none;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000B2;
+}
+
+.payment-btn{
+    margin-top: 12rem;
+}
+
+.addpayment{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    width: 655px;
+    height: 70px;
+    border: 3px solid #FD575B;
+    border-radius: 6px;
+    color: #FD575B;
+    font-weight: 700;
+   font-size: 18px;
+}

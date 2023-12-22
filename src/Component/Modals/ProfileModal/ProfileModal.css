@@ -19,10 +19,14 @@
     top: 0;
     right: -553px;
     background: #ffffff;
-    padding: 20px;
-    width: 521px;
+    padding: 15px;
+    width: 400px;
     height: 100%;
     transition: right 0.3s ease;
+}
+.custom-link {
+  text-decoration: none;
+  /* Add more styles as needed */
 }
 
 .Profilemodal-overlay.active {
@@ -88,12 +92,12 @@
   }
 
   .signout p {
-    font-weight: 700;
-    font-size: 22px;
+    font-weight: 600;
+    font-size: 18px;
     color: #FD575B;
     text-align: center;
     width: auto;
-    height: 20px;
+    height: 10px;
   }
   
   .signout-icon {
@@ -133,8 +137,8 @@
     margin-right: 4px;
   }
   .profile-content h3{
-    font-weight: 400;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 18px;
     color: #000000B2;
     cursor: pointer;
   }

@@ -8,7 +8,7 @@ import signout from '../Images/signout.png'
 import manageacc from '../Images/profilemodal3.png'
 import setting from '../Images/profilemodel2.png'
 import help from '../Images/profilemodal1.png'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -65,18 +65,24 @@ const Navbar = () => {
             <div className="profileline"><hr /></div>
 
             <div className="profile-sections1">
+            <Link to={'/accountdetails'} className="custom-link">
               <div className="profile-content">
                 <img src={manageacc} alt="" />
                 <h3>Manage Account</h3>
               </div>
+              </Link>
+              <Link to={'/setting'} className="custom-link">
               <div className="profile-content">
               <img src={setting} alt="" />
                 <h3>Change Settings</h3>
               </div>
+              </Link>
+              <Link to={'/helpdesk'} className="custom-link">
               <div className="profile-content">
               <img src={help} alt="" />
                 <h3>Support & Help</h3>
               </div>
+              </Link>
             </div>
           </div>
         </ProfileModal>

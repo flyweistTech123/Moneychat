@@ -1,0 +1,151 @@
+.helpdesk-container {
+    width: 1003px;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    padding: 50px;
+    margin-top: 3rem;
+}
+
+
+.helpdesk-container .helpdeskheading{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0070BC;
+}
+
+
+.helpdeskquestion{
+    margin-top: 4rem;
+
+}
+
+
+
+.faq-item {
+    margin-bottom: 3rem;
+  }
+  
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    padding-bottom: 30px;
+    border-bottom: 0.6px solid #000000;
+  }
+  
+  .question span{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  .open{
+    border: none;
+  }
+  .open span{
+    font-weight: bold;
+  }
+  
+  .arrow-button {
+    padding: 5px;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  .answer {
+    margin-top: 10px;
+    padding: 10px;
+    padding-bottom: 30px;
+    border-bottom: 0.6px solid #000000;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000B2;
+  }
+  
+
+
+
+
+  .circle-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: none;
+    left: 900px;
+    top: 60px;
+  }
+  
+  .expandable-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #FEA82F 0%, #FD575B 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .expandable-button img {
+    width: 58px;
+    height: 58px;
+  }
+
+
+  .button-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 1rem;
+    display: none;
+  }
+
+  .button-text-expanded {
+    display: none;
+    margin-top: 8px;
+  }
+  
+  .expandable-button.expanded .button-text {
+    display: block;
+  }
+  
+  .expandable-button.expanded .button-text-expanded {
+    display: block;
+    font-size: 16px;
+    color: #FFFFFF99;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .expandable-button.expanded {
+    width: 400px;
+    height: 100px;
+    border-radius: 63px;
+  }
+  
+  /* Add animation styles */
+  @keyframes buttonAppear {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .expandable-button.expanded {
+    animation: buttonAppear 0.3s ease-in-out;
+  }
+  

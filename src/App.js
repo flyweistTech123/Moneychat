@@ -34,6 +34,8 @@ import CommunicationTools from "./pages/Communication Tools/CommunicationTools";
 import Setting from "./pages/Setting/Setting";
 import NotificationsAlerts from "./pages/Setting/NotificationsAlerts";
 import ReportSettings from "./pages/Setting/ReportSettings";
+import AccountDetails from "./pages/AccountDetails/AccountDetails";
+import HelpDesk from "./pages/Support & Help Desk/HelpDesk";
 
 function App() {
   return (
@@ -70,6 +72,8 @@ function App() {
         <Route path="/setting" element={<Setting/>} />
         <Route path="/notification" element={<NotificationsAlerts/>} />
         <Route path="/reportSettings" element={<ReportSettings/>} />
+        <Route path="/accountdetails" element={<AccountDetails/>} />
+        <Route path="/helpdesk" element={<HelpDesk/>} />
       </Routes> 
     </>
   );

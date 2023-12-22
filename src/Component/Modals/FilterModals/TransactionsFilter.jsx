@@ -17,7 +17,7 @@ const TransactionsFilter = ({ onClose, children }) => {
         <div className={`filtermodal-overlay ${isActive ? 'active' : ''}`} onClick={onClose}>
             <div className={`filtermodal-content ${isActive ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>
                 <div className="close-icon-container">
-                    <img src={closeicon} alt=""  onClick={onClose}/>
+                    <img src={closeicon} alt=""  onClick={onClose} style={{width:'8%', height:'8%'}}/>
                 </div>
                 {children}
             </div>

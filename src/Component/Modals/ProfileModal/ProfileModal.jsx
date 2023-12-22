@@ -17,7 +17,7 @@ const ProfileModal = ({ onClose, children }) => {
         <div className={`Profilemodal-overlay ${isActive ? 'active' : ''}`} onClick={onClose}>
             <div className={`Profilemodal-content ${isActive ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>
                 <div className="close-icon-container">
-                    <img src={closeicon} alt=""  onClick={onClose}/>
+                    <img src={closeicon} alt=""  onClick={onClose} style={{width:'8%', height:'8%'}}/>
                 </div>
                 {children}
             </div>

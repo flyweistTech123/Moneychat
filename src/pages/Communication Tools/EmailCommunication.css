@@ -1,0 +1,309 @@
+.Email-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align items to the bottom of the viewport */
+    z-index: 1000;
+}
+
+.Email-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: auto;
+    z-index: 1100;
+    overflow-y: auto; /* Add scrollbar when content overflows */
+    transition: transform 0.2s ease-out;
+    transform: translateY(100%);
+  }
+
+.Email-modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.Email-modal-content::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+    border-radius: 7px;
+}
+
+.Email-modal-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+  
+
+.Email-modal-overlay.active .Email-modal-content {
+    transform: translateY(0);
+}
+
+.close-btn {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    color: #333;
+    height: 50px;
+}
+
+
+.Email-communication-header h2{
+    font-weight: 600;
+    font-size: 25px;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+.email-line hr{
+    border: 0.8px solid #000000B2;
+}
+
+
+.Email-container-div{
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.Email-templete::-webkit-scrollbar {
+    width: 5px;
+}
+
+.Email-templete::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+    border-radius: 7px;
+}
+
+.Email-templete::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.Email-templete{
+    margin-top: 4rem;
+    width: 433px;
+    height: 300px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 9px;
+    padding: 20px;
+    overflow: auto;
+    direction: rtl; /* Set the text direction back to left-to-right */
+}
+
+.Email-content{
+    direction: ltr; /* Set the text direction back to left-to-right */
+}
+
+.Email-templete span{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0070BC;
+}
+
+
+.template-searchbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #EEEEEE;
+    padding: 10px;
+    border-radius: 10px;
+    width: 329px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.template-searchbox input {
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e1e1e99;
+    background: transparent;
+}
+
+.template-searchbox input::placeholder {
+    font-weight: 600;
+    font-size: 16px;
+    color: #00000080;
+}
+
+.Email-templete h6{
+    font-weight: 500;
+    font-size: 18px;
+    color: #00000099;
+    padding: 20px;
+}
+
+
+
+.Email-input-box{
+    margin-top: 4rem;
+}
+
+
+.Email-input-area {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #EEEEEE80;
+    padding: 10px;
+    border-radius: 10px;
+    width: 858px;
+    height: 60px;
+    margin-top: 20px;
+    padding: 15px;
+    /* Adjust padding as needed */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Box shadow properties */
+}
+
+.Email-input-area select{
+    outline: none;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000B2;
+}
+
+.Email-input-area input {
+    outline: none;
+    width: 100%;
+    background: transparent;
+}
+
+.Email-input-area input::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000B2;
+}
+
+
+
+
+.textarea1 {
+    position: relative;
+  }
+  
+  .custom-textarea {
+    position: relative;
+  }
+  
+  .custom-textarea textarea {
+    padding-left: 30px; /* Adjust the padding to make space for the image */
+    /* background-image: url('../../../Images/fileupload.png'); Replace with your image path */
+    background-size: 20px; /* Adjust the size of the background image */
+    background-repeat: no-repeat;
+    background-position: 5px center; /* Adjust the position of the image */
+    border: 1px solid #ccc; /* Add border or customize as needed */
+  }
+
+  
+
+  .Email-upload1{
+    cursor: pointer;
+  }
+
+  .Email-upload1 img{
+    width: 20px; 
+    height: auto; 
+  }
+
+  .Email-upload1 h6{
+    font-weight: 600;
+    font-size: 18px;
+    color: #FD575B;
+  }
+
+  .Email-upload2 {
+    cursor: pointer;
+  }
+
+  .Email-upload2 img{
+    width: 20px; 
+    height: auto; 
+  }
+
+  .Email-upload2 h6{
+    font-weight: 600;
+    font-size: 18px;
+    color: #FD575B;
+  }
+
+  .Email-upload3 {
+    cursor: pointer;
+  }
+
+  .Email-upload3 img{
+    width: 20px; 
+    height: auto; 
+  }
+
+  .Email-upload3 h6{
+    font-weight: 600;
+    font-size: 18px;
+    color: #FC0005;
+  }
+  
+  .custom-textarea .Email-upload1 {
+    position: absolute;
+    left: 10px;
+    top: 80%; 
+    transform: translateY(-50%);
+    width: 30%;
+  }
+
+
+  .custom-textarea .Email-upload2 {
+    position: absolute;
+    left: 200px;
+    top: 80%; 
+    transform: translateY(-50%); 
+    width: 30%;
+  }
+  .custom-textarea .Email-upload3 {
+    position: absolute;
+    left: 400px;
+    top: 80%; 
+    transform: translateY(-50%); 
+    width: 30%;
+  }
+
+  .custom-textarea .Email-upload4 {
+    position: absolute;
+    left: 650px;
+    top: 80%; 
+    transform: translateY(-50%); 
+  }
+
+
+
+  .Email-send-btn{
+    width: 175px;
+    height: 60px;
+    border: 1px solid;
+    background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    border-radius: 10px;
+  }
+
+
+  .Email_textarea12{
+    margin-top: 2rem;
+  }

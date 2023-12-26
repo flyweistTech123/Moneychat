@@ -42,3 +42,21 @@
     color: #0070BC;
   }
   
+
+
+  @media (max-width: 568px) {
+    .finacial-box {
+      width: 100%;
+    }
+    .finacial-title h1 {
+      font-size: 24px;
+    }
+  
+    .finacial-title span:nth-child(1) {
+      font-size: 14px;
+    }
+  
+    .finacial-title span:nth-child(2) {
+      font-size: 20px;
+    }
+  }

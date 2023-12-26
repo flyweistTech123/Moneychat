@@ -62,4 +62,13 @@
   
 
   
-  
+  @media (max-width: 568px) {
+    .intakecards1 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .small-card1 {
+      width: 100%; /* Set the maximum width of each card */
+    }
+  }

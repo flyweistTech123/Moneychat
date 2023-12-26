@@ -37,7 +37,7 @@ const Navbar = () => {
           <img src="./Image/13.png" alt="" className="notify" />
 
           <div className="content">
-            <img src="./Image/12.png" alt="" />
+            <img src="./Image/12.png" alt="" style={{width:'50px', height:'50px'}} />
             <div>
               <p className="head">Dave Smith</p>
               <a onClick={openProfileModal} >VIEW MORE </a>

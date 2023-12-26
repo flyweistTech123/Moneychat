@@ -84,7 +84,10 @@
 }
 
 
-
+.reviewtable{
+  width: 100%;
+  overflow: auto;
+}
 
 
 .reviewtable th {

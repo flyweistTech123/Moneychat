@@ -85,7 +85,7 @@ const Resources = () => {
           </i>
           <input type="search" placeholder="Search" />
         </div>
-        <div style={{ display: "flex", justifyContent: 'space-between', marginTop: "20px" }}>
+        <div className='newsdiv'>
           <div className='left_side'>
             <h5>Updates & Newsletters</h5>
             <div className="app">

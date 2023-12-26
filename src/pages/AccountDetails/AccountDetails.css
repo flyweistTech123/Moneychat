@@ -1,4 +1,3 @@
-
 /* PROFILE INFORMATION */
 
 .Acccount-details-PROFILE-INFORMATION {
@@ -30,7 +29,7 @@
     /* Box shadow properties */
 }
 
-.Profile-inputs select{
+.Profile-inputs select {
     outline: none;
     width: 100%;
     background: transparent;
@@ -53,28 +52,28 @@
 }
 
 
-.profile-infomation span{
+.profile-infomation span {
     font-weight: 600;
     font-size: 20px;
     color: #0070BC;
 }
 
-.acc-contact{
+.acc-contact {
     margin-top: 4rem;
 }
 
-.acc-contact label{
+.acc-contact label {
     font-weight: 500;
     font-size: 18px;
     color: #000000;
 }
 
 
-.profile-documents{
+.profile-documents {
     margin-top: 4rem;
 }
 
-.profile-documents label{
+.profile-documents label {
     font-weight: 500;
     font-size: 18px;
     color: #000000;
@@ -87,24 +86,24 @@
     margin-top: 2rem;
 }
 
-.profile-documents .missing-document p{
+.profile-documents .missing-document p {
     font-weight: 500;
     font-size: 18px;
     color: #000000B2;
     margin-top: 1rem;
 }
 
-.bussiness-registration{
+.bussiness-registration {
     margin-top: 4rem;
 }
 
-.bussiness-registration label{
+.bussiness-registration label {
     font-weight: 500;
     font-size: 18px;
     color: #000000;
 }
 
-.docupload1{
+.docupload1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,13 +119,13 @@
     font-weight: 600;
 }
 
-.btnuploaddoc{
+.btnuploaddoc {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.legal{
+.legal {
     font-weight: 600;
     font-size: 20px;
     color: #000000;
@@ -139,7 +138,7 @@
 /* BUSINESS INFORMATION */
 
 
-.Acccount-details-BUSINESS-INFORMATION{
+.Acccount-details-BUSINESS-INFORMATION {
     width: 1003px;
     height: auto;
     background: #FFFFFF;
@@ -153,7 +152,7 @@
 /* BANK DETAILS & PAYMENT INFORMATION */
 
 
-.Acccount-details-PAYMENT-INFORMATION{
+.Acccount-details-PAYMENT-INFORMATION {
     width: 1003px;
     height: 1271px;
     background: #FFFFFF;
@@ -163,26 +162,26 @@
     margin-top: 4rem;
 }
 
-.Acccount-details-PAYMENT-INFORMATION p{
+.Acccount-details-PAYMENT-INFORMATION p {
     font-weight: 400;
     font-size: 20px;
     color: #000000;
     margin-top: 2rem;
 }
 
-.paymentchecked{
+.paymentchecked {
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
-   
 
-.paymentchecked input{
+
+.paymentchecked input {
     width: 20px;
     height: 20px;
     margin-right: 20px;
 }
 
-.paymentchecked span{
+.paymentchecked span {
     font-weight: 500;
     font-size: 18px;
     color: #000000B2;
@@ -191,7 +190,7 @@
 }
 
 
-.debit-card{
+.debit-card {
     display: flex;
     gap: 30px;
     margin-top: 2rem;
@@ -214,7 +213,7 @@
 }
 
 
-.Profile-inputs-months select{
+.Profile-inputs-months select {
     outline: none;
     width: 100%;
     background: transparent;
@@ -224,11 +223,11 @@
     color: #000000B2;
 }
 
-.payment-btn{
+.payment-btn {
     margin-top: 12rem;
 }
 
-.addpayment{
+.addpayment {
 
     display: flex;
     align-items: center;
@@ -241,5 +240,55 @@
     border-radius: 6px;
     color: #FD575B;
     font-weight: 700;
-   font-size: 18px;
+    font-size: 18px;
+}
+
+
+@media (max-width: 568px) {
+
+    .Acccount-details-PROFILE-INFORMATION {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Acccount-details-BUSINESS-INFORMATION {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Acccount-details-PAYMENT-INFORMATION {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Profile-inputs {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #EEEEEE80;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        height: 60px;
+        margin-top: 20px;
+        padding: 15px;
+        /* Adjust padding as needed */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        /* Box shadow properties */
+    }
+
+
+    .btnuploaddoc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .addpayment {
+
+        gap: 20px;
+        width: 100%;
+        height: 70px;
+
+    }
 }

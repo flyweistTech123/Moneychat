@@ -11,6 +11,7 @@ import fileupload from '../../Images/fileupload.png'
 import emoji from '../../Images/emoji.png'
 import dust from '../../Images/deletethree.png'
 import senderprofile from '../../Images/profilechat.png'
+import EmojiPicker from 'emoji-picker-react';
 import online from '../../Images/online.png'
 import threedot from '../../Images/threedot.png'
 import emoji1 from '../../Images/emoji1.png'
@@ -21,6 +22,7 @@ const CommunicationTools = () => {
     const [isEmailCommunicationOpen, setEmailCommunicationModalOpen] = useState(false);
     const [isChatModalOpen, setChatModalOpen] = useState(false);
 
+    const [isEmojiPickerOpen, setIsEmojiPickerOpen] = useState(false);
 
 
     const openEmailCommunicationModalOpen = () => {
@@ -41,6 +43,9 @@ const CommunicationTools = () => {
 
     const triggerFileInput = () => {
         document.getElementById('fileInput').click();
+    };
+    const toggleEmojiPicker = () => {
+        setIsEmojiPickerOpen(!isEmojiPickerOpen);
     };
     return (
         <>
@@ -126,14 +131,19 @@ const CommunicationTools = () => {
                                 </div>
                                 <div className="Email_textarea12">
                                     <div className="custom-textarea">
+                                        <div className='uploades-container'>
                                         <div className='Email-upload1'>
                                             <img src={fileupload} alt="Your Image" onClick={triggerFileInput} />
                                             <h6 onClick={triggerFileInput}>ADD MEDIA</h6>
                                         </div>
                                         <div className='Email-upload2'>
                                             <img src={emoji} alt="Your Image" />
-                                            <h6>INSERT EMOJI</h6>
-                                            
+                                            <h6 onClick={toggleEmojiPicker}>INSERT EMOJI</h6>
+                                            {isEmojiPickerOpen && (
+                                                <div>
+                                                    <EmojiPicker />
+                                                </div>
+                                            )}
                                         </div>
                                         <div className='Email-upload3'>
                                             <img src={dust} alt="Your Image" />
@@ -141,6 +151,7 @@ const CommunicationTools = () => {
                                         </div>
                                         <div className='Email-upload4'>
                                             <button className="Email-send-btn">SEND</button>
+                                        </div>
                                         </div>
                                         <input type="file" id="fileInput" style={{ display: 'none' }} />
                                         <textarea rows="10" cols="30" placeholder="Type Here.........."></textarea>

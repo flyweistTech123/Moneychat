@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
 const HOC = (Wcomponenet) => {
+
   return function Component() {
     const [hamb, setHamb] = useState(false);
     return (
@@ -13,8 +14,8 @@ const HOC = (Wcomponenet) => {
           <Navbar hamb={hamb} setHamb={setHamb} />
         </div>
 
-        <section className="component_style">
-          <Sidebar hamb={hamb} setHamb={setHamb} />
+        <section className=" component_style">
+          <Sidebar hamb={hamb} setHamb={setHamb}/>
           <div
             className=" child_component"
           >

@@ -14,9 +14,11 @@ import activeicon4 from '../Images/activeicon4.png'
 import icon5 from '../Images/icon5.png'
 import activeicon5 from '../Images/activeicon5.png'
 import icon6 from '../Images/icon6.png'
+import { MdClose } from "react-icons/md";
 
 
-const Sidebar = () => {
+
+const Sidebar = ( {isMenuOpen, toggleMenu}) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -85,10 +87,14 @@ const Sidebar = () => {
       return i.img;
     }
   }
+  
 
   return (
     <>
       <aside className="sidebar">
+      <span className='close1' onClick={toggleMenu}>
+      <MdClose />
+      </span>
         <nav className="py-6">
           <ul>
             {nav.map((nav) => {

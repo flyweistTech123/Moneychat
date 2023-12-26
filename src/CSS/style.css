@@ -437,6 +437,12 @@
 }
 
 /* ---- */
+.close1{
+  position: absolute;
+  left: 200px;
+  font-size: 20px;
+  cursor: pointer;
+}
 .component_style {
   display: flex;
   gap: 20px;
@@ -444,8 +450,13 @@
   min-height: 100vh;
 }
 .sidebar {
+  /* display: none; */
   background-color: #fff;
   width: 20%;
+}
+
+.sidebar1{
+  /* display: none; */
 }
 
 .sidebar ul {
@@ -478,7 +489,7 @@
 }
 
 .child_component {
-  width: 80%;
+  width: 100%;
   /* padding: 20px; */
   height: 100%;
 }

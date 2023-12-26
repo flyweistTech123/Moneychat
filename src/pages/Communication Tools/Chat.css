@@ -313,3 +313,14 @@
     height: 40px;
     cursor: pointer;
 }
+
+
+
+@media (max-width: 568px) {
+    .Chat-container-div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+  }

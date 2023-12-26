@@ -11,7 +11,6 @@ import fileupload from '../../Images/fileupload.png'
 import emoji from '../../Images/emoji.png'
 import dust from '../../Images/deletethree.png'
 import senderprofile from '../../Images/profilechat.png'
-// import EmojiPicker from 'emoji-picker-react';
 import online from '../../Images/online.png'
 import threedot from '../../Images/threedot.png'
 import emoji1 from '../../Images/emoji1.png'
@@ -22,7 +21,6 @@ const CommunicationTools = () => {
     const [isEmailCommunicationOpen, setEmailCommunicationModalOpen] = useState(false);
     const [isChatModalOpen, setChatModalOpen] = useState(false);
 
-    const [isEmojiPickerOpen, setIsEmojiPickerOpen] = useState(false);
 
 
     const openEmailCommunicationModalOpen = () => {
@@ -43,9 +41,6 @@ const CommunicationTools = () => {
 
     const triggerFileInput = () => {
         document.getElementById('fileInput').click();
-    };
-    const toggleEmojiPicker = () => {
-        setIsEmojiPickerOpen(!isEmojiPickerOpen);
     };
     return (
         <>

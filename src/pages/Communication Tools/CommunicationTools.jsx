@@ -11,7 +11,7 @@ import fileupload from '../../Images/fileupload.png'
 import emoji from '../../Images/emoji.png'
 import dust from '../../Images/deletethree.png'
 import senderprofile from '../../Images/profilechat.png'
-import EmojiPicker from 'emoji-picker-react';
+// import EmojiPicker from 'emoji-picker-react';
 import online from '../../Images/online.png'
 import threedot from '../../Images/threedot.png'
 import emoji1 from '../../Images/emoji1.png'
@@ -137,12 +137,8 @@ const CommunicationTools = () => {
                                         </div>
                                         <div className='Email-upload2'>
                                             <img src={emoji} alt="Your Image" />
-                                            <h6 onClick={toggleEmojiPicker}>INSERT EMOJI</h6>
-                                            {isEmojiPickerOpen && (
-                                                <div>
-                                                    <EmojiPicker />
-                                                </div>
-                                            )}
+                                            <h6>INSERT EMOJI</h6>
+                                            
                                         </div>
                                         <div className='Email-upload3'>
                                             <img src={dust} alt="Your Image" />

@@ -1,0 +1,195 @@
+.viewProfile-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align items to the bottom of the viewport */
+    z-index: 1000;
+  }
+  
+  .viewProfile-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* top: 50px; */
+    width: 100%;
+    height: 600px;
+    z-index: 1100;
+    /* overflow-x: auto; */
+    overflow: auto;
+    transition: transform 0.2s ease-out;
+    transform: translateY(100%);
+  }
+  
+  .viewProfile-modal-content::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .viewProfile-modal-content::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+    border-radius: 7px;
+  }
+  
+  .viewProfile-modal-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  
+  .viewProfile-modal-overlay.active .viewProfile-modal-content {
+    transform: translateY(0);
+  }
+  
+  .close-btn {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    color: #333;
+    height: 50px;
+  }
+  
+  
+  
+  .viewprofileheader{
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+  }
+
+
+  .viewProfile-content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+
+  .viewprofile-left{
+    display: flex;
+    gap: 50px;
+  }
+
+
+  .viewprofile-details h6{
+
+    font-weight: 600;
+    font-size: 25px;
+    color: #000000;
+  }
+
+  .employeer_detailsss{
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+  }
+
+  .employeer_detailsss span{
+    font-weight: 500;
+    font-size: 18px;
+    color: #0070BC;
+  }
+
+
+  .profile-permission {
+    margin-top: 20px;
+  }
+
+  .profile-permission h3{
+    font-weight: 500;
+    font-size: 22px;
+    color: #0070BC;
+    text-align: start;
+    margin-bottom: 20px;
+  }
+
+  .profile-permission p{
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+  }
+
+
+.profile-switchbtn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-switchbtn p{
+  color: #000000;
+}
+
+
+
+
+
+
+
+  .viewprofile-right{
+    width: 596px;
+    height: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    border-radius: 9px;
+  }
+
+
+
+  .login-history{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+
+  .login-history .circlelogin{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+  }
+
+
+  .login-history span{
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000B2;
+  }
+
+
+
+  .profile-documenet{
+    margin-top: 20px;
+  }
+  
+.profile-documentsss {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.info-viewprofile{
+  display: flex;
+  gap: 20px;
+}
+
+
+.profile-documenet span{
+  font-weight: 500;
+  font-size: 20px;
+  color: #0070BC;
+  text-align: start;
+}
+
+
+.info-viewprofile span{
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+}

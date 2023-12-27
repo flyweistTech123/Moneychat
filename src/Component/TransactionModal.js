@@ -20,12 +20,15 @@ import btnlearn from '../Images/btnlearnmore.png'
 import uplbtn from '../Images/uploadbtn.png'
 import text from '../Images/text.png'
 import Flag from "./Modals/TransactionRepost/Flag";
+import ViewProfileModal from "./Modals/ViewProfileModal/ViewProfileModal";
+import Editprofile from "./Modals/ProfileModal/EditProfileModal";
 
 
 
 export const TransactionModal = ({ isOpen, onClose }) => {
   const [isRepostOpen, setRepostOpen] = useState(false)
   const [isFlagOpen, setFlagOpen] = useState(false)
+  const [isProfileModalopen, setProfileModalOpen] = useState(false);
   const openRepostModal = () => {
     setRepostOpen(true);
   }
@@ -42,6 +45,14 @@ export const TransactionModal = ({ isOpen, onClose }) => {
     setFlagOpen(false);
   }
 
+
+  const openProfileModal = () => {
+    setProfileModalOpen(true)
+  }
+
+  const closeProfileModal = () => {
+    setProfileModalOpen(false)
+  }
 
 
 
@@ -138,19 +149,19 @@ export const TransactionModal = ({ isOpen, onClose }) => {
         </div>
       </div>
 
-        {/* CurrenciesrModallist */}
-     {isRepostOpen && (
-      <AddNote onClose={closeRepostModal}>
-      </AddNote>
-    )}
+      {/* CurrenciesrModallist */}
+      {isRepostOpen && (
+        <AddNote onClose={closeRepostModal}>
+        </AddNote>
+      )}
 
-    {isFlagOpen && (
-      <Flag onClose={closeFlagModal}>
-      </Flag>
-    )}
+      {isFlagOpen && (
+        <Flag onClose={closeFlagModal}>
+        </Flag>
+      )}
     </motion.div>
 
-   
+
   );
 
 
@@ -331,6 +342,7 @@ export const ReciverModal = ({ isOpen, onClose }) => {
 };
 
 export const Threeline1 = ({ isOpen, onClose }) => {
+  const [isProfileModalopen, setProfileModalOpen] = useState(false);
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -349,6 +361,14 @@ export const Threeline1 = ({ isOpen, onClose }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen, onClose]);
+
+  const openProfileModal = () => {
+    setProfileModalOpen(true)
+  }
+
+  const closeProfileModal = () => {
+    setProfileModalOpen(false)
+  }
 
   return (
     <motion.div
@@ -377,8 +397,8 @@ export const Threeline1 = ({ isOpen, onClose }) => {
         <div className="heading">
           <img src={profile} alt="" />
           <div>
-            <span className="description">
-              <span className="name">View Profile</span>
+            <span className="description" >
+              <span className="name" onClick={openProfileModal}>View Profile</span>
             </span>
           </div>
         </div>
@@ -391,6 +411,11 @@ export const Threeline1 = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
+      {isProfileModalopen && (
+        <ViewProfileModal onClose={closeProfileModal} isProfileModalopen={isProfileModalopen}>
+
+        </ViewProfileModal>
+      )}
     </motion.div>
   );
 };
@@ -467,9 +492,9 @@ export const Threeline2 = ({ isOpen, onClose }) => {
 
       </div>
       {isFlagOpen && (
-      <Flag onClose={closeFlagModal}>
-      </Flag>
-    )}
+        <Flag onClose={closeFlagModal}>
+        </Flag>
+      )}
     </motion.div>
   );
 };
@@ -560,73 +585,73 @@ export const Threeline3 = ({ isOpen, onClose }) => {
           <img src={download} alt="" />
           <div>
             <span className="description">
-              <span className="name"  onClick={openRepostModal}>Download</span>
+              <span className="name" onClick={openRepostModal}>Download</span>
             </span>
           </div>
         </div>
       </div>
-      
+
       {isRepostOpen && (
-          <Repost onClose={closeRepostModal}>
+        <Repost onClose={closeRepostModal}>
 
-            <div className="repostconatiner">
-              <div className="repostheder">
-                <div>
-                  <h3>Edit Document / Resource Details</h3>
-                </div>
-                <div className="repostimg">
-                  {/* <img src={setting}></img> */}
-                  <img src={smallcross} onClick={closeRepostModal}></img>
-                </div>
+          <div className="repostconatiner">
+            <div className="repostheder">
+              <div>
+                <h3>Edit Document / Resource Details</h3>
               </div>
-              <div className="repostline">
-                <hr />
-              </div>
-              <div className="sender">
-                <div className="searchbar" style={{ width: '660px' }}>
-                  <i><img style={{ width: '30px', height: '30px', color: '#00000080' }} src={text}></img></i>
-                  <input type="text" placeholder="Add Title" />
-                </div>
-              </div>
-              <div className="repostselect">
-                <div>
-                  <select>
-                    <option>Select Category</option>
-                    <option >WEEKLY</option>
-                    <option>MONTHLY</option>
-                    <option>MONTHLY</option>
-                    <option >HALF-YEARLY ( 6 MONTHS )</option>
-                    <option>YEARLY</option>
-                  </select>
-                </div>
-
-              </div>
-
-              <div className="upload-box" onClick={triggerFileInput}>
-                <input type="file" id="fileInput" style={{ display: 'none' }} />
-                <div className="icon"><img src={uplbtn} alt="" /></div>
-                <div>
-                  <p>CLICK TO UPLOAD</p>
-                  <span className="text">*Docx , Pdf , Txt etc.</span>
-                </div>
-
-              </div>
-
-              <div className="textarea1">
-                <textarea rows="6" cols="30" placeholder="Add Description..............."></textarea>
+              <div className="repostimg">
+                {/* <img src={setting}></img> */}
+                <img src={smallcross} onClick={closeRepostModal}></img>
               </div>
             </div>
-
-            <div className="btn12">
-              <button className="exportbtn" onClick={closeRepostModal}>SUBMIT</button>
-              <div className="cancelbtn1">
-                <img src={arrowbtn}></img>
-                <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+            <div className="repostline">
+              <hr />
+            </div>
+            <div className="sender">
+              <div className="searchbar" style={{ width: '660px' }}>
+                <i><img style={{ width: '30px', height: '30px', color: '#00000080' }} src={text}></img></i>
+                <input type="text" placeholder="Add Title" />
               </div>
             </div>
+            <div className="repostselect">
+              <div>
+                <select>
+                  <option>Select Category</option>
+                  <option >WEEKLY</option>
+                  <option>MONTHLY</option>
+                  <option>MONTHLY</option>
+                  <option >HALF-YEARLY ( 6 MONTHS )</option>
+                  <option>YEARLY</option>
+                </select>
+              </div>
 
-          </Repost>
-        )}
+            </div>
+
+            <div className="upload-box" onClick={triggerFileInput}>
+              <input type="file" id="fileInput" style={{ display: 'none' }} />
+              <div className="icon"><img src={uplbtn} alt="" /></div>
+              <div>
+                <p>CLICK TO UPLOAD</p>
+                <span className="text">*Docx , Pdf , Txt etc.</span>
+              </div>
+
+            </div>
+
+            <div className="textarea1">
+              <textarea rows="6" cols="30" placeholder="Add Description..............."></textarea>
+            </div>
+          </div>
+
+          <div className="btn12">
+            <button className="exportbtn" onClick={closeRepostModal}>SUBMIT</button>
+            <div className="cancelbtn1">
+              <img src={arrowbtn}></img>
+              <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+            </div>
+          </div>
+
+        </Repost>
+      )}
     </motion.div>
   );
 };
@@ -635,6 +660,7 @@ export const Threeline3 = ({ isOpen, onClose }) => {
 export const Threeline4 = ({ isOpen, onClose }) => {
   const modalRef = useRef(null);
   const [isRepostOpen, setRepostOpen] = useState(false)
+  const [isProfileModalopen, setProfileModalOpen] = useState(false);
   const openRepostModal = () => {
     setRepostOpen(true);
   }
@@ -662,6 +688,14 @@ export const Threeline4 = ({ isOpen, onClose }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen, onClose]);
+
+  const openProfileModal = () => {
+    setProfileModalOpen(true)
+  }
+
+  const closeProfileModal = () => {
+    setProfileModalOpen(false)
+  }
 
   return (
     <motion.div
@@ -691,7 +725,7 @@ export const Threeline4 = ({ isOpen, onClose }) => {
           <img src={profile} alt="" />
           <div>
             <span className="description">
-              <span className="name">View / Edit Profile</span>
+              <span className="name" onClick={openProfileModal}>View / Edit Profile</span>
             </span>
           </div>
         </div>
@@ -705,46 +739,53 @@ export const Threeline4 = ({ isOpen, onClose }) => {
         </div>
       </div>
       {isRepostOpen && (
-          <Repost onClose={closeRepostModal}>
+        <Repost onClose={closeRepostModal}>
 
-            <div className="repostconatiner">
-              <div className="repostheder">
-                <div>
-                  <h3>Recipient Verification</h3>
-                </div>
-                <div className="repostimg">
-                  <img src={smallcross} onClick={closeRepostModal}></img>
-                </div>
+          <div className="repostconatiner">
+            <div className="repostheder">
+              <div>
+                <h3>Recipient Verification</h3>
               </div>
-              <div className="repostline">
-                <hr />
-              </div>
-              <div className="employdatials">
-                <div className="employ-datials">
-                  <span style={{marginRight:"20px"}}>Recipient ID</span>
-                  <input type="text" className="input-min" placeholder="Enter Lorem Ipsum" />
-                </div>
-                <div className="employ-datials">
-                  <span>Expiry Date</span>
-                  <input type="date" className="input-max" />
-                </div>
-                <div className="employ-datials">
-                  <span>Add Notes</span>
-                  <input type="text" className="input-max" placeholder="Type Here....." />
-                </div>
+              <div className="repostimg">
+                <img src={smallcross} onClick={closeRepostModal}></img>
               </div>
             </div>
-
-            <div className="btn12">
-              <button className="exportbtn" onClick={closeRepostModal}>SAVE & ADD</button>
-              <div className="cancelbtn1">
-                <img src={arrowbtn}></img>
-                <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+            <div className="repostline">
+              <hr />
+            </div>
+            <div className="employdatials">
+              <div className="employ-datials">
+                <span style={{ marginRight: "20px" }}>Recipient ID</span>
+                <input type="text" className="input-min" placeholder="Enter Lorem Ipsum" />
+              </div>
+              <div className="employ-datials">
+                <span>Expiry Date</span>
+                <input type="date" className="input-max" />
+              </div>
+              <div className="employ-datials">
+                <span>Add Notes</span>
+                <input type="text" className="input-max" placeholder="Type Here....." />
               </div>
             </div>
+          </div>
 
-          </Repost>
-        )}
+          <div className="btn12">
+            <button className="exportbtn" onClick={closeRepostModal}>SAVE & ADD</button>
+            <div className="cancelbtn1">
+              <img src={arrowbtn}></img>
+              <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+            </div>
+          </div>
+
+        </Repost>
+      )}
+
+
+      {isProfileModalopen && (
+        <Editprofile onClose={closeProfileModal} isProfileModalopen={isProfileModalopen}>
+
+        </Editprofile>
+      )}
     </motion.div>
   );
 };
@@ -798,16 +839,15 @@ export const Inffo = ({ isOpen, onClose }) => {
         <div className="heading">
           <div>
             <span className="description">
-            <img src={redinfo} alt="" />
-              <span className="name">Recipient’s Account has <span style={{color:'#000000'}}>reached</span> the limit of receiving maximum amount  of <span style={{color:'#000000'}}>$10,000</span>  & now <span style={{color:'#FC0005'}}>restricted</span> for any further Transactions by the system</span>
+              <img src={redinfo} alt="" />
+              <span className="name">Recipient’s Account has <span style={{ color: '#000000' }}>reached</span> the limit of receiving maximum amount  of <span style={{ color: '#000000' }}>$10,000</span>  & now <span style={{ color: '#FC0005' }}>restricted</span> for any further Transactions by the system</span>
             </span>
           </div>
         </div>
-        <img src={btnlearn} alt="" style={{marginTop:"2px"}} />
+        <img src={btnlearn} alt="" style={{ marginTop: "2px" }} />
       </div>
     </motion.div>
   );
 };
 
 
-   

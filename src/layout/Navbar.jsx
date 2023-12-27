@@ -10,7 +10,7 @@ import setting from '../Images/profilemodel2.png'
 import help from '../Images/profilemodal1.png'
 import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({close,handleSideBar,handleBoss}) => {
   const navigate = useNavigate();
   const [isProfileModalOpen, setProfileModalOpen] = useState(false);
 
@@ -21,6 +21,9 @@ const Navbar = () => {
   const closeProfileModal = () => {
     setProfileModalOpen(false);
   };
+  const newComp=()=>{
+    handleBoss()
+  }
   return (
     <>
       <div className="Navbar">

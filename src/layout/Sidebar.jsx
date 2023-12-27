@@ -92,9 +92,9 @@ const Sidebar = ( {isMenuOpen, toggleMenu}) => {
   return (
     <>
       <aside className="sidebar">
-      <span className='close1' onClick={toggleMenu}>
+      {/* <span className='close1' onClick={toggleMenu}>
       <MdClose />
-      </span>
+      </span> */}
         <nav className="py-6">
           <ul>
             {nav.map((nav) => {

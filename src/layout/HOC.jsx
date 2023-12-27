@@ -8,6 +8,7 @@ const HOC = (Wcomponenet) => {
 
   return function Component() {
     const [hamb, setHamb] = useState(false);
+
     return (
       <>
         <div style={{ backgroundColor: "#f2f3f8" }}>
@@ -15,7 +16,7 @@ const HOC = (Wcomponenet) => {
         </div>
 
         <section className=" component_style">
-          <Sidebar hamb={hamb} setHamb={setHamb}/>
+          <Sidebar hamb={hamb} setHamb={setHamb} />
           <div
             className=" child_component"
           >

@@ -21,6 +21,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-top: 3rem;
   }
   .pages h5 span:nth-child(1) {
     color: #0070BC;
@@ -137,6 +138,38 @@
 
 /* Responsive Styles for Small Devices */
 @media (max-width: 768px) {
+  .Headingall {
+    flex-direction: column;
+    /* align-items: flex-start; */
+    margin-left: 20px
+  }
+
+
+  .Headingall .search div {
+    width: 100%; /* Adjusted width for responsiveness */
+  }
+
+
+
+  .Headingall .button_container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: none; /* Remove maximum width for responsiveness */
+  }
+
+  .Headingall .button_container button {
+    width: 100%; /* Adjusted width for responsiveness */
+  }
+
+  .Headingall .button_container button.report {
+    max-width: none; /* Remove maximum width for responsiveness */
+  }
+}
+
+
+/* Responsive Styles for Small Devices */
+@media (max-width: 968px) {
   .Headingall {
     flex-direction: column;
     /* align-items: flex-start; */

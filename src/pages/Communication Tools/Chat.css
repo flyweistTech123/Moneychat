@@ -19,22 +19,22 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    top: 50px;
+    top: 30px;
     width: 100%;
-    height: auto;
+    height: 100%;
     z-index: 1100;
-    overflow-y: auto; /* Add scrollbar when content overflows */
+    overflow: auto;
     transition: transform 0.2s ease-out;
     transform: translateY(100%);
   }
 
 .Chat-modal-content::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
 .Chat-modal-content::-webkit-scrollbar-thumb {
     background-color: #D9D9D9;
-    border-radius: 7px;
+    border-radius: 5px;
 }
 
 .Chat-modal-content::-webkit-scrollbar-track {
@@ -165,7 +165,7 @@
     height: 79px;
     display: flex;
     align-items: center;
-    gap: 50px;
+    justify-content: space-between;
     padding: 20px;
     border-radius: 9px;
     background-color: #FFFFFF;
@@ -173,9 +173,21 @@
 
 }
 
+.profile-status12{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
 .profile-status img{
     width: 50px;
     height: 50px;
+}
+
+.profile-status12 span{
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
 }
 
 .today{
@@ -302,11 +314,16 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     border-radius: 29px;
     text-align: end;
-    padding: 10px;
+    padding: 20px;
     font-weight: 700;
     font-size: 18px;
     cursor: pointer;
+    background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make the text transparent */
 }
+
+
 
 .send-msg-emoji img{
     width: 40px;
@@ -322,5 +339,56 @@
       flex-direction: column;
     }
 
+    .Chat-templete{
+        width: 100%;
+        height: 300px;
+    }
+
+    .template-searchbox {
+        width: 100%;
+        height: 50px;
+    }
     
+    .Chat-chat-box{
+        margin-top: 4rem;
+        width: 100%;
+        height: 568px;
+    
+    }
+    .profile-status{
+        width: 100%;
+        height: 79px;
+    }
+
+    
+  }
+
+
+  
+@media (max-width: 968px) {
+    .Chat-container-div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .Chat-templete{
+        width: 100%;
+        height: 300px;
+    }
+
+    .template-searchbox {
+        width: 100%;
+        height: 50px;
+    }
+    
+    .Chat-chat-box{
+        margin-top: 4rem;
+        width: 100%;
+        height: 568px;
+    
+    }
+    .profile-status{
+        width: 100%;
+        height: 79px;
+    }
   }

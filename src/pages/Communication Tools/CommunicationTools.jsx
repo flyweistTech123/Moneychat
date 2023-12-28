@@ -173,7 +173,7 @@ const CommunicationTools = () => {
                         <div className='Chat-container-div'>
                             <div className='Chat-templete'>
                                 <div className='Chat-content'>
-                                    <span>Select Template</span>
+                                    <span>Select Member</span>
                                     <div className="template-searchbox">
                                         <i>
                                             <img src={searchicon} alt="" />
@@ -213,9 +213,11 @@ const CommunicationTools = () => {
                             </div>
                             <div className='Chat-chat-box'>
                                 <div className='profile-status'>
+                                    <div className='profile-status12'>
                                     <img src={senderprofile} alt=""  style={{width:'50px', height:'50px'}}/>
                                     <span>Lorem Ipsum</span >
                                     <img src={online}alt="" style={{width:'171px', height:'21px'}} />
+                                    </div>
                                     <img src= {threedot}alt="" style={{width:'30px', height:'30px', marginLeft:'100px' }} />
                                 </div>
 

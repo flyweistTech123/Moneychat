@@ -77,6 +77,7 @@ const ViewProfileModal = ({ onClose, isProfileModalopen, }) => {
                                     <p style={{ color: '#000000', fontWeight: "600", fontSize: '18px' }}>Admin</p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -135,20 +136,35 @@ const ViewProfileModal = ({ onClose, isProfileModalopen, }) => {
                         </div>
 
                     </div>
-                </div>
 
-                <div className='profile-documenet'>
-                    <span>Documents Submitted</span>
-                    <div className='profile-documentsss'>
-                        <div className="Profile-inputs">
+
+                </div>
+                <div className="profile-permission122">
+                    <h3>Documents Submitted</h3>
+                    <div className='btnuploaddoc123'>
+                        <div className="Profile-inputs123">
                             <i>
                                 <img src={doc} alt="" />
                             </i>
                             <input type="text" placeholder="Document 1" />
                         </div>
-                        <div className='info-viewprofile'>
+
+                        <div className='infodate'>
                             <img src={info} alt="" style={{ width: '30px', height: '30px' }} />
-                            <span>EXPIRING ON -  DD / MM / YYYY</span>
+                            <span><span>EXPIRING ON -</span>  DD / MM / YYYY</span>
+                        </div>
+                    </div>
+                    <div className='btnuploaddoc123'>
+                        <div className="Profile-inputs123">
+                            <i>
+                                <img src={doc} alt="" />
+                            </i>
+                            <input type="text" placeholder="Document 1" />
+                        </div>
+
+                        <div className='infodate'>
+                            <img src={info} alt="" style={{ width: '30px', height: '30px' }} />
+                            <span><span>EXPIRING ON -</span>  DD / MM / YYYY</span>
                         </div>
                     </div>
                 </div>

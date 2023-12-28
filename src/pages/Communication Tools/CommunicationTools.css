@@ -123,3 +123,27 @@
   }
   
   }
+
+
+  
+  @media (max-width: 968px) {
+
+    .intakecards2 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .small-card2 {
+      width: 100%;
+    }
+    
+  .contactcontainer{
+    width: 100%;
+    margin-left: 20px
+  }
+  .contact{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  }

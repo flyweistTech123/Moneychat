@@ -149,3 +149,16 @@
     animation: buttonAppear 0.3s ease-in-out;
   }
   
+  @media (max-width: 568px) {
+    .helpdesk-container {
+      width: 100%;
+  }
+  
+  }
+
+  @media (max-width: 968px) {
+    .helpdesk-container {
+      width: 100%;
+  }
+  
+  }

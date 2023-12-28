@@ -17,6 +17,8 @@ import smallcross from '../../Images/smallcross.png'
 import arrowbtn from '../../Images/arrowbtn.png'
 import profileimg from '../../Images/profilerepost.png'
 import { Threeline1 } from "../../Component/TransactionModal";
+import { IoIosArrowForward } from "react-icons/io";
+
 
 
 
@@ -126,7 +128,7 @@ const AccessControl = () => {
   return (
     <>
       <section className="pages">
-        <h5><span onClick={() => navigate('/gallery')}>Security & Compliance</span> / Role-Based Access Control</h5>
+      <h5 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><span onClick={() => navigate('/setting')} style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>Security & Compliance<IoIosArrowForward style={{ width: '25px' }} /></span>Role-Based Access Control</h5>
         <div className="Headingall">
           <div className="search">
             <div>

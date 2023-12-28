@@ -572,7 +572,9 @@
 .Heading_all .button_container button.report span {
   color: #fff;
 }
-
+.page{
+  overflow: auto;
+}
 .pages table {
   width: 100%;
   margin-top: 5%;
@@ -604,10 +606,10 @@
   padding: 10px;
   font-size: 16px;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .pages table {
     display: block;
-    overflow-x: auto;
+   
   }
 
   .pages table thead {
@@ -630,14 +632,15 @@
     display: block;
     text-align: left;
   }
-}
+} */
 /* Responsive Styles for Small Devices */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .Heading_all {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     margin-top: 20px;
+    margin-left: 20px;
   }
 
   .Heading_all h5 {

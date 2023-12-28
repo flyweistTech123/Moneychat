@@ -292,3 +292,54 @@
 
     }
 }
+
+
+
+@media (max-width: 968px) {
+
+    .Acccount-details-PROFILE-INFORMATION {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Acccount-details-BUSINESS-INFORMATION {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Acccount-details-PAYMENT-INFORMATION {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Profile-inputs {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #EEEEEE80;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        height: 60px;
+        margin-top: 20px;
+        padding: 15px;
+        /* Adjust padding as needed */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        /* Box shadow properties */
+    }
+
+
+    .btnuploaddoc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .addpayment {
+
+        gap: 20px;
+        width: 100%;
+        height: 70px;
+
+    }
+}

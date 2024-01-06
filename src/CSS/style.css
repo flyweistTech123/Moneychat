@@ -413,13 +413,20 @@
   line-height: normal;
   cursor: pointer;
 }
+.oo{
+  display: none;
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
   .Navbar {
     flex-direction: column;
-    height: auto;
-    padding: 5px;
+    height: auto; 
+    padding: 10px;
   }
+  .oo{
+    display: block;
+  }
+
 
   .Navbar .search_bar {
     max-width: none;
@@ -455,9 +462,6 @@
   width: 20%;
 }
 
-.sidebar1{
-  /* display: none; */
-}
 
 .sidebar ul {
   display: flex;
@@ -488,10 +492,32 @@
   color: #0070bc;
 }
 
+
+
 .child_component {
   width: 80%;
   /* padding: 20px; */
   height: 100%;
+}
+
+.child_component_full {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Adjust width as needed for smaller screens */
+  }
+
+  .sidebar ul {
+    gap: 20px; /* Adjust gap as needed */
+  }
+
+  .sidebar ul li {
+    gap: 5px; /* Adjust gap as needed */
+  }
 }
 
 
@@ -578,7 +604,6 @@
 .pages table {
   width: 100%;
   margin-top: 5%;
-  overflow: auto;
 }
 .pages table thead {
   background: linear-gradient(180deg, #00aaea 0%, #0070bc 100%);
@@ -606,33 +631,8 @@
   padding: 10px;
   font-size: 16px;
 }
-/* @media (max-width: 768px) {
-  .pages table {
-    display: block;
-   
-  }
 
-  .pages table thead {
-    display: none;
-  }
 
-  .pages table tbody {
-    display: block;
-  }
-
-  .pages table tbody tr {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    border-radius: 10px;
-  }
-
-  .pages table tbody td {
-    display: block;
-    text-align: left;
-  }
-} */
 /* Responsive Styles for Small Devices */
 @media (max-width: 968px) {
   .Heading_all {
@@ -1102,3 +1102,6 @@ table tbody tr:last-child td:first-child {
 .payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal .Inffo_content .details {
   margin-top: 20px;
 }
+
+
+

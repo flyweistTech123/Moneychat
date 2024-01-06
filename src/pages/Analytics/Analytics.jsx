@@ -155,7 +155,7 @@ const Analytics = () => {
                     <div className="transaction-box">
                         <div className='transactionheader'>
                             <div className="transaction-title">Transaction Volumes</div>
-                            <div>
+                            <div className='widht'>
                                 <select id="timeRange">
                                     <option value="This Week">THIS WEEK</option>
                                     <option value="This Month">THIS MONTH</option>
@@ -172,7 +172,7 @@ const Analytics = () => {
                     <div className='transaction-box'>
                         <div className='transactionheader'>
                             <div className="transaction-title">TRENDS</div>
-                            <div>
+                            <div className='widht'>
                                 <select id="timeRange">
                                     <option value="This Week">THIS WEEK</option>
                                     <option value="This Month">THIS MONTH</option>
@@ -181,12 +181,14 @@ const Analytics = () => {
                                 </select>
                             </div>
                         </div>
-                        <Chart
-                            options={state.options}
-                            series={state.series}
-                            type="line"
-                            width="450"
-                        />
+                        <div className='widht'>
+                            <Chart
+                                options={state.options}
+                                series={state.series}
+                                type="line"
+                            />
+                        </div>
+
                     </div>
                 </div>
 
@@ -198,21 +200,22 @@ const Analytics = () => {
                         <div className='transaction-box'>
                             <div className='transactionheader'>
                                 <div className="transaction-title">COMPARATIVE ANALYSIS</div>
-                                <div>
-                                    <select id="timeRange">
-                                        <option value="This Week">THIS WEEK</option>
-                                        <option value="This Month">THIS MONTH</option>
-                                        <option value="Custom">CUSTOM</option>
-                                        <option value="All Time">ALL TIME</option>
-                                    </select>
-                                </div>
+                                <div className='widht'>
+                                <select id="timeRange">
+                                    <option value="This Week">THIS WEEK</option>
+                                    <option value="This Month">THIS MONTH</option>
+                                    <option value="Custom">CUSTOM</option>
+                                    <option value="All Time">ALL TIME</option>
+                                </select>
                             </div>
-                            <Chart
-                                options={state.options}
-                                series={state.series}
-                                type="line"
-                                width="450"
-                            />
+                            </div>
+                            <div className='widht'>
+                                <Chart
+                                    options={state.options}
+                                    series={state.series}
+                                    type="line"
+                                />
+                            </div>
                         </div>
                         <div className='transaction-box'>
                             <div className='transactionheader'>
@@ -226,8 +229,10 @@ const Analytics = () => {
                                     </select>
                                 </div>
                             </div>
-                            <Chart options={piestate.options} series={piestate.series} type="pie" width={piestate.options.chart.width} />
-
+                            <div className='widht'>
+                            <Chart options={piestate.options} series={piestate.series} type="pie"  />
+                            </div>
+                           
                         </div>
                     </div>
                     <div className='transaction-box' style={{ marginTop: '20px' }}>
@@ -242,12 +247,14 @@ const Analytics = () => {
                                 </select>
                             </div>
                         </div>
+                        <div className='widht'>
                         <Chart
                             options={barstate.options}
                             series={barstate.series}
                             type="bar"
-                            width="450"
                         />
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -281,7 +288,7 @@ const Analytics = () => {
                                 <div className='analticsvalume'>
                                     <p>TRANSACTIONAL VOLUMES</p>
                                     <div>
-                                    <span>Range</span>
+                                        <span>Range</span>
                                         <select id="timeRange">
                                             <option value="This Week">THIS WEEK</option>
                                             <option value="This Month">THIS MONTH</option>
@@ -299,7 +306,7 @@ const Analytics = () => {
                                 <div className='analticsvalume'>
                                     <p>TRENDS</p>
                                     <div>
-                                    <span>Range</span>
+                                        <span>Range</span>
                                         <select id="timeRange">
                                             <option value="This Week">THIS WEEK</option>
                                             <option value="This Month">THIS MONTH</option>
@@ -317,7 +324,7 @@ const Analytics = () => {
                                 <div className='analticsvalume'>
                                     <p>COMPARATIVE ANALYSIS</p>
                                     <div>
-                                    <span>Range</span>
+                                        <span>Range</span>
                                         <select id="timeRange">
                                             <option value="This Week">THIS WEEK</option>
                                             <option value="This Month">THIS MONTH</option>
@@ -335,7 +342,7 @@ const Analytics = () => {
                                 <div className='analticsvalume'>
                                     <p>GEOGRAPHICAL DATA</p>
                                     <div>
-                                    <span>Range</span>
+                                        <span>Range</span>
                                         <select id="timeRange">
                                             <option value="This Week">THIS WEEK</option>
                                             <option value="This Month">THIS MONTH</option>
@@ -353,7 +360,7 @@ const Analytics = () => {
                                 <div className='analticsvalume'>
                                     <p>TIME BASED ANALYSIS</p>
                                     <div>
-                                    <span>Range</span>
+                                        <span>Range</span>
                                         <select id="timeRange">
                                             <option value="This Week">THIS WEEK</option>
                                             <option value="This Month">THIS MONTH</option>

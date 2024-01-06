@@ -86,8 +86,9 @@
 
 .reviewtable{
   width: 100%;
-  /* overflow: auto; */
+  overflow-y: scroll;
 }
+
 
 
 .reviewtable th {

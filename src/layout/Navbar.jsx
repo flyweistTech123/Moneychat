@@ -9,8 +9,10 @@ import manageacc from '../Images/profilemodal3.png'
 import setting from '../Images/profilemodel2.png'
 import help from '../Images/profilemodal1.png'
 import { Link, useNavigate } from "react-router-dom";
+import { BsFilterLeft } from "react-icons/bs";
 
-const Navbar = ({close,handleSideBar,handleBoss}) => {
+
+const Navbar = ({ close, handleSideBar, handleBoss, setShow, show }) => {
   const navigate = useNavigate();
   const [isProfileModalOpen, setProfileModalOpen] = useState(false);
 
@@ -21,14 +23,16 @@ const Navbar = ({close,handleSideBar,handleBoss}) => {
   const closeProfileModal = () => {
     setProfileModalOpen(false);
   };
-  const newComp=()=>{
+  const newComp = () => {
     handleBoss()
   }
+
   return (
     <>
       <div className="Navbar">
+
         <div className="logo">
-          <img src={logo} alt="" />
+          <img style={{ cursor: "pointer" }} src={logo} alt=""  onClick={() => setShow(!show)}  />
         </div>
 
         <div className="search_bar">
@@ -37,10 +41,16 @@ const Navbar = ({close,handleSideBar,handleBoss}) => {
         </div>
 
         <div className="side_div">
+          <div className="oo">
+            <BsFilterLeft style={{ fontSize: '40px', fontWeight:'700', color:'#000000' }} onClick={() => setShow(!show)} />
+          </div>
           <img src="./Image/13.png" alt="" className="notify" />
 
           <div className="content">
-            <img src="./Image/12.png" alt="" style={{width:'50px', height:'50px'}} />
+
+            <img src="./Image/12.png" alt="" style={{ width: '50px', height: '50px' }} />
+
+
             <div>
               <p className="head">Dave Smith</p>
               <a onClick={openProfileModal} >VIEW MORE </a>
@@ -59,7 +69,7 @@ const Navbar = ({close,handleSideBar,handleBoss}) => {
               <img src={profile} alt="User" className="user-image1" />
               <h2>Dave Smith</h2>
               <p><span>USER ID -</span> ABC2345</p>
-              <div className="signout" onClick={()=>navigate('/')}>
+              <div className="signout" onClick={() => navigate('/')}>
                 <img src={signout} alt="Sign Out" className="signout-icon" />
                 <p >SIGN OUT</p>
               </div>
@@ -68,23 +78,23 @@ const Navbar = ({close,handleSideBar,handleBoss}) => {
             <div className="profileline"><hr /></div>
 
             <div className="profile-sections1">
-            <Link to={'/accountdetails'} className="custom-link">
-              <div className="profile-content">
-                <img src={manageacc} alt="" />
-                <h3>Manage Account</h3>
-              </div>
+              <Link to={'/accountdetails'} className="custom-link">
+                <div className="profile-content">
+                  <img src={manageacc} alt="" />
+                  <h3>Manage Account</h3>
+                </div>
               </Link>
               <Link to={'/setting'} className="custom-link">
-              <div className="profile-content">
-              <img src={setting} alt="" />
-                <h3>Change Settings</h3>
-              </div>
+                <div className="profile-content">
+                  <img src={setting} alt="" />
+                  <h3>Change Settings</h3>
+                </div>
               </Link>
               <Link to={'/helpdesk'} className="custom-link">
-              <div className="profile-content">
-              <img src={help} alt="" />
-                <h3>Support & Help</h3>
-              </div>
+                <div className="profile-content">
+                  <img src={help} alt="" />
+                  <h3>Support & Help</h3>
+                </div>
               </Link>
             </div>
           </div>

@@ -132,3 +132,28 @@
     font-size: 20px;
     color: #000000;
 }
+
+
+@media screen and (max-width: 768px) {
+  .viewProfile-modal-content {
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+  }
+
+  .viewprofileheader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edit-profile-detals {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .edit-profile-range input {
+    width: auto;
+  }
+  
+  .Note-eidy {
+    flex-direction: column;
+  }
+}

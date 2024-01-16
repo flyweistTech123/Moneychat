@@ -1,7 +1,6 @@
 /** @format */
 import { useState } from "react";
 import logo from "../Images/logo.png";
-import { IoSearch } from "react-icons/io5";
 import ProfileModal from "../Component/Modals/ProfileModal/ProfileModal";
 import profile from '../Images/profilmodal.png'
 import signout from '../Images/signout.png'
@@ -10,6 +9,9 @@ import setting from '../Images/profilemodel2.png'
 import help from '../Images/profilemodal1.png'
 import { Link, useNavigate } from "react-router-dom";
 import { BsFilterLeft } from "react-icons/bs";
+import searchicon from '../Images/searchicon.png'
+import { IoIosArrowForward } from "react-icons/io";
+
 
 
 const Navbar = ({ close, handleSideBar, handleBoss, setShow, show }) => {
@@ -32,17 +34,17 @@ const Navbar = ({ close, handleSideBar, handleBoss, setShow, show }) => {
       <div className="Navbar">
 
         <div className="logo">
-          <img style={{ cursor: "pointer" }} src={logo} alt=""  onClick={() => setShow(!show)}  />
+          <img style={{ cursor: "pointer" }} src={logo} alt="" onClick={() => setShow(!show)} />
         </div>
 
         <div className="search_bar">
-          <i><IoSearch /></i>
+          <i> <img src={searchicon} alt="" /> </i>
           <input type="search" placeholder="Search..." />
         </div>
 
         <div className="side_div">
           <div className="oo">
-            <BsFilterLeft style={{ fontSize: '40px', fontWeight:'700', color:'#000000' }} onClick={() => setShow(!show)} />
+            <BsFilterLeft style={{ fontSize: '40px', fontWeight: '700', color: '#000000' }} onClick={() => setShow(!show)} />
           </div>
           <img src="./Image/13.png" alt="" className="notify" />
 
@@ -52,8 +54,11 @@ const Navbar = ({ close, handleSideBar, handleBoss, setShow, show }) => {
 
 
             <div>
-              <p className="head">Dave Smith</p>
-              <a onClick={openProfileModal} >VIEW MORE </a>
+              <h6 className="head">Dave Smith</h6>
+              <p onClick={openProfileModal} style={{ display: 'flex', alignItems: 'center' }}>
+                VIEW MORE <IoIosArrowForward style={{ marginLeft: '5px' }} />
+              </p>
+
             </div>
           </div>
 

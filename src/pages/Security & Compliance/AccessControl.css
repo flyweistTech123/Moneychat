@@ -15,14 +15,14 @@
     line-height: normal;
   } */
 
-  .pages h5{
+  /* .pages h5{
     color: #000;
     font-size: 25px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     margin-top: 3rem;
-  }
+  } */
   .pages h5 span:nth-child(1) {
     color: #0070BC;
     cursor: pointer;

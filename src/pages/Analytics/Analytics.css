@@ -1,122 +1,216 @@
 /* TransactionBox.css */
-.uppercontainer{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+
+.Heading_all2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
+
+.Heading_all2 h5 {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32.81px;
+  margin-bottom: 2px;
+}
+
+.Heading_all2 .search {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.Heading_all2 .search img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.Heading_all2 .search div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 13px;
+  width: 285px;
+  height: 60px;
+}
+
+.Heading_all2 .search input {
+  outline: none;
+  width: 90%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.Heading_all2 .search button {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+  padding: 10px;
+  width: 206px;
+  height: 56px;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.09px;
+  color: #FFFFFF;
+}
+
+.Heading_all2 .search input::placeholder {
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #1E1E1E99;
+}
+
+.Heading_all2 .search i img {
+  width: 20px;
+  height: 20px;
+}
+
+.uppercontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
 .transaction-box {
-    width: 484px;
-    height: 361px;
-    top: 209px;
-    border-radius: 14px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-  }
-  .transactionheader{
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .transaction-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #0070BC;
-   
-  }
-  
-  .transaction-details {
-    font-weight: 700;
-    font-size: 35px;
-    color: #000000;
-    margin-bottom: 25px;
-  }
-  
-  .transaction-details span{
-    font-weight: 600;
-    font-size: 15px;
-    color: #1E1E1E99;
-  }
-
-  select {
-    border-radius: 10px;
-    width: 183px;
-    height: 40px;
-    padding: 5px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #1E1E1E99;
-    /* appearance: none; */
-    /* -webkit-appearance: none; */
-    -moz-appearance: none;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add your desired box shadow */
-  }
-
-
-
-
-  .transaction-details1{
-    font-size: 20px;
-    font-weight: 800;
-    margin-bottom: 25px;
-    color: #3BB54A;
-  }
-.transaction-details1 span{
-    color: #1E1E1E99;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 5px;
+  width: 484px;
+  height: auto;
+  top: 209px;
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-.transaction-details1 img{
-    width: 40px;
-    height: 40px;
+.transactionheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.transaction-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0070BC;
+
+}
+
+.transaction-details {
+  font-weight: 700;
+  font-size: 50px;
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+
+.transaction-details span {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1E1E1E99;
+}
+
+select {
+  border-radius: 10px;
+  width: 183px;
+  height: 40px;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1E1E1E99;
+  outline: none;
+  border: none;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+.transaction-details1 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #3BB54A;
+  padding-left: 10px;
+}
+
+.transaction-details1 span {
+  color: #1E1E1E99;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.transaction-details1 img {
+  width: 40px;
+  height: 40px;
 }
 
 .increase {
-    display: flex; /* Use flexbox to align items in a row */
-    align-items: center; /* Align items vertically in the center */
-    margin-bottom: 25px;
-  }
-  .increase img {
-    margin-right: 8px; /* Add some space between the image and text */
-  }
-
-
-
-.transaction-details2{
-    color: #1E1E1E99;
-    font-weight: 600;
-    font-size: 18px;
-    position: absolute;
-    /* left: 120px; */
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
-.transaction-details2 span{
-    color: #0070BC;
-    font-weight: 600;
-    font-size: 18px;
+.increase img {
+  margin-right: 8px;
 }
 
 
-  
-  /* Add additional styles as needed */
-  
-.secondconatiner{
-    display: flex;
-    justify-content: space-between;
+
+.transaction-details2 {
+  color: #1E1E1E99;
+  font-weight: 600;
+  font-size: 18px;
+  padding-left: 60px;
 }
 
-.charts{
-    display: block;
+.transaction-details2 span {
+  color: #0070BC;
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px
+}
+.transaction-details2 span img {
+  width: 30px;
+  height: 30px;
 }
 
-.widht{
+
+
+/* Add additional styles as needed */
+
+.secondconatiner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.charts {
+  display: block;
+}
+
+.widht {
   width: 100%;
+  margin-top: 10px;
+}
+.apexcharts-toolbar svg[data-icon='plus'],
+.apexcharts-toolbar svg[data-icon='minus'],
+.apexcharts-toolbar svg[data-icon='home'],
+.apexcharts-toolbar svg[data-icon='menu'] {
+  display: none;
 }
 
 
@@ -128,8 +222,9 @@
     width: 100%;
   }
 
-  .widht{
-    width: 100%; /* Adjust width as needed for larger screens */
+  .widht {
+    width: 100%;
+    /* Adjust width as needed for larger screens */
   }
 
   .transaction-box {
@@ -173,10 +268,11 @@
   .transaction-details2 span {
     font-size: 14px;
   }
-  .secondconatiner{
+
+  .secondconatiner {
     display: block;
     justify-content: space-between;
-}
+  }
 }
 
 
@@ -194,10 +290,11 @@
     margin-top: 20px;
   }
 
-  .secondconatiner{
+  .secondconatiner {
     display: block;
     justify-content: space-between;
-}
+  }
+
   .transaction-title {
     font-size: 15px;
   }

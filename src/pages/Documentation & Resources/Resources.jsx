@@ -11,6 +11,8 @@ import article from '../../Images/articals.png'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import DucmentModal from './DocumentationModal'
 import documentimg from '../../Images/document.png'
+import searchicon from '../../Images/searchicon.png'
+
 
 
 
@@ -81,7 +83,7 @@ const Resources = () => {
         </div>
         <div className="searchbox">
           <i>
-            <IoSearch />
+          <img src={searchicon} alt="" />
           </i>
           <input type="search" placeholder="Search" />
         </div>

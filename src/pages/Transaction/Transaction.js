@@ -25,6 +25,7 @@ import smallcross from '../../Images/smallcross.png'
 
 import setting from '../../Images/setting.png'
 import arrowbtn from '../../Images/arrowbtn.png'
+import searchicon from '../../Images/searchicon.png'
 import { Link } from "react-router-dom";
 
 
@@ -207,18 +208,7 @@ const Transaction = () => {
     };
 
 
-  // const [options, setOptions] = useState({
-  //   option1: false,
-  //   option2: false,
-  //   option3: false,
-  // });
 
-  // const handleCheckboxChange = (option) => {
-  //   setOptions((prevOptions) => ({
-  //     ...prevOptions,
-  //     [option]: !prevOptions[option],
-  //   }));
-  // };
 
   return (
     <>
@@ -229,7 +219,7 @@ const Transaction = () => {
           <div className="search">
             <img src="./Image/15.png" alt="" onClick={() => handleShow()} />
             <div>
-              <i><IoSearch /></i>
+              <i> <img src={searchicon} alt="" /></i>
               <input type="search" placeholder="Search Transaction" />
             </div>
           </div>
@@ -237,7 +227,7 @@ const Transaction = () => {
           <div className="button_container">
             <button className="filter"  onClick={openFilterModal}>
               <img src="./Image/16.png" alt="" />
-              <span>FILTERS</span>
+              <span >FILTERS</span>
             </button>
             <button className="report" onClick={openRepostModal}>
               <img src="./Image/17.png" alt="" />

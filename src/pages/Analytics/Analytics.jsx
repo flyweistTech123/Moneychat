@@ -10,7 +10,8 @@ import smallcross from '../../Images/smallcross.png'
 import setting from '../../Images/setting.png'
 import arrowbtn from '../../Images/arrowbtn.png'
 import Repost from '../../Component/Modals/TransactionRepost/Repost';
-
+import searchicon from '../../Images/searchicon.png'
+import ibtn from '../../Images/ibtnnn.png'
 
 
 
@@ -33,6 +34,9 @@ const Analytics = () => {
             },
             xaxis: {
                 categories: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday],
+            },
+            toolbar: {
+                show: false, // Hide the entire toolbar
             },
         },
         series: [
@@ -89,6 +93,7 @@ const Analytics = () => {
             dataLabels: {
                 enabled: false
             },
+
             stroke: {
                 show: true,
                 width: 2,
@@ -128,25 +133,24 @@ const Analytics = () => {
     }
 
 
-
+    const triggerFileInput = () => {
+        document.getElementById('fileInput').click();
+    };
 
     return (
         <>
             <FullScreenLoader show={show} handleClose={handleClose} />
             <section className="pages">
-                <div className="Heading_all">
+                <div className="Heading_all2">
                     <h5>Analytics</h5>
                     <div className="search">
                         <img src="./Image/15.png" alt="" onClick={() => handleShow()} />
                         <div>
-                            <i><IoSearch /></i>
+                            <i> <img src={searchicon} alt="" /></i>
                             <input type="search" placeholder="Search Transaction" />
                         </div>
-                    </div>
-
-                    <div className="button_container">
                         <button className="report" onClick={openRepostModal}>
-                            <img src="./Image/17.png" alt="" />
+                            <img src="./Image/17.png" alt="" style={{ width: '30px', height: "30px" }} />
                             <span>REPORT</span>
                         </button>
                     </div>
@@ -154,8 +158,8 @@ const Analytics = () => {
                 <div className='uppercontainer'>
                     <div className="transaction-box">
                         <div className='transactionheader'>
-                            <div className="transaction-title">Transaction Volumes</div>
-                            <div className='widht'>
+                            <h2 className='transaction-title'>Transaction Volumes</h2>
+                            <div className=''>
                                 <select id="timeRange">
                                     <option value="This Week">THIS WEEK</option>
                                     <option value="This Month">THIS MONTH</option>
@@ -167,12 +171,12 @@ const Analytics = () => {
                         {/* <div className="transaction-details">THIS WEEK</div> */}
                         <div className="transaction-details">5,000 <span>TRANSACTIONS PROCESSED</span></div>
                         <div className="transaction-details1 increase"> <img src={increase} alt="" /> +10% INCREASE  <span> IN TRANSACTIONS</span></div>
-                        <div className="transaction-details2">AVERAGE TRANSACTIONAL AMOUNT -<span> 2400</span></div>
+                        <div className="transaction-details2">AVERAGE TRANSACTIONAL AMOUNT - <br /><span> 2400 <img src={ibtn} alt="" /></span></div>
                     </div>
                     <div className='transaction-box'>
                         <div className='transactionheader'>
-                            <div className="transaction-title">TRENDS</div>
-                            <div className='widht'>
+                            <h2 className='transaction-title'>TRENDS</h2>
+                            <div className=''>
                                 <select id="timeRange">
                                     <option value="This Week">THIS WEEK</option>
                                     <option value="This Month">THIS MONTH</option>
@@ -199,15 +203,15 @@ const Analytics = () => {
                     <div className='secondconatiner'>
                         <div className='transaction-box'>
                             <div className='transactionheader'>
-                                <div className="transaction-title">COMPARATIVE ANALYSIS</div>
-                                <div className='widht'>
-                                <select id="timeRange">
-                                    <option value="This Week">THIS WEEK</option>
-                                    <option value="This Month">THIS MONTH</option>
-                                    <option value="Custom">CUSTOM</option>
-                                    <option value="All Time">ALL TIME</option>
-                                </select>
-                            </div>
+                                <h2 className='transaction-title'>COMPARATIVE ANALYSIS</h2>
+                                <div className=''>
+                                    <select id="timeRange">
+                                        <option value="This Week">THIS WEEK</option>
+                                        <option value="This Month">THIS MONTH</option>
+                                        <option value="Custom">CUSTOM</option>
+                                        <option value="All Time">ALL TIME</option>
+                                    </select>
+                                </div>
                             </div>
                             <div className='widht'>
                                 <Chart
@@ -219,8 +223,8 @@ const Analytics = () => {
                         </div>
                         <div className='transaction-box'>
                             <div className='transactionheader'>
-                                <div className="transaction-title">GEOGRAPHICAL DATA</div>
-                                <div>
+                                <h2 className='transaction-title'>GEOGRAPHICAL DATA</h2>
+                                <div className=''>
                                     <select id="timeRange">
                                         <option value="This Week">THIS WEEK</option>
                                         <option value="This Month">THIS MONTH</option>
@@ -230,15 +234,15 @@ const Analytics = () => {
                                 </div>
                             </div>
                             <div className='widht'>
-                            <Chart options={piestate.options} series={piestate.series} type="pie"  />
+                                <Chart options={piestate.options} series={piestate.series} type="pie" />
                             </div>
-                           
+
                         </div>
                     </div>
-                    <div className='transaction-box' style={{ marginTop: '20px' }}>
+                    <div className='transaction-box' style={{ marginTop: '30px', marginBottom:'50px' }}>
                         <div className='transactionheader'>
-                            <div className="transaction-title">TIME BASED ANALYSIS</div>
-                            <div>
+                            <h2 className='transaction-title'>TIME BASED ANALYSIS</h2>
+                            <div className=''>
                                 <select id="timeRange">
                                     <option value="This Week">THIS WEEK</option>
                                     <option value="This Month">THIS MONTH</option>
@@ -248,13 +252,13 @@ const Analytics = () => {
                             </div>
                         </div>
                         <div className='widht'>
-                        <Chart
-                            options={barstate.options}
-                            series={barstate.series}
-                            type="bar"
-                        />
+                            <Chart
+                                options={barstate.options}
+                                series={barstate.series}
+                                type="bar"
+                            />
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -382,7 +386,8 @@ const Analytics = () => {
                         </div>
 
                         <div className="btn12">
-                            <button className="exportbtn" onClick={closeRepostModal}>EXPORT</button>
+                            <button className="exportbtn" onClick={triggerFileInput}>EXPORT</button>
+                            <input type="file" id="fileInput" style={{ display: 'none' }} />
                             <div className="cancelbtn1">
                                 <img src={arrowbtn}></img>
                                 <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>

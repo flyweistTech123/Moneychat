@@ -9,8 +9,24 @@ body {
   font-family: Quicksand !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: auto;
 
 }
+body::-webkit-scrollbar {
+  width: 12px;
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 8px; 
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #eee; 
+}
+
+
 
 code {
   font-family: 'Roboto', sans-serif !important;

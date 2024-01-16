@@ -15,7 +15,7 @@ const HOC = (Wcomponenet) => {
           <Navbar hamb={hamb} setHamb={setHamb} setShow={setShow} show={show}/>
         </div>
 
-        <section className=" component_style">
+        <section className="component_style">
           <Sidebar hamb={hamb} setHamb={setHamb} show={show} />
           <div className={show ? "child_component" : "child_component_full"} >
             {" "}

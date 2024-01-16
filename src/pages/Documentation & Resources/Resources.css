@@ -18,11 +18,23 @@
     color: #1E1E1E99;
 }
 
+.searchbox input::placeholder{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25.78px;
+  color: #1E1E1E99;
+}
+
+.searchbox i{
+  width: 20px;
+  height: 20px;
+}
 
 .newsdiv{
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 
@@ -33,7 +45,7 @@
 }
 
 .left_side h5{
-  font-weight: 500;
+  font-weight: 600;
   font-size: 24px;
   margin-bottom: 20px;
   color: #000000;
@@ -110,7 +122,7 @@
 }
 
 .card1 h5{
-  font-weight: 500;
+  font-weight: 600;
   font-size: 24px;
   margin-bottom: 20px;
   color: #000000;
@@ -173,7 +185,7 @@
   margin-top: 20px;
 }
 .right_side h5{
-  font-weight: 500;
+  font-weight: 600;
   font-size: 24px;
   margin-bottom: 20px;
   color: #000000;
@@ -185,6 +197,7 @@
   width: 342px;
   padding: 20px;
   border-radius: 14px;
+  background: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

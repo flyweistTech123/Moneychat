@@ -113,7 +113,7 @@ const Financial = () => {
   return (
     <>
       <section className='pages'>
-        <div className="Heading_all">
+        <div className="Heading_all3">
           <h5>Financial Overview</h5>
           <div className="button_container">
             <button className="report" onClick={triggerFileInput}>

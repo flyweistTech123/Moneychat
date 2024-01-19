@@ -22,6 +22,10 @@ import redplus from '../../Images/redplus.png'
 const AccountDetails = () => {
     const [value, setValue] = useState()
     const navigate = useNavigate()
+    const triggerFileInput = () => {
+        document.getElementById('fileInput').click();
+    };
+
     return (
         <>
             <section className='pages'>
@@ -103,7 +107,8 @@ const AccountDetails = () => {
                                             </i>
                                             <input type="text" placeholder="Certificate of Incorporation" />
                                         </div>
-                                        <button className='docupload1'><img src={upload} alt="" />UPLOAD</button>
+                                        <button className='docupload1' onClick={triggerFileInput}><img src={upload} alt="" />UPLOAD</button>
+                                        <input type="file" id="fileInput" style={{ display: 'none' }} />
                                     </div>
                                 </div>
                                 <div className='bussiness-registration'>
@@ -134,7 +139,8 @@ const AccountDetails = () => {
                                             </i>
                                             <input type="text" placeholder="Financial Statements" />
                                         </div>
-                                        <button className='docupload1'><img src={upload} alt="" />UPLOAD</button>
+                                        <button className='docupload1' onClick={triggerFileInput} ><img src={upload} alt="" />UPLOAD</button>
+                                        <input type="file" id="fileInput" style={{ display: 'none' }} />
                                     </div>
                                 </div>
                                 <div className='bussiness-registration'>
@@ -210,7 +216,8 @@ const AccountDetails = () => {
                                             </i>
                                             <input type="text" placeholder="Liability Insurance" />
                                         </div>
-                                        <button className='docupload1'><img src={upload} alt="" />UPLOAD</button>
+                                        <button className='docupload1' onClick={triggerFileInput}><img src={upload} alt="" />UPLOAD</button>
+                                        <input type="file" id="fileInput" style={{ display: 'none' }} />
                                     </div>
                                 </div>
                                 <div className='bussiness-registration'>

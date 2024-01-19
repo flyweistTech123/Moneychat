@@ -1,10 +1,25 @@
 /* TransactionBox.css */
 
+.VIEW_DETAILS1{
+  text-align: center;
+}
+.VIEW_DETAILS1 button{
+  width: 221px;
+  height: 51px;
+  border-radius: 10px;
+  border: 2px solid #FD575B;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: #FD575B;
+}
+
+
 .Heading_all2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .Heading_all2 h5 {

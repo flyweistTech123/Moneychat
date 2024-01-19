@@ -21,6 +21,8 @@ import British from '../../Images/British.png'
 import ascending from '../../Images/Ascending.png'
 import serndername from '../../Images/sendername.png'
 import Currencies from '../../Images/Currencies.png'
+import searchicon from '../../Images/searchicon.png'
+
 
 
 
@@ -199,17 +201,16 @@ const ReviewInterface = () => {
           <h5>Review Interface</h5>
           <div className="search">
             <img src="./Image/15.png" alt="" onClick={() => handleShow()} />
-            <div>
-              <i><IoSearch /></i>
+            <div className="search21">
+            <i> <img src={searchicon} alt="" /></i>
               <input type="search" placeholder="Search Transaction" />
             </div>
-          </div>
-
-          <div className="button_container">
+            <div className="button_container">
             <button className="filter" onClick={openFilterModal}>
               <img src="./Image/16.png" alt="" />
               <span>FILTERS</span>
             </button>
+          </div>
           </div>
         </div>
         <div className="reviewtable">

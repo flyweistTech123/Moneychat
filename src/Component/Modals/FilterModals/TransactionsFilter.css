@@ -508,8 +508,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .employdatials .employ-datials {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     margin-top: 20px;
+    text-align: start;
 }
 
 .employdatials .employ-datials span {

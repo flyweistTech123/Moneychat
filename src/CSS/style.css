@@ -533,7 +533,8 @@
 .child_component {
   width: 80%;
   height: 100%;
-  margin: auto;
+  margin:  0 auto;
+  margin-top: 40px;
 }
 
 .child_component_full {
@@ -568,7 +569,7 @@
   display: flex;
   gap: 50px;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .Heading_all h5 {
@@ -1003,6 +1004,7 @@ table tbody tr:last-child td:first-child {
 
 .payment_custom_modal.Sender_custom_Modal .sender_content .details .items p {
   margin: 0;
+  text-align: start;
 }
 
 .payment_custom_modal.Sender_custom_Modal .sender_content .details .items p.head {

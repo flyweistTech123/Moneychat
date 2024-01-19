@@ -22,6 +22,7 @@ import text from '../Images/text.png'
 import Flag from "./Modals/TransactionRepost/Flag";
 import ViewProfileModal from "./Modals/ViewProfileModal/ViewProfileModal";
 import Editprofile from "./Modals/ProfileModal/EditProfileModal";
+import Recipient from "./Modals/TransactionRepost/Recipient";
 
 
 
@@ -739,45 +740,9 @@ export const Threeline4 = ({ isOpen, onClose }) => {
         </div>
       </div>
       {isRepostOpen && (
-        <Repost onClose={closeRepostModal}>
+        <Recipient onClose={closeRepostModal}>
 
-          <div className="repostconatiner">
-            <div className="repostheder">
-              <div>
-                <h3>Recipient Verification</h3>
-              </div>
-              <div className="repostimg">
-                <img src={smallcross} onClick={closeRepostModal}></img>
-              </div>
-            </div>
-            <div className="repostline">
-              <hr />
-            </div>
-            <div className="employdatials">
-              <div className="employ-datials">
-                <span style={{ marginRight: "20px" }}>Recipient ID</span>
-                <input type="text" className="input-min" placeholder="Enter Lorem Ipsum" />
-              </div>
-              <div className="employ-datials">
-                <span>Expiry Date</span>
-                <input type="date" className="input-max" />
-              </div>
-              <div className="employ-datials">
-                <span>Add Notes</span>
-                <input type="text" className="input-max" placeholder="Type Here....." />
-              </div>
-            </div>
-          </div>
-
-          <div className="btn12">
-            <button className="exportbtn" onClick={closeRepostModal}>SAVE & ADD</button>
-            <div className="cancelbtn1">
-              <img src={arrowbtn}></img>
-              <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
-            </div>
-          </div>
-
-        </Repost>
+        </Recipient>
       )}
 
 
@@ -849,5 +814,87 @@ export const Inffo = ({ isOpen, onClose }) => {
     </motion.div>
   );
 };
+
+
+
+export const Threeline6 = ({ isOpen, onClose }) => {
+  const [isProfileModalopen, setProfileModalOpen] = useState(false);
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isOpen &&
+        modalRef.current &&
+        !modalRef.current.contains(event.target)
+      ) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen, onClose]);
+
+  const openProfileModal = () => {
+    setProfileModalOpen(true)
+  }
+
+  const closeProfileModal = () => {
+    setProfileModalOpen(false)
+  }
+
+  return (
+    <motion.div
+      ref={modalRef}
+      initial={{
+        height: 0,
+        opacity: 0,
+        display: "none",
+        zIndex: -100,
+      }}
+      animate={{
+        height: isOpen ? "auto" : 0,
+        opacity: isOpen ? 1 : 0,
+        zIndex: isOpen ? 200 : -100,
+      }}
+      transition={{ duration: 0.3 }}
+      exit={{
+        height: 0,
+        opacity: 0,
+        display: "none",
+        zIndex: -100,
+      }}
+      className={`payment_custom_modal Sender_custom_Modal ThreeLine_custom_Modal`}
+    >
+      <div className="threeline_content">
+        <div className="heading">
+          <img src={profile} alt="" />
+          <div>
+            <span className="description" >
+              <span className="name" onClick={openProfileModal}>View Profile</span>
+            </span>
+          </div>
+        </div>
+        <div className="heading" style={{ marginTop: '20px' }}>
+          <img src={cross} alt="" />
+          <div>
+            <span className="description">
+              <span className="name" style={{ color: '#FC0005' }}>Block Employee</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      {isProfileModalopen && (
+        <ViewProfileModal onClose={closeProfileModal} isProfileModalopen={isProfileModalopen}>
+
+        </ViewProfileModal>
+      )}
+    </motion.div>
+  );
+};
+
 
 

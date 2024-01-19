@@ -1,3 +1,63 @@
+.Heading_all3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.Heading_all3 h5 {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32.81px;
+  margin-bottom: 20px;
+}
+
+.Heading_all3 .button_container {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.Heading_all3 .button_container button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.Heading_all3 .button_container button img {
+  width: 30px;
+  height: 30px;
+}
+
+.Heading_all3 .button_container button span {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.09px;
+}
+
+.Heading_all3 .button_container button.filter span {
+  color: #0070bc;
+}
+
+.Heading_all3 .button_container button.report {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+  padding: 10px;
+  width: 206px;
+  height: 56px;
+  justify-content: center;
+}
+
+.Heading_all3 .button_container button.report span {
+  color: #fff;
+}
+
+
+
+
+
+
 .finacial-box {
     width: 1004px;
     top: 209px;

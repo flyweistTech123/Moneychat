@@ -76,9 +76,6 @@ const data = [
     image1: staff,
     time: '16 Mins Ago',
     lastLoggedin: "HH : MM ( DD/MM )",
-    // receiver: "HH : MM ( DD/MM )",
-    // status: "complete",
-    // permissions: "Super-Admin",
   },
 ];
 
@@ -128,7 +125,7 @@ const AccessControl = () => {
   return (
     <>
       <section className="pages">
-      <h5 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><span onClick={() => navigate('/setting')} style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>Security & Compliance<IoIosArrowForward style={{ width: '25px' }} /></span>Role-Based Access Control</h5>
+      <h5 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><span onClick={() => navigate('/gallery')} style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>Security & Compliance<IoIosArrowForward style={{ width: '25px' }} /></span>Role-Based Access Control</h5>
         <div className="Headingall">
           <div className="search">
             <div>

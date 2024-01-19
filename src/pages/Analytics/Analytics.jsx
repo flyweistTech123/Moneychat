@@ -12,10 +12,13 @@ import arrowbtn from '../../Images/arrowbtn.png'
 import Repost from '../../Component/Modals/TransactionRepost/Repost';
 import searchicon from '../../Images/searchicon.png'
 import ibtn from '../../Images/ibtnnn.png'
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Analytics = () => {
+
+    const Navigate = useNavigate()
     const Monday = 'DAY 1';
     const Tuesday = 'DAY 2';
     const Wednesday = 'DAY 3';
@@ -198,7 +201,7 @@ const Analytics = () => {
 
                 <div className='charts'>
                     <div className="Heading_all" style={{ marginBottom: '20px' }}>
-                        <h5>Insights & Tools</h5>
+                        <h5 style={{marginTop:"30px"}}>Insights & Tools</h5>
                     </div>
                     <div className='secondconatiner'>
                         <div className='transaction-box'>
@@ -236,7 +239,10 @@ const Analytics = () => {
                             <div className='widht'>
                                 <Chart options={piestate.options} series={piestate.series} type="pie" />
                             </div>
-
+                            <div className='VIEW_DETAILS1'>
+                            <button className='VIEW_DETAILS1'>VIEW DETAILS</button>
+                            </div>
+                          
                         </div>
                     </div>
                     <div className='transaction-box' style={{ marginTop: '30px', marginBottom:'50px' }}>
@@ -271,7 +277,7 @@ const Analytics = () => {
                                     <h3>Generate Analytics Report</h3>
                                 </div>
                                 <div className="repostimg">
-                                    <img src={setting}></img>
+                                    <img src={setting} onClick={()=>Navigate('/reportSettings')}></img>
                                     <img src={smallcross} onClick={closeRepostModal}></img>
                                 </div>
                             </div>

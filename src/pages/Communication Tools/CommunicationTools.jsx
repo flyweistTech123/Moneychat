@@ -16,7 +16,12 @@ import online from '../../Images/online.png'
 import threedot from '../../Images/threedot.png'
 import emoji1 from '../../Images/emoji1.png'
 import plus from '../../Images/add.png'
+import plus1 from '../../Images/plusreport.png'
 import mike from '../../Images/mike.png'
+import closeicon from '../../Images/closeicon.png'
+import profile from '../../Images/profile.png'
+import cross from '../../Images/crosssetting.png'
+
 
 const CommunicationTools = () => {
     const [isEmailCommunicationOpen, setEmailCommunicationModalOpen] = useState(false);
@@ -88,7 +93,14 @@ const CommunicationTools = () => {
                 {isEmailCommunicationOpen && (
                     <EmailCommunicarion onClose={closeEmailCommunicationModalModal} isDocumentationModalOpen={isEmailCommunicationOpen}>
                         <div className='Email-communication-header'>
-                            <h2>Email Communication</h2>
+                            <div className='viewprofileheader'>
+                                <h5>Email Communication</h5>
+                                <div className='block12'>
+                                    <span className="close-btn" onClick={closeEmailCommunicationModalModal}><img src={closeicon} alt="" />
+                                    </span>
+                                </div>
+
+                            </div>
                             <div className='email-line'><hr /></div>
                         </div>
 
@@ -125,6 +137,15 @@ const CommunicationTools = () => {
                                 </div>
                                 <div className="Email-input-area">
                                     <input type="text" placeholder="Recipients :" />
+                                    <div className='report-profile-card1'>
+                                        <img src={profile} alt="" />
+                                        <p>Lorem Ipsum</p>
+                                        <img src={cross} alt="" />
+                                    </div>
+                                    <div className='AddReport'>
+                                        <img src={plus1} alt="" />
+                                        <p>ADD</p>
+                                    </div>
                                 </div>
                                 <div className="Email-input-area">
                                     <input type="text" placeholder="Add Subject" />
@@ -132,26 +153,26 @@ const CommunicationTools = () => {
                                 <div className="Email_textarea12">
                                     <div className="custom-textarea">
                                         <div className='uploades-container'>
-                                        <div className='Email-upload1'>
-                                            <img src={fileupload} alt="Your Image" onClick={triggerFileInput} />
-                                            <h6 onClick={triggerFileInput}>ADD MEDIA</h6>
-                                        </div>
-                                        <div className='Email-upload2'>
-                                            <img src={emoji} alt="Your Image" />
-                                            <h6 onClick={toggleEmojiPicker}>INSERT EMOJI</h6>
-                                            {isEmojiPickerOpen && (
-                                                <div>
-                                                    <EmojiPicker />
-                                                </div>
-                                            )}
-                                        </div>
-                                        <div className='Email-upload3'>
-                                            <img src={dust} alt="Your Image" />
-                                            <h6>DISCARD</h6>
-                                        </div>
-                                        <div className='Email-upload4'>
-                                            <button className="Email-send-btn">SEND</button>
-                                        </div>
+                                            <div className='Email-upload1'>
+                                                <img src={fileupload} alt="Your Image" onClick={triggerFileInput} />
+                                                <h6 onClick={triggerFileInput}>ADD MEDIA</h6>
+                                            </div>
+                                            <div className='Email-upload2'>
+                                                <img src={emoji} alt="Your Image" />
+                                                <h6 onClick={toggleEmojiPicker}>INSERT EMOJI</h6>
+                                                {isEmojiPickerOpen && (
+                                                    <div>
+                                                        <EmojiPicker />
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <div className='Email-upload3'>
+                                                <img src={dust} alt="Your Image" />
+                                                <h6>DISCARD</h6>
+                                            </div>
+                                            <div className='Email-upload4'>
+                                                <button className="Email-send-btn">SEND</button>
+                                            </div>
                                         </div>
                                         <input type="file" id="fileInput" style={{ display: 'none' }} />
                                         <textarea rows="10" cols="30" placeholder="Type Here.........."></textarea>
@@ -166,7 +187,14 @@ const CommunicationTools = () => {
                 {isChatModalOpen && (
                     <Chat onClose={closeChatModalModal} isDocumentationModalOpen={isChatModalOpen}>
                         <div className='Chat-communication-header'>
-                            <h2>Email Communication</h2>
+                            <div className='viewprofileheader'>
+                                <h5>Chat with Moneychat Team</h5>
+                                <div className='block12'>
+                                    <span className="close-btn" onClick={closeChatModalModal}><img src={closeicon} alt="" />
+                                    </span>
+                                </div>
+
+                            </div>
                             <div className='chat-line'><hr /></div>
                         </div>
 
@@ -214,16 +242,16 @@ const CommunicationTools = () => {
                             <div className='Chat-chat-box'>
                                 <div className='profile-status'>
                                     <div className='profile-status12'>
-                                    <img src={senderprofile} alt=""  style={{width:'50px', height:'50px'}}/>
-                                    <span>Lorem Ipsum</span >
-                                    <img src={online}alt="" style={{width:'171px', height:'21px'}} />
+                                        <img src={senderprofile} alt="" style={{ width: '50px', height: '50px' }} />
+                                        <span>Lorem Ipsum</span >
+                                        <img src={online} alt="" style={{ width: '171px', height: '21px' }} />
                                     </div>
-                                    <img src= {threedot}alt="" style={{width:'30px', height:'30px', marginLeft:'100px' }} />
+                                    <img src={threedot} alt="" style={{ width: '30px', height: '30px', marginLeft: '100px' }} />
                                 </div>
 
                                 <div className='today'>
                                     <div className='today-1'>
-                                    <h6>TODAY</h6>
+                                        <h6>TODAY</h6>
                                     </div>
                                 </div>
 
@@ -242,14 +270,14 @@ const CommunicationTools = () => {
 
                                 <div className='send_msg_container'>
 
-                                <div className='send-msg-emoji'>
-                                    <img src={emoji1} alt=""/>
-                                    <img src={plus} alt="" />
-                                    <div className='send-input-btn'>
-                                        send
+                                    <div className='send-msg-emoji'>
+                                        <img src={emoji1} alt="" />
+                                        <img src={plus} alt="" />
+                                        <div className='send-input-btn'>
+                                            SEND
+                                        </div>
+                                        <img src={mike} alt="" />
                                     </div>
-                                    <img src={mike} alt="" />
-                                </div>
                                 </div>
                             </div>
                         </div>

@@ -5,6 +5,19 @@
     margin-top: 40px;
 }
 
+.head123head{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32.81px;
+}
+.head123head1{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
   .pages h5 span:nth-child(1) {
     color: #0070BC;
@@ -31,6 +44,25 @@
     padding: 10px;
     border-radius: 13px;
     width: 439px;
+  }
+
+  .Headingall .search .largerrrr {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 13px;
+    width: 826px;
+    margin-right: 20px;
+  }
+
+
+
+    
+  .Headingall .search i img{
+    width: 30px;
+    height: 30px;
   }
   .Headingall .search input {
     outline: none;

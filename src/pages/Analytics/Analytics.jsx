@@ -13,6 +13,8 @@ import Repost from '../../Component/Modals/TransactionRepost/Repost';
 import searchicon from '../../Images/searchicon.png'
 import ibtn from '../../Images/ibtnnn.png'
 import { useNavigate } from 'react-router-dom';
+import Imodel from '../../Component/Modals/FilterModals/Imodel';
+import person from '../../Images/pesons.png'
 
 
 
@@ -126,6 +128,8 @@ const Analytics = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [isRepostOpen, setRepostOpen] = useState(false)
+    const [isOrder, setorder] = useState(false)
+
 
     const openRepostModal = () => {
         setRepostOpen(true);
@@ -139,6 +143,13 @@ const Analytics = () => {
     const triggerFileInput = () => {
         document.getElementById('fileInput').click();
     };
+    const openOrderModal = () => {
+        setorder(true);
+    }
+
+    const closeOrderModal = () => {
+        setorder(false);
+    }
 
     return (
         <>
@@ -174,7 +185,7 @@ const Analytics = () => {
                         {/* <div className="transaction-details">THIS WEEK</div> */}
                         <div className="transaction-details">5,000 <span>TRANSACTIONS PROCESSED</span></div>
                         <div className="transaction-details1 increase"> <img src={increase} alt="" /> +10% INCREASE  <span> IN TRANSACTIONS</span></div>
-                        <div className="transaction-details2">AVERAGE TRANSACTIONAL AMOUNT - <br /><span> 2400 <img src={ibtn} alt="" /></span></div>
+                        <div className="transaction-details2">AVERAGE TRANSACTIONAL AMOUNT - <br /><span> 2400 <img src={ibtn} alt="" style={{cursor:'pointer'}} onClick={() => openOrderModal()} /></span></div>
                     </div>
                     <div className='transaction-box'>
                         <div className='transactionheader'>
@@ -201,7 +212,7 @@ const Analytics = () => {
 
                 <div className='charts'>
                     <div className="Heading_all" style={{ marginBottom: '20px' }}>
-                        <h5 style={{marginTop:"30px"}}>Insights & Tools</h5>
+                        <h5 style={{ marginTop: "30px" }}>Insights & Tools</h5>
                     </div>
                     <div className='secondconatiner'>
                         <div className='transaction-box'>
@@ -240,12 +251,12 @@ const Analytics = () => {
                                 <Chart options={piestate.options} series={piestate.series} type="pie" />
                             </div>
                             <div className='VIEW_DETAILS1'>
-                            <button className='VIEW_DETAILS1'>VIEW DETAILS</button>
+                                <button className='VIEW_DETAILS1'>VIEW DETAILS</button>
                             </div>
-                          
+
                         </div>
                     </div>
-                    <div className='transaction-box' style={{ marginTop: '30px', marginBottom:'50px' }}>
+                    <div className='transaction-box' style={{ marginTop: '30px', marginBottom: '50px' }}>
                         <div className='transactionheader'>
                             <h2 className='transaction-title'>TIME BASED ANALYSIS</h2>
                             <div className=''>
@@ -267,6 +278,23 @@ const Analytics = () => {
 
                     </div>
                 </div>
+            
+                {isOrder && (
+                    <Imodel onClose={closeOrderModal}>
+
+                        <div className='a1212'>
+                        <img src={ibtn} alt="" />
+                            <h5>Average Transaction Amount is calculated by dividing <span style={{color:'#000000'}}>Total Transactional Volume</span> by the <span>Total Number of Senders</span> within a specific time period</h5>
+                        </div>
+
+                        <div className='a12121'>
+                            <img src={person} alt="" />
+                            <h5>SENDERS -</h5>
+                            <h6>760</h6>
+                        </div>
+                    
+                    </Imodel>
+                )}
 
                 {isRepostOpen && (
                     <Repost onClose={closeRepostModal}>
@@ -277,7 +305,7 @@ const Analytics = () => {
                                     <h3>Generate Analytics Report</h3>
                                 </div>
                                 <div className="repostimg">
-                                    <img src={setting} onClick={()=>Navigate('/reportSettings')}></img>
+                                    <img src={setting} onClick={() => Navigate('/reportSettings')}></img>
                                     <img src={smallcross} onClick={closeRepostModal}></img>
                                 </div>
                             </div>
@@ -402,7 +430,11 @@ const Analytics = () => {
 
                     </Repost>
                 )}
+
             </section>
+
+
+
         </>
     )
 }

@@ -63,6 +63,17 @@
   overflow: auto;
 }
 
+.biggreentick{
+  position: relative;
+}
+
+.tick-mark {
+  position: absolute;
+  top: 10%;  /* Adjust as needed */
+  left: 10%;  /* Adjust as needed */
+  transform: translate(-50%, -50%);
+}
+
 
 .edit-profile-detals {
   display: flex;
@@ -116,21 +127,21 @@
 
 .edit-personal{
   text-align: start;
-  margin-left: 200px;
+  margin-left: 230px;
 }
 
 .edit-personal span {
   font-weight: 700;
   font-size: 18px;
   color: #0070BC;
-  padding-right: 30px;
+  padding-right: 90px;
 }
 
 
 .edit-profile-range input {
   width: 80%;
   margin: auto;
-  margin-left: 150px;
+  margin-left: 190px;
   margin-top: 20px;
 
 }
@@ -143,6 +154,7 @@
   display: flex;
   justify-content: space-around;
   margin-top: 3rem;
+  margin-left: 8rem;
 }
 
 

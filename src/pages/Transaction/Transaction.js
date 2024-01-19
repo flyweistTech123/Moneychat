@@ -22,11 +22,14 @@ import British from '../../Images/British.png'
 import ascending from '../../Images/Ascending.png'
 import Repost from "../../Component/Modals/TransactionRepost/Repost";
 import smallcross from '../../Images/smallcross.png'
+import Ascending from '../../Images/asending.png'
+import Descending from '../../Images/desending.png'
 
 import setting from '../../Images/setting.png'
 import arrowbtn from '../../Images/arrowbtn.png'
 import searchicon from '../../Images/searchicon.png'
 import { Link } from "react-router-dom";
+import Order from "../../Component/Modals/FilterModals/Order";
 
 
 const data = [
@@ -78,6 +81,7 @@ const data = [
 const Transaction = () => {
   const [isfilterModalOpen, setFilterModaOpen] = useState(false);
   const [isSenderModallist, setSenderModallist] = useState(false);
+  const [isOrder, setorder] = useState(false)
   const [isRepostOpen, setRepostOpen] = useState(false)
   const [isCurrenciesModallist, setCurrenciesModallist] = useState(false)
   const [modalStates, setModalStates] = useState({});
@@ -183,29 +187,38 @@ const Transaction = () => {
   }
 
 
-    const [minPrice, setMinPrice] = useState(2500);
-    const [maxPrice, setMaxPrice] = useState(7500);
-    const priceGap = 1000;
+  const openOrderModal = () => {
+    setorder(true);
+  }
 
-    const handlePriceInputChange = (e) => {
-      let value = parseInt(e.target.value, 10);
+  const closeOrderModal = () => {
+    setorder(false);
+  }
 
-      if (e.target.className === "input-min" && (maxPrice - value >= priceGap) && maxPrice <= 10000) {
-        setMinPrice(value);
-      } else if (e.target.className === "input-max" && (value - minPrice >= priceGap) && value <= 10000) {
-        setMaxPrice(value);
-      }
-    };
 
-    const handleRangeInputChange = (e) => {
-      let value = parseInt(e.target.value, 10);
+  const [minPrice, setMinPrice] = useState(2500);
+  const [maxPrice, setMaxPrice] = useState(7500);
+  const priceGap = 1000;
 
-      if (e.target.className === "range-min" && (maxPrice - value) >= priceGap) {
-        setMinPrice(value);
-      } else if (e.target.className === "range-max" && (value - minPrice) >= priceGap) {
-        setMaxPrice(value);
-      }
-    };
+  const handlePriceInputChange = (e) => {
+    let value = parseInt(e.target.value, 10);
+
+    if (e.target.className === "input-min" && (maxPrice - value >= priceGap) && maxPrice <= 10000) {
+      setMinPrice(value);
+    } else if (e.target.className === "input-max" && (value - minPrice >= priceGap) && value <= 10000) {
+      setMaxPrice(value);
+    }
+  };
+
+  const handleRangeInputChange = (e) => {
+    let value = parseInt(e.target.value, 10);
+
+    if (e.target.className === "range-min" && (maxPrice - value) >= priceGap) {
+      setMinPrice(value);
+    } else if (e.target.className === "range-max" && (value - minPrice) >= priceGap) {
+      setMaxPrice(value);
+    }
+  };
 
 
 
@@ -225,7 +238,7 @@ const Transaction = () => {
           </div>
 
           <div className="button_container">
-            <button className="filter"  onClick={openFilterModal}>
+            <button className="filter" onClick={openFilterModal}>
               <img src="./Image/16.png" alt="" />
               <span >FILTERS</span>
             </button>
@@ -535,12 +548,8 @@ const Transaction = () => {
                 <div className="datarange">
                   <h3>Order</h3>
 
-                  <div>
-                    <select>
-                      <option>Select</option>
-                      <option data-image={ascending}> <img src={ascending}></img>Ascending</option>
-                      <option >Descending</option>
-                    </select>
+                  <div className="order12">
+                    <input type="search" placeholder="Search" onClick={openOrderModal} />
                   </div>
                 </div>
 
@@ -643,6 +652,23 @@ const Transaction = () => {
           </SenderList>
         )}
 
+        {isOrder && (
+          <Order onClose={closeOrderModal}>
+            <div className="senderlist">
+              <div className="senders2" onClick={closeOrderModal}>
+                <div className="serders1">
+                  <img src={Ascending} alt="1"></img>
+                  <span>Ascending</span>
+                </div>
+                <div className="serders1">
+                  <img src={Descending} alt="1"></img>
+                  <span>Descending</span>
+                </div>
+              </div>
+            </div>
+          </Order>
+        )}
+
 
 
 
@@ -655,8 +681,8 @@ const Transaction = () => {
                   <h3>Generate Transactional Report</h3>
                 </div>
                 <div className="repostimg">
-                <Link to={'/setting'}>
-                  <img src={setting}></img>
+                  <Link to={'/reportSettings'}>
+                    <img src={setting}></img>
                   </Link>
                   <img src={smallcross} onClick={closeRepostModal}></img>
                 </div>
@@ -667,87 +693,87 @@ const Transaction = () => {
               <div className="switchbtn">
                 <label className="switch">
                   <input type="checkbox" />
-                    <span className="slider1 round"></span>
+                  <span className="slider1 round"></span>
                 </label>
                 <p>Match Customization Settings with my Filter</p>
               </div>
               <div className="repostselect">
-                  <div>
+                <div>
                   <span>Range</span>
-                    <select>
-                      <option>CUSTOM</option>
-                      <option >WEEKLY</option>
-                      <option>MONTHLY</option>
-                      <option>MONTHLY</option>
-                      <option >HALF-YEARLY ( 6 MONTHS )</option>
-                      <option>YEARLY</option>
-                    </select>
-                  </div>
+                  <select>
+                    <option>CUSTOM</option>
+                    <option >WEEKLY</option>
+                    <option>MONTHLY</option>
+                    <option>MONTHLY</option>
+                    <option >HALF-YEARLY ( 6 MONTHS )</option>
+                    <option>YEARLY</option>
+                  </select>
+                </div>
 
-                  <div className="repost-date">
-                    <div className="repost-field">
-                      <span>From</span>
-                      <input type="date" className="input-min" />
+                <div className="repost-date">
+                  <div className="repost-field">
+                    <span>From</span>
+                    <input type="date" className="input-min" />
+                  </div>
+                  <div className="repost-field">
+                    <span>To</span>
+                    <input type="date" className="input-max" />
+                  </div>
+                </div>
+              </div>
+              <div className="repostStatus">
+                <h3>Status</h3>
+                <div className="selectoption11">
+                  <div className="mode1">
+                    <div className="label13">
+                      <input
+                        type="checkbox"
+                      />
+                      <label style={{ color: '#3BB54A' }}>COMPLETED</label>
                     </div>
-                    <div className="repost-field">
-                      <span>To</span>
-                      <input type="date" className="input-max" />
+                    <div className="label13">
+                      <input
+                        type="checkbox"
+                      />
+                      <label style={{ color: '#FEA82F' }}>PENDING</label>
+                    </div>
+                  </div>
+                  <div className="mode1">
+                    <div className="label13">
+                      <input
+                        type="checkbox"
+                      />
+                      <label style={{ color: '#FD575B' }}>FAILED</label>
+                    </div>
+                    <div className="label13">
+                      <input
+                        type="checkbox"
+                      />
+                      <label style={{ color: '#0070BC' }}>UNDER REVIEW</label>
                     </div>
                   </div>
                 </div>
-                <div className="repostStatus">
-                  <h3>Status</h3>
-                  <div className="selectoption11">
-                    <div className="mode1">
-                      <div className="label13">
-                        <input
-                          type="checkbox"
-                        />
-                        <label style={{color:'#3BB54A'}}>COMPLETED</label>
-                      </div>
-                      <div className="label13">
-                        <input
-                          type="checkbox"
-                        />
-                        <label style={{color:'#FEA82F'}}>PENDING</label>
-                      </div>
-                    </div>
-                    <div className="mode1">
-                      <div className="label13">
-                        <input
-                          type="checkbox"
-                        />
-                        <label style={{color:'#FD575B'}}>FAILED</label>
-                      </div>
-                      <div className="label13">
-                        <input
-                          type="checkbox"
-                        />
-                        <label style={{color:'#0070BC'}}>UNDER REVIEW</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </div>
 
-                <div className="repostselect">
+              <div className="repostselect">
                 <h3>Export As :</h3>
-                  <div>
-                    <select>
-                      <option>PDF</option>
-                      <option >EXCEL SHEET</option>
-                    </select>
-                  </div>
+                <div>
+                  <select>
+                    <option>PDF</option>
+                    <option >EXCEL SHEET</option>
+                  </select>
                 </div>
+              </div>
             </div>
-            
+
             <div className="btn12">
-                  <button className="exportbtn" onClick={closeRepostModal}>EXPORT</button>
-                  <div className="cancelbtn1">
-                  <img src={arrowbtn}></img>
-                  <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
-                  </div>
-                </div>
-            
+              <button className="exportbtn" onClick={closeRepostModal}>EXPORT</button>
+              <div className="cancelbtn1">
+                <img src={arrowbtn}></img>
+                <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+              </div>
+            </div>
+
           </Repost>
         )}
 

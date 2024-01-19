@@ -10,7 +10,7 @@ const NotificationsAlerts = () => {
   return (
     <>
       <section className='pages'>
-        <h5 style={{ display: 'flex', alignItems: 'center', gap: '20px' }}><span onClick={() => navigate('/setting')} style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>Settings  <IoIosArrowForward style={{ width: '25px' }} /></span>  Notifications & Alerts</h5>
+      <h5 className="head123head"><span  className="head123head1" onClick={() => navigate('/setting')}>Settings<IoIosArrowForward style={{ width: '25px' }} /></span>Notifications & Alerts</h5>
 
         <div className='Notificatoncontainer'>
           <div className='notification-content'>

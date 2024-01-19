@@ -12,6 +12,9 @@ import info from '../../../Images/redinfomodal.png'
 import block from '../../../Images/crossthree.png'
 import dot from '../../../Images/dot.png'
 import { Threeline6 } from '../../TransactionModal';
+import OpendocumentModal from '../FilterModals/OpendocumentModal';
+import profile1 from '../../../Images/profilethree.png'
+import request from '../../../Images/request.png'
 
 
 
@@ -38,6 +41,18 @@ const ViewProfileModal = ({ onClose, isProfileModalopen, }) => {
             simpleModal: false, // Use the same generic key used for opening
         }));
     }
+
+    const [isOpendoc, setOpenDoc] = useState(false)
+
+
+    const closeDocModal = () => {
+        setOpenDoc(false);
+    };
+
+    const openDocModal = () => {
+        setOpenDoc(true);
+    }
+
 
     return (
         <div className={`viewProfile-modal-overlay ${isProfileModalopen ? 'active' : ''}`} onClick={onClose}>
@@ -99,14 +114,25 @@ const ViewProfileModal = ({ onClose, isProfileModalopen, }) => {
                                         <input type="checkbox" />
                                         <span className="slider1 round"></span>
                                     </label>
-                                    <p style={{ color: '#000000', fontWeight: "600", fontSize: '18px' }}>Admin</p>
+                                    <p style={{ color: '#000000', fontWeight: "600", fontSize: '18px',}}>Admin</p>
                                 </div>
                             </div>
 
                         </div>
                     </div>
 
-
+                    {isOpendoc && (
+                    <OpendocumentModal onClose={closeDocModal}>
+                    <div className='Document_thre'>
+                        <img src={profile1} alt="" />
+                        <h5>Open Document</h5>
+                    </div>
+                    <div className='Document_thre'>
+                        <img src={request} alt="" />
+                        <h5>Request Document Update</h5>
+                    </div>
+                    </OpendocumentModal>
+                )}
                     <div className='history1222'>
                         <h5>Login History</h5>
                         <div className='viewprofile-right'>
@@ -177,7 +203,7 @@ const ViewProfileModal = ({ onClose, isProfileModalopen, }) => {
                             </i>
                             <input type="text" placeholder="Document 1" />
                             <i onClick={handleSenderModal}>
-                                <img src={dot} alt="" />
+                                <img src={dot} alt="" onClick={() => openDocModal()} />
                                 <Threeline6
                                     isOpen={modalStates2.simpleModal || false}
                                     onClose={handleSenderModalClose}
@@ -193,11 +219,11 @@ const ViewProfileModal = ({ onClose, isProfileModalopen, }) => {
                     <div className='btnuploaddoc123'>
                         <div className="Profile-inputs123">
                             <i>
-                                <img src={doc} alt="" />
+                                <img src={doc} alt=""  />
                             </i>
                             <input type="text" placeholder="Document 1" />
                             <i>
-                                <img src={dot} alt="" />
+                                <img src={dot} alt="" onClick={() => openDocModal()} />
                             </i>
                         </div>
 

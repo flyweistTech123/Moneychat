@@ -124,6 +124,36 @@
   
   }
 
+  .report-profile-card1{
+    width: 260px;
+    height: 40px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.report-profile-card1 img:nth-child(1){
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.report-profile-card1 img:nth-child(3){
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.report-profile-card1 p{
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+}
+
 
   
   @media (max-width: 968px) {

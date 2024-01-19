@@ -42,9 +42,7 @@
 .documentation {
     padding: 30px;
     overflow-y: auto;
-    /* Add vertical scrollbar when content exceeds modal height */
     max-height: 80vh;
-    /* Set a maximum height for the content to make the scrollbar appear */
     padding-right: 20px;
 }
 
@@ -62,4 +60,6 @@
 
 .documentation p {
     margin-top: 30px;
+    color: #000000;
+
 }

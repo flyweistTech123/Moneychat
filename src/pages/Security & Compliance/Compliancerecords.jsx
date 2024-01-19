@@ -9,13 +9,14 @@ import { useNavigate } from "react-router-dom";
 import dot from '../../Images/dot.png'
 import Repost from "../../Component/Modals/TransactionRepost/Repost";
 import smallcross from '../../Images/smallcross.png'
-
-import setting from '../../Images/setting.png'
+import { IoIosArrowForward } from "react-icons/io";
 import arrowbtn from '../../Images/arrowbtn.png'
 import { useState } from "react";
 import text from '../../Images/text.png'
 import uplbtn from '../../Images/uploadbtn.png'
 import { Threeline3 } from "../../Component/TransactionModal";
+import searchicon from '../../Images/searchicon.png'
+
 
 
 
@@ -91,11 +92,11 @@ const Compliancerecords = () => {
   return (
     <>
       <section className="pages">
-        <h5><span onClick={() => navigate('/gallery')}>Security & Compliance</span> / Compliance Records</h5>
+      <h5 className="head123head"><span  className="head123head1" onClick={() => navigate('/gallery')}>Security & Compliance<IoIosArrowForward style={{ width: '25px' }} /></span>Compliance Records</h5>
         <div className="Headingall">
           <div className="search">
             <div>
-              <i><IoSearch /></i>
+            <i> <img src={searchicon} alt="" /></i>
               <input type="search" placeholder="Search" />
             </div>
           </div>

@@ -12,6 +12,8 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import DucmentModal from './DocumentationModal'
 import documentimg from '../../Images/document.png'
 import searchicon from '../../Images/searchicon.png'
+import closeicon from '../../Images/closeicon.png'
+
 
 
 
@@ -83,7 +85,7 @@ const Resources = () => {
         </div>
         <div className="searchbox">
           <i>
-          <img src={searchicon} alt="" />
+            <img src={searchicon} alt="" />
           </i>
           <input type="search" placeholder="Search" />
         </div>
@@ -156,7 +158,7 @@ const Resources = () => {
             <h5>Recently Viewed</h5>
             <div className="article-container" onClick={openDocumentModalOpen}>
               {articlesData.map(article => (
-                <Article key={article.id} {...article}  />
+                <Article key={article.id} {...article} />
               ))}
             </div>
           </div>
@@ -167,7 +169,14 @@ const Resources = () => {
         {isDocumentModalOpen && (
           <DucmentModal onClose={closeDocumentModalModal} isDocumentationModalOpen={isDocumentModalOpen}>
             <div className='documentation'>
-              <h5>Email Communication</h5>
+              <div className='viewprofileheader'>
+                <h5>Email Communication</h5>
+                <div className='block12'>
+                  <span className="close-btn" onClick={closeDocumentModalModal}><img src={closeicon} alt=""  />
+                  </span>
+                </div>
+
+              </div>
               <hr />
               <img src={documentimg} alt="" />
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor auctor posuere. In rhoncus rhoncus gravida. Maecenas odio neque, sagittis et varius quis, sagittis id turpis. Mauris mauris tellus, molestie at dignissim nec, efficitur id turpis. Aenean eget commodo turpis. Sed ut fermentum ante, quis condimentum velit. Maecenas vestibulum scelerisque hendrerit. Praesent eu risus ipsum. Vivamus scelerisque eget quam sit amet vehicula. Aenean gravida, metus et varius accumsan, lacus elit ultrices ligula, in lacinia mi enim posuere diam. Curabitur pulvinar scelerisque faucibus. Etiam posuere lobortis metus, ac molestie felis pellentesque a. Fusce aliquet eget tortor pharetra venenatis. Nullam tincidunt convallis elit eget hendrerit. Duis non scelerisque lacus.

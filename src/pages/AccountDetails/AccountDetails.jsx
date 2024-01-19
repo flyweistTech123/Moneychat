@@ -29,8 +29,14 @@ const AccountDetails = () => {
     return (
         <>
             <section className='pages'>
+                <div className='Heading_all_all'>
                 <h5>Account Details</h5>
-
+                <div className='Heading_all_active'>
+                    <h6>STATUS  -  </h6>
+                    <div className='Heading_all_green'></div>
+                    <h5>ACTIVE</h5>
+                </div>
+                </div>
                 <div className='Acccount-details-PROFILE-INFORMATION'>
                     <div className='account-container'>
                         <div className='profile-infomation'>

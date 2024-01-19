@@ -3,6 +3,7 @@ import HOC from '../../layout/HOC'
 import { IoIosArrowForward } from "react-icons/io";
 import './HelpDesk.css'
 import btn from '../../Images/btnquestion.png'
+import searchicon from '../../Images/searchicon.png'
 
 
 
@@ -77,7 +78,15 @@ const HelpDesk = () => {
     return (
         <>
             <section className='pages'>
-                <h5>Support & Help Desk</h5>
+                <div className='Heading_all_all'>
+                    <h5>Support & Help Desk</h5>
+                </div>
+                <div className="searchbox">
+                    <i>
+                        <img src={searchicon} alt="" />
+                    </i>
+                    <input type="search" placeholder="Search" />
+                </div>
                 <div className='helpdesk-container'>
                     <span className='helpdeskheading'>FREQUENTLY ASKED QUESTIONS ( FAQ’S )</span>
                     <div className='helpdeskquestion'>
@@ -101,9 +110,9 @@ const HelpDesk = () => {
                         onClick={handleButtonClick}
                     >
                         <img src={btn} alt="Button Image" />
-                        <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-                        <span className="button-text">Got any Query? Please let us know...</span>
-                        <span className="button-text-expanded">CLICK TO CONTINUE  <IoIosArrowForward  /></span>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <span className="button-text">Got any Query? Please let us know...</span>
+                            <span className="button-text-expanded">CLICK TO CONTINUE  <IoIosArrowForward /></span>
                         </div>
                     </button>
                 </div>

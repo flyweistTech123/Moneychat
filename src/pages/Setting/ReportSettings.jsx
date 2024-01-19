@@ -24,11 +24,13 @@ const ReportSettings = () => {
     setSenderModallist(false);
   }
   const navigate = useNavigate()
+  const triggerFileInput = () => {
+    document.getElementById('fileInput').click();
+};
   return (
     <>
       <section className='pages'>
-        <h5 style={{ display: 'flex', alignItems: 'center', gap: '20px' }}><span onClick={() => navigate('/setting')} style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>Settings  <IoIosArrowForward style={{ width: '25px' }} /></span>Report Settings</h5>
-
+      <h5 className="head123head"><span  className="head123head1" onClick={() => navigate('/setting')}>Settings<IoIosArrowForward style={{ width: '25px' }} /></span>Report Settings</h5>
         <div className='Report-container'>
           <div className='Report-content'>
             <span>MANUAL REPORT GENERATION</span>
@@ -37,7 +39,8 @@ const ReportSettings = () => {
               <div className="reportlocation-datials">
                 <img src={file} alt="" />
                 <input type="text" className="input-min" placeholder="Windows \ D: \My Files \ My Folder \" />
-                <img src={change} alt="" />
+                <img src={change} alt=""  onClick={triggerFileInput} />
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </div>
             </div>
 
@@ -96,7 +99,7 @@ const ReportSettings = () => {
                   <p>Lorem Ipsum</p>
                   <img src={cross} alt="" />
                 </div>
-                <div className='AddReport'>
+                <div className='AddReport'  onClick={openSenderModallist}>
                   <img src={plus} alt="" />
                   <p>ADD</p>
                 </div>

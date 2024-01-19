@@ -1,0 +1,40 @@
+.OpendocumentModal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.OpendocumentModal-content {
+    position: relative;
+    top: 450px;
+    left: 0;
+    background: #fff;
+    width: 370px;
+    height: 183px;
+    border-radius: 12px;
+}
+
+.Document_thre{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+.Document_thre img{
+    width: 40px;
+    height: 40px;
+}
+
+.Document_thre h5{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.09px;
+    color: #000000B2;
+}

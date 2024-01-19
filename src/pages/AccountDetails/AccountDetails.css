@@ -1,5 +1,55 @@
 /* PROFILE INFORMATION */
 
+.Heading_all_all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Heading_all_all h5{
+    color: #000000;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32.81px;
+    margin-bottom: 20px;
+}
+
+.Heading_all_active{
+    width: 300px;
+    height: 60px;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+    margin-right: 10px;
+}
+
+.Heading_all_active h6{
+    color: #000000B2;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23.44px;
+}
+
+.Heading_all_active h5{
+    color: #3BB54A;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.44px;
+}
+
+.Heading_all_green{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3BB54A;
+}
+
+
+
 .Acccount-details-PROFILE-INFORMATION {
     width: 1003px;
     height: 3191px;
@@ -7,7 +57,7 @@
     border: 1px solid #FFFFFF;
     border-radius: 14px;
     padding: 50px;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 
@@ -24,9 +74,7 @@
     height: 60px;
     margin-top: 20px;
     padding: 15px;
-    /* Adjust padding as needed */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    /* Box shadow properties */
 }
 
 .Profile-inputs select {
@@ -160,6 +208,8 @@
     border-radius: 14px;
     padding: 50px;
     margin-top: 4rem;
+    margin-bottom: 4rem;
+
 }
 
 .Acccount-details-PAYMENT-INFORMATION p {

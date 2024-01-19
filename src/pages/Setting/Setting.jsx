@@ -8,43 +8,51 @@ import { IoIosArrowForward } from "react-icons/io";
 const Setting = () => {
   return (
     <>
-    <section className='pages'>
-    <div className="Heading_all">
+      <section className='pages'>
+        <div className="Heading_all">
           <h5>Settings</h5>
         </div>
         <div className='setting-conatiner'>
-              <div className='settingcard'>
-                <Link to={'/notification'}>
-                <div className="small-setting-card">
+          <div className='settingcard'>
+            <Link to={'/notification'}>
+              <div className="small-setting-card">
+                <div className='small-setting-setting'>
                   <img src={settingbell} alt="Icon" className="setting-icon" />
                   <span>Notifications & Alerts</span>
-                  <IoIosArrowForward  className="setting-icon1" />
                 </div>
-                </Link>
-                <Link to={'/reportSettings'}>
-                <div className="small-setting-card">
+                <IoIosArrowForward className="setting-icon1" />
+              </div>
+            </Link>
+            <Link to={'/reportSettings'}>
+              <div className="small-setting-card">
+                <div className='small-setting-setting'>
                   <img src={settignchart} alt="Icon" className="setting-icon" />
                   <span>Report Settings</span>
-                  <div className='settg'><IoIosArrowForward  className="setting-icon1" /></div>
                 </div>
-                </Link>
-                <Link to={'/compliancerecords'}>
-                <div className="small-setting-card">
+                <div className='settg'><IoIosArrowForward className="setting-icon1" /></div>
+              </div>
+            </Link>
+            <Link to={''}>
+              <div className="small-setting-card">
+                <div className='small-setting-setting'>
                   <img src={settingbell} alt="Icon" className="setting-icon" />
                   <span>Communications</span>
-                  <div><IoIosArrowForward  className="setting-icon1" /></div>
                 </div>
-                </Link>
-                <Link to={'/compliancerecords'}>
-                <div className="small-setting-card">
+                <div><IoIosArrowForward className="setting-icon1" /></div>
+              </div>
+            </Link>
+            <Link to={''}>
+              <div className="small-setting-card">
+                <div className='small-setting-setting'>
                   <img src={settingbell} alt="Icon" className="setting-icon" />
                   <span>Notifications & Alerts</span>
-                  <div><IoIosArrowForward  className="setting-icon1" /></div>
                 </div>
-                </Link>
+                <div><IoIosArrowForward className="setting-icon1" /></div>
               </div>
-            </div>
-    </section>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

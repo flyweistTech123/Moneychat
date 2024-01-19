@@ -13,6 +13,8 @@ import TransactionsFilter from "../../Component/Modals/FilterModals/Transactions
 import { Inffo, Threeline4, Threeline5 } from "../../Component/TransactionModal";
 import Infffo from "../../Component/Modals/InfforModal/InfoModal"
 import closeicon from '../../Images/closeicon.png'
+import smallgreentick from '../../Images/smallgreentick.png'
+import plusicon from '../../Images/plusicon.png'
 
 
 import CopyText from "../../Component/CopyText";
@@ -83,7 +85,7 @@ const data = [
     },
 ];
 
-const data1 =[
+const data1 = [
     {
         id: "ABCD12341",
         date: "DD/MM/YYYY",
@@ -273,7 +275,10 @@ const RecipientSManagement = () => {
                                                 <img src={info} alt="" style={{ width: '20px', height: '20px', visibility: 'hidden', marginLeft: '2px' }} />
                                             </div>
                                         ) : (<div className="profilediv">
-                                            <img src={i.image} alt="Profile" style={{ marginRight: "8px", border: '1px solid #FD575B', borderRadius: '50px' }} />
+                                            <div className='biggreentick1'>
+                                                <img src={i.image} alt="Profile" style={{ marginRight: "8px", border: '1px solid #FD575B', borderRadius: '50px' }} />
+                                                <img src={smallgreentick} alt="" className="tick-mark1" />
+                                            </div>
                                             <span style={{ display: 'flex', textAlign: 'center', color: '#FD575B' }}>{i.redrecipientsName}</span>
                                             <span className="cursor_class">
                                                 <span onClick={() => handleinfoModal(i.id)}>
@@ -440,11 +445,11 @@ const RecipientSManagement = () => {
                             </div>
                         </div>
                         <div className="recipient-searchbox">
-                                <i>
-                                    <IoSearch />
-                                </i>
-                                <input type="search" placeholder="Search" />
-                            </div>
+                            <i>
+                                <IoSearch />
+                            </i>
+                            <input type="search" placeholder="Search" />
+                        </div>
                         <div className="conatainerabless">
                             <div className="reviewtable">
                                 <table>
@@ -465,6 +470,7 @@ const RecipientSManagement = () => {
                                                 </td>
                                                 <td>
                                                     <span className="amount_td" >
+                                                        <img src={plusicon} alt="" />
                                                         <span style={{ color: '#000000', fontSize: '25px' }}> {i.amount} </span>
                                                         <img
                                                             src="./Image/18.png"
@@ -484,7 +490,7 @@ const RecipientSManagement = () => {
                                                     {hoveredId === i.id ? <CopyText text={i.id} /> : i.id}
                                                 </td>
                                                 <td>
-                                                    <span style={{color:'#000000'}}>{i.deliverymethod}</span>
+                                                    <span style={{ color: '#000000' }}>{i.deliverymethod}</span>
                                                 </td>
                                                 <td>
 

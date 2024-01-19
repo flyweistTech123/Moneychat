@@ -12,7 +12,8 @@ import TransactionsFilter from "../../Component/Modals/FilterModals/Transactions
 import { useState } from "react";
 import {  Threeline2, TransactionModal } from "../../Component/TransactionModal";
 import CopyText from "../../Component/CopyText";
-
+import searchicon from '../../Images/searchicon.png'
+import { IoIosArrowForward } from "react-icons/io";
 
 
 
@@ -149,11 +150,11 @@ const Flaggedtransactions = () => {
   return (
     <>
       <section className="pages">
-        <h5><span onClick={() => navigate('/gallery')}>Security & Compliance</span> / Flagged Transactions</h5>
+      <h5 className="head123head"><span  className="head123head1" onClick={() => navigate('/gallery')}>Security & Compliance<IoIosArrowForward style={{ width: '25px' }} /></span>Flagged Transactions</h5>
         <div className="Headingall">
           <div className="search">
-            <div>
-              <i><IoSearch /></i>
+            <div className="largerrrr">
+            <i> <img src={searchicon} alt="" /></i>
               <input type="search" placeholder="Search" />
             </div>
           </div>

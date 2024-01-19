@@ -5,6 +5,19 @@
 }
 
 
+.biggreentick1{
+  position: relative;
+
+}
+
+.tick-mark1{
+  position: absolute;
+  top: 20%;  
+  left: 5%; 
+  transform: translate(-50%, -50%);
+}
+
+
 
 .Headingall1 h5 {
   color: #000;
@@ -14,13 +27,6 @@
   line-height: normal;
 }
 
-/* .pages h5{
-    color: #000;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  } */
 
 
 

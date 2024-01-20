@@ -364,7 +364,7 @@ const ReviewInterface = () => {
                         <option value="reject">REJECT</option>
                         <option value="escalate">ESCALATE</option>
                         <option value="onHold">ON-HOLD</option>
-                        <option value="audit & Accountability">audit & Accountability</option>
+                        <option value="audit & Accountability">Audit & Accountability</option>
                       </select>
                     )}
                   </td>

@@ -1,6 +1,7 @@
 /** @format */
 * {
   font-family: 'Roboto', sans-serif !important;
+  /* overflow: hidden; */
 }
 
 
@@ -535,6 +536,7 @@
   height: 100%;
   margin:  0 auto;
   margin-top: 40px;
+  overflow-x: scroll;
 }
 
 .child_component_full {
@@ -771,6 +773,66 @@ table tbody tr:last-child td:first-child {
   font-weight: 700;
   line-height: normal;
 }
+
+.status.pending {
+  color: #FEA82F;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+.status.failed {
+  color: #FD575B;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+.status.under_review {
+  color: #0070BC;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+.status.onHold {
+  color: #00AAEA;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+
+.status.approve {
+  color: #3bb54a;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.status.reject {
+  color: #FC0005;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+.status.escalate {
+  color: #FEA82F;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+.status.audit & Accountability{
+  color: #666666;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+.status.onHold {
+  color: #00AAEA;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
 
 .pages table tbody tr td select {
   outline: none;
@@ -1197,4 +1259,87 @@ table tbody tr:last-child td:first-child {
 
 .payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal .Inffo_content .details {
   margin-top: 20px;
+}
+
+
+
+
+/*  Threeline7*/
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal {
+  position: absolute;
+  right: 0 !important;
+  top: 50px;
+  left: -250px;
+}
+
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .threeline7_content {
+  width: 228px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  padding: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    height: auto;
+}
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .threeline7_content h6{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #0070BC;
+}
+
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .threeline7_content .heading {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .threeline7_content .heading input {
+  width: 100%;
+  max-width: 30px;
+  height: 30px;
+}
+
+
+
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .Inffo_content .heading span.description span.name {
+  color: #000000B2;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.75px;
+}
+
+.payment_custom_modal.Sender_custom_Modal.ThreeLine_custom_Modal .threeline_content .details {
+  margin-top: 20px;
+}
+
+
+
+
+.Permissions611{
+  width: 152px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.Permissions611 h6{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: #1E1E1E99;
+}
+
+.Permissions611 .Permissions62{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18.75px;
+  color: #1E1E1E99;
+  margin-bottom: 10px;
 }

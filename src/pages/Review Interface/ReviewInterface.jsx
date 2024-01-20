@@ -22,6 +22,16 @@ import ascending from '../../Images/Ascending.png'
 import serndername from '../../Images/sendername.png'
 import Currencies from '../../Images/Currencies.png'
 import searchicon from '../../Images/searchicon.png'
+import Repost from "../../Component/Modals/TransactionRepost/Repost";
+import smallcross from '../../Images/smallcross.png'
+import arrowbtn from '../../Images/arrowbtn.png'
+import fileupload from '../../Images/fileupload.png'
+import { MdOutlineHistory } from "react-icons/md";
+import loaction from '../../Images/locationlogin.png'
+
+
+
+
 
 
 
@@ -75,6 +85,10 @@ const data = [
 const ReviewInterface = () => {
   const [isfilterModalOpen, setFilterModaOpen] = useState(false);
   const [isSenderModallist, setSenderModallist] = useState(false);
+  const [isRepostOpen, setRepostOpen] = useState(false)
+  const [isRepostOpen1, setRepostOpen1] = useState(false)
+  const [isRepostOpen2, setRepostOpen2] = useState(false)
+  const [isRepostOpen3, setRepostOpen3] = useState(false)
   const [isCurrenciesModallist, setCurrenciesModallist] = useState(false)
   const [modalStates, setModalStates] = useState({});
   const [modalStates2, setModalStates2] = useState({});
@@ -168,6 +182,41 @@ const ReviewInterface = () => {
     setCurrenciesModallist(false);
   }
 
+  const openRepostModal = () => {
+    setRepostOpen(true);
+  }
+
+  const closeRepostModal = () => {
+    setRepostOpen(false);
+  }
+
+
+  const openRepostModal1 = () => {
+    setRepostOpen1(true);
+  }
+
+  const closeRepostModal1 = () => {
+    setRepostOpen1(false);
+  }
+  const openRepostModal2 = () => {
+    setRepostOpen2(true);
+  }
+
+  const closeRepostModal2 = () => {
+    setRepostOpen2(false);
+  }
+
+  const openRepostModal3 = () => {
+    setRepostOpen3(true);
+  }
+
+  const closeRepostModal3 = () => {
+    setRepostOpen3(false);
+  }
+
+
+
+
   const [minPrice, setMinPrice] = useState(2500);
   const [maxPrice, setMaxPrice] = useState(7500);
   const priceGap = 1000;
@@ -193,6 +242,36 @@ const ReviewInterface = () => {
   };
 
 
+
+
+  const [statusMap, setStatusMap] = useState({});
+
+  const handleStatusChange = (id, newStatus) => {
+    setStatusMap((prevStatusMap) => ({
+      ...prevStatusMap,
+      [id]: newStatus,
+    }));
+
+    // Check if the newStatus is 'APPROVE' and trigger the modal opening function
+    if (newStatus === 'reject') {
+      openRepostModal();
+    }
+    if (newStatus === 'escalate') {
+      openRepostModal1();
+    }
+    if (newStatus === 'onHold') {
+      openRepostModal2();
+    }
+    if (newStatus === 'audit & Accountability') {
+      openRepostModal3();
+    }
+  };
+
+  const triggerFileInput = () => {
+    document.getElementById('fileInput').click();
+  };
+
+
   return (
     <>
       <FullScreenLoader show={show} handleClose={handleClose} />
@@ -202,15 +281,15 @@ const ReviewInterface = () => {
           <div className="search">
             <img src="./Image/15.png" alt="" onClick={() => handleShow()} />
             <div className="search21">
-            <i> <img src={searchicon} alt="" /></i>
+              <i> <img src={searchicon} alt="" /></i>
               <input type="search" placeholder="Search Transaction" />
             </div>
             <div className="button_container">
-            <button className="filter" onClick={openFilterModal}>
-              <img src="./Image/16.png" alt="" />
-              <span>FILTERS</span>
-            </button>
-          </div>
+              <button className="filter" onClick={openFilterModal}>
+                <img src="./Image/16.png" alt="" />
+                <span>FILTERS</span>
+              </button>
+            </div>
           </div>
         </div>
         <div className="reviewtable">
@@ -274,16 +353,18 @@ const ReviewInterface = () => {
                     </span>
                   </td>
                   <td>
-                    {i.status ? (
-                      <span className="status complete">COMPLETED</span>
+                    {statusMap[i.id] ? (
+                      <span className={`status ${statusMap[i.id]}`}>
+                        {statusMap[i.id].toUpperCase()}
+                      </span>
                     ) : (
-                      <select >
-                        <option style={{ textAlign: 'center' }}>Select</option>
-                        <option className="complete">APPROVE</option>
-                        <option className="pending">REJECT</option>
-                        <option className="failed">ESCALATE</option>
-                        <option className="under_review">ON-HOLD</option>
-                        <option className="onHold">audit & Accountability</option>
+                      <select onChange={(e) => handleStatusChange(i.id, e.target.value)}>
+                        <option>Select Status</option>
+                        <option value="approve">APPROVE</option>
+                        <option value="reject">REJECT</option>
+                        <option value="escalate">ESCALATE</option>
+                        <option value="onHold">ON-HOLD</option>
+                        <option value="audit & Accountability">audit & Accountability</option>
                       </select>
                     )}
                   </td>
@@ -605,6 +686,230 @@ const ReviewInterface = () => {
               </div>
             </div>
           </SenderList>
+        )}
+
+        {isRepostOpen && (
+          <Repost onClose={closeRepostModal}>
+
+            <div className="repostconatiner">
+              <div className="repostheder">
+                <div>
+                  <h3>Reject</h3>
+                </div>
+                <div className="repostimg">
+                  <img src={smallcross} onClick={closeRepostModal}></img>
+                </div>
+              </div>
+              <div className="repostline">
+                <hr />
+              </div>
+              <div className="repostselect">
+                <div>
+                  <span>Reason for Rejection</span>
+                  <select>
+                    <option>Select your Reason</option>
+                    <option >Reason</option>
+                    <option>Reason</option>
+                    <option>Reason</option>
+                    <option >Reason</option>
+                    <option>Reason</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div className="action51">
+                <div className="textarea1">
+                  <span className="action52">Any Information you want to Provide ?</span>
+                  <div className="custom-textarea">
+                    <img src={fileupload} alt="Your Image" onClick={triggerFileInput} />
+                    <h6 onClick={triggerFileInput}>ADD MEDIA</h6>
+                    <input type="file" id="fileInput" style={{ display: 'none' }} />
+                    <textarea rows="6" cols="30" placeholder="Type Here.........."></textarea>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="btn12">
+              <button className="exportbtn" onClick={closeRepostModal}>SUBMIT</button>
+              <div className="cancelbtn1">
+                <img src={arrowbtn}></img>
+                <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+              </div>
+            </div>
+
+          </Repost>
+        )}
+
+
+        {isRepostOpen1 && (
+          <Repost onClose={closeRepostModal1}>
+
+            <div className="repostconatiner">
+              <div className="repostheder">
+                <div>
+                  <h3>Escalate</h3>
+                </div>
+                <div className="repostimg">
+                  <img src={smallcross} onClick={closeRepostModal1}></img>
+                </div>
+              </div>
+              <div className="repostline">
+                <hr />
+              </div>
+              <div className="repostselect">
+                <div>
+                  <span>Reason for Escalation</span>
+                  <select>
+                    <option>Select your Reason</option>
+                    <option >Reason</option>
+                    <option>Reason</option>
+                    <option>Reason</option>
+                    <option >Reason</option>
+                    <option>Reason</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div className="action51">
+                <div className="textarea1">
+                  <span className="action52">Any Information you want to Provide ?</span>
+                  <div className="custom-textarea">
+                    <img src={fileupload} alt="Your Image" onClick={triggerFileInput} />
+                    <h6 onClick={triggerFileInput}>ADD MEDIA</h6>
+                    <input type="file" id="fileInput" style={{ display: 'none' }} />
+                    <textarea rows="6" cols="30" placeholder="Type Here.........."></textarea>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="btn12">
+              <button className="exportbtn" onClick={closeRepostModal}>SUBMIT</button>
+              <div className="cancelbtn1">
+                <img src={arrowbtn}></img>
+                <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+              </div>
+            </div>
+
+          </Repost>
+        )}
+        {isRepostOpen2 && (
+          <Repost onClose={closeRepostModal2}>
+
+            <div className="repostconatiner">
+              <div className="repostheder">
+                <div>
+                  <h3>On-Hold</h3>
+                </div>
+                <div className="repostimg">
+                  <img src={smallcross} onClick={closeRepostModal2}></img>
+                </div>
+              </div>
+              <div className="repostline">
+                <hr />
+              </div>
+              <div className="action51">
+                <div className="textarea1">
+                  <span className="action52">Any Information you want to Provide ?</span>
+                  <div className="custom-textarea">
+                    <img src={fileupload} alt="Your Image" onClick={triggerFileInput} />
+                    <h6 onClick={triggerFileInput}>ADD MEDIA</h6>
+                    <input type="file" id="fileInput" style={{ display: 'none' }} />
+                    <textarea rows="6" cols="30" placeholder="Type Here.........."></textarea>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="btn12">
+              <button className="exportbtn" onClick={closeRepostModal}>SUBMIT</button>
+              <div className="cancelbtn1">
+                <img src={arrowbtn}></img>
+                <button className="cancelbtn" onClick={closeRepostModal}>Cancel</button>
+              </div>
+            </div>
+
+          </Repost>
+        )}
+
+        {isRepostOpen3 && (
+          <Repost onClose={closeRepostModal3}>
+
+            <div className=''>
+              <div className="repostheder">
+                <div>
+                  <h3>Audit & Accountability</h3>
+                </div>
+                <div className="repostimg">
+                  <img src={smallcross} onClick={closeRepostModal3}></img>
+                </div>
+              </div>
+              <div className="repostline">
+                <hr />
+              </div>
+              <div className='viewprofile-right121'>
+                <div className='login-history'>
+                  <div>
+                    <span>HH : MM  ( DD/ MM / YYYY )</span>
+                    <p style={{ display: 'flex', alignItems: 'center', margin: 0 }}>
+                      <MdOutlineHistory style={{ marginRight: '4px', marginLeft: '50px' }} />20 Mins Ago
+                    </p>
+                  </div>
+                  <div className='circlelogin'>
+
+                  </div>
+                  <img src={loaction} alt="" style={{ width: '30px', height: "30px" }} />
+                  <span>State, City, Country</span>
+                </div>
+                <div className='login-history'>
+                  <div>
+                    <span>HH : MM  ( DD/ MM / YYYY )</span>
+                    <p style={{ display: 'flex', alignItems: 'center', margin: 0 }}>
+                      <MdOutlineHistory style={{ marginRight: '4px', marginLeft: '50px' }} />20 Mins Ago
+                    </p>
+                  </div>
+                  <div className='circlelogin'>
+
+                  </div>
+                  <img src={loaction} alt="" style={{ width: '30px', height: "30px" }} />
+                  <span>State, City, Country</span>
+                </div>
+                <div className='login-history'>
+                  <div>
+                    <span>HH : MM  ( DD/ MM / YYYY )</span>
+                    <p style={{ display: 'flex', alignItems: 'center', margin: 0 }}>
+                      <MdOutlineHistory style={{ marginRight: '4px', marginLeft: '50px' }} />20 Mins Ago
+                    </p>
+                  </div>
+                  <div className='circlelogin'>
+
+                  </div>
+                  <img src={loaction} alt="" style={{ width: '30px', height: "30px" }} />
+                  <span>State, City, Country</span>
+                </div>
+                <div className='login-history'>
+                  <div>
+                    <span>HH : MM  ( DD/ MM / YYYY )</span>
+                    <p style={{ display: 'flex', alignItems: 'center', margin: 0 }}>
+                      <MdOutlineHistory style={{ marginRight: '4px', marginLeft: '50px' }} />20 Mins Ago
+                    </p>
+                  </div>
+                  <div className='circlelogin'>
+
+                  </div>
+                  <img src={loaction} alt="" style={{ width: '30px', height: "30px" }} />
+                  <span>State, City, Country</span>
+                </div>
+              </div>
+            </div>
+
+          </Repost>
         )}
       </section>
     </>

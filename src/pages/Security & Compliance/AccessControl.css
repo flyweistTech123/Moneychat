@@ -1,11 +1,11 @@
-.Headingall{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
+.Headingall {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
 }
 
-.head123head{
+.head123head {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -13,142 +13,171 @@
   font-size: 25px;
   line-height: 32.81px;
 }
-.head123head1{
+
+.head123head1 {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-  .pages h5 span:nth-child(1) {
-    color: #0070BC;
-    cursor: pointer;
+.pages h5 span:nth-child(1) {
+  color: #0070BC;
+  cursor: pointer;
 }
 
 
-  .Headingall .search {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .Headingall .search img {
-    width: 40px;
-    cursor: pointer;
-  }
-  
-  .Headingall .search div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 13px;
-    width: 439px;
-  }
+.Headingall .search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
-  .Headingall .search .largerrrr {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 13px;
-    width: 826px;
-    margin-right: 20px;
-  }
+.Headingall .search img {
+  width: 40px;
+  cursor: pointer;
+}
 
+.Headingall .search div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 13px;
+  width: 439px;
+}
 
-
-    
-  .Headingall .search i img{
-    width: 30px;
-    height: 30px;
-  }
-  .Headingall .search input {
-    outline: none;
-    width: 90%;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
-  .Headingall .button_container {
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
-    max-width: 400px;
-    width: 100%;
-    align-items: center;
-  }
-  .Headingall .button_container button {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  .Headingall .button_container button img {
-    width: 25px;
-  }
-  .Headingall .button_container button span {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  .Headingall .button_container button.filter span {
-    color: #0070bc;
-  }
-  .Headingall .button_container button.report {
-    border-radius: 10px;
-    background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
-    padding: 10px;
-    width: 328px;
-    justify-content: center;
-    align-items: flex-end !important;
-  }
-  .Headingall .button_container button.report span {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
+.Headingall .search .largerrrr {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 13px;
+  width: 826px;
+  margin-right: 20px;
+}
 
 
 
-  .employeetable th{
 
-    font-weight: 500;
-    font-size: 18px;
-    color: #FFFFFF;
-    text-align: center;
-  }
+.Headingall .search i img {
+  width: 30px;
+  height: 30px;
+}
 
-  .employeetable td{
-    font-weight: 600;
-    font-size: 16px;
-    color: #000000B2;
-    text-align: center;
-    cursor: pointer;
-    /* padding: 20px; */
-  }
-.profilediv{
+.Headingall .search input {
+  outline: none;
+  width: 90%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Headingall .button_container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 400px;
+  width: 100%;
+  align-items: center;
+}
+
+.Headingall .button_container button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.Headingall .button_container button img {
+  width: 25px;
+}
+
+.Headingall .button_container button span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Headingall .button_container button.filter span {
+  color: #0070bc;
+}
+
+.Headingall .button_container button.report {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fea82f 0%, #fd575b 100%);
+  padding: 10px;
+  width: 328px;
+  justify-content: center;
+  align-items: flex-end !important;
+}
+
+.Headingall .button_container button.report span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+
+
+.employeetable th {
+
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.employeetable td {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000B2;
+  text-align: center;
+  cursor: pointer;
+  /* padding: 20px; */
+}
+
+.profilediv {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.employeetable td p{
+.employeetable td p {
   color: #3BB54A;
   font-size: 14px;
   font-weight: 500;
   margin: 0;
 }
 
-.employeetable select{
-  color: #000000B2;
+
+.Permissions61{
+  width: 228px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.options{
-  font-weight: 500;
+.Permissions61 h6{
+  font-weight: 600;
   font-size: 16px;
-  color: #000000B2;
+  line-height: 18.75px;
+  color: #1E1E1E99;
 }
+
+.Permissions61 .Permissions62{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18.75px;
+  color: #1E1E1E99;
+  margin-bottom: 10px;
+}
+
+
 
 
 /* Responsive Styles for Small Devices */
@@ -161,7 +190,8 @@
 
 
   .Headingall .search div {
-    width: 100%; /* Adjusted width for responsiveness */
+    width: 100%;
+    /* Adjusted width for responsiveness */
   }
 
 
@@ -170,15 +200,18 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    max-width: none; /* Remove maximum width for responsiveness */
+    max-width: none;
+    /* Remove maximum width for responsiveness */
   }
 
   .Headingall .button_container button {
-    width: 100%; /* Adjusted width for responsiveness */
+    width: 100%;
+    /* Adjusted width for responsiveness */
   }
 
   .Headingall .button_container button.report {
-    max-width: none; /* Remove maximum width for responsiveness */
+    max-width: none;
+    /* Remove maximum width for responsiveness */
   }
 }
 
@@ -193,7 +226,8 @@
 
 
   .Headingall .search div {
-    width: 100%; /* Adjusted width for responsiveness */
+    width: 100%;
+    /* Adjusted width for responsiveness */
   }
 
 
@@ -202,14 +236,22 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    max-width: none; /* Remove maximum width for responsiveness */
+    max-width: none;
+    /* Remove maximum width for responsiveness */
   }
 
   .Headingall .button_container button {
-    width: 100%; /* Adjusted width for responsiveness */
+    width: 100%;
+    /* Adjusted width for responsiveness */
   }
 
   .Headingall .button_container button.report {
-    max-width: none; /* Remove maximum width for responsiveness */
+    max-width: none;
+    /* Remove maximum width for responsiveness */
   }
 }
+
+
+
+
+

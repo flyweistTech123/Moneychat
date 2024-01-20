@@ -221,6 +221,15 @@ const Transaction = () => {
   };
 
 
+  const [statusMap, setStatusMap] = useState({}); 
+
+  const handleStatusChange = (id, newStatus) => {
+    setStatusMap(prevStatusMap => ({
+      ...prevStatusMap,
+      [id]: newStatus,
+    }));
+  };
+
 
 
   return (
@@ -311,16 +320,18 @@ const Transaction = () => {
                   </td>
 
                   <td>
-                    {i.status ? (
-                      <span className="status complete">COMPLETED</span>
+                    {statusMap[i.id] ? (
+                      <span className={`status ${statusMap[i.id]}`}>
+                        {statusMap[i.id].toUpperCase()}
+                      </span>
                     ) : (
-                      <select>
+                      <select onChange={(e) => handleStatusChange(i.id, e.target.value)}>
                         <option>Select Status</option>
-                        <option className="complete">COMPLETED</option>
-                        <option className="pending">PENDING</option>
-                        <option className="failed">FAILED</option>
-                        <option className="under_review">UNDER REVIEW</option>
-                        <option className="onHold">ON HOLD</option>
+                        <option value="complete">COMPLETED</option>
+                        <option value="pending">PENDING</option>
+                        <option value="failed">FAILED</option>
+                        <option value="under_review">UNDER REVIEW</option>
+                        <option value="onHold">ON HOLD</option>
                       </select>
                     )}
                   </td>

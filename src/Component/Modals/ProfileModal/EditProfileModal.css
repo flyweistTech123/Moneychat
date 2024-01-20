@@ -63,14 +63,16 @@
   overflow: auto;
 }
 
-.biggreentick{
+.biggreentick {
   position: relative;
 }
 
 .tick-mark {
   position: absolute;
-  top: 10%;  /* Adjust as needed */
-  left: 10%;  /* Adjust as needed */
+  top: 10%;
+  /* Adjust as needed */
+  left: 10%;
+  /* Adjust as needed */
   transform: translate(-50%, -50%);
 }
 
@@ -125,7 +127,7 @@
   border-radius: 10px;
 }
 
-.edit-personal{
+.edit-personal {
   text-align: start;
   margin-left: 230px;
 }
@@ -189,3 +191,130 @@
     flex-direction: column;
   }
 }
+
+
+.transactiondetails31{
+  display: flex;
+  margin-left: 230px;
+  margin-top: 20px;
+  gap: 100px;
+}
+
+/* .pay1 {
+  display: flex;
+  margin-left: 230px;
+  gap: 20px;
+}
+
+
+
+.pay2 h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25.78px;
+  color: #0070BC;
+}
+
+
+
+
+.pay3 h3{
+ 
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25.78px;
+  color: #00000099;
+}
+ */
+
+ .pay1 {
+  display: flex;
+  margin-left: 230px;
+  gap: 180px;
+}
+
+.pay2 h3, .pay3 h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25.78px;
+}
+
+.pay2.active h3 {
+  color: #0070BC;
+}
+
+.pay3.active h3 {
+  color: #00000099;
+}
+
+.transactiondetails33{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+
+.transactiondetails34 h6 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.44px;
+  color: #000000B2;
+}
+
+.transactiondetails34 h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 37.5px;
+  color: #000000;
+}
+
+.transactiondetails35{
+  margin-top: 20px;
+
+}
+
+
+
+
+.transactiondetails36 {
+  position: relative;
+  margin-left: 230px;
+  margin-top: 10px;
+}
+
+.transactiondetails37 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 10px;
+  background-color: #D9D9D9;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.transactiondetails38 {
+  position: absolute;
+  width: 200px;
+  left: 0;
+  height: 10px;
+  background-color: #0070BC;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+
+.transactiondetails39 {
+  position: absolute;
+  width: 200px;
+  left: 0;
+  height: 10px;
+  background-color: #0070BC;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+  margin-left: 350px;
+}
+
+
+
+

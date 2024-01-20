@@ -16,8 +16,10 @@ import Repost from "../../Component/Modals/TransactionRepost/Repost";
 import smallcross from '../../Images/smallcross.png'
 import arrowbtn from '../../Images/arrowbtn.png'
 import profileimg from '../../Images/profilerepost.png'
-import { Threeline1 } from "../../Component/TransactionModal";
+import { Threeline1, Threeline7 } from "../../Component/TransactionModal";
 import { IoIosArrowForward } from "react-icons/io";
+import { FaAngleDown } from "react-icons/fa";
+
 
 
 
@@ -87,6 +89,7 @@ const AccessControl = () => {
   const [isfilterModalOpen, setFilterModaOpen] = useState(false);
   const [isRepostOpen, setRepostOpen] = useState(false)
   const [modalStates2, setModalStates2] = useState({});
+  const [modalStates, setModalStates] = useState({});
   const handleSenderModal = (id) => {
     const updatedStates = Object.fromEntries(
       Object.entries(modalStates2).map(([modalId]) => [modalId, false])
@@ -98,6 +101,23 @@ const AccessControl = () => {
   };
   const handleSenderModalClose = (id) => {
     setModalStates2((prevStates) => ({
+      ...prevStates,
+      [id]: false,
+    }));
+  };
+
+  const handleModalOpen = (id) => {
+    const updatedStates = Object.fromEntries(
+      Object.entries(modalStates).map(([modalId]) => [modalId, false])
+    );
+    setModalStates({
+      ...updatedStates,
+      [id]: true,
+    });
+  };
+
+  const handleModalClose = (id) => {
+    setModalStates((prevStates) => ({
       ...prevStates,
       [id]: false,
     }));
@@ -178,21 +198,22 @@ const AccessControl = () => {
                   <td>
                     <div>{i.lastLoggedin}</div>
                     <p style={{ display: 'flex', alignItems: 'center', margin: 0 }}>
-                      <MdOutlineHistory style={{ marginRight: '4px', marginLeft: '50px' }} /> {i.time}
+                      <MdOutlineHistory style={{ marginRight: '4px', marginLeft: '50px' }}  /> {i.time}
                     </p>
                   </td>
                   <td>
-                    {i.permissions ? (
-                      <span className="status complete">Super-Admin</span>
-                    ) : (
-                      <select>
-                        <option>All Accessible</option>
-                        <option className="options">Super-Admin</option>
-                        <option className="options">Admin</option>
-                        <option className="options">Head</option>
-                        <option className="options">Manager</option>
-                      </select>
-                    )}
+                    <span className="cursor_class">
+                      <span onClick={() => handleModalOpen(i.id)}>
+                        <div className="Permissions61">
+                          <h6>All Accessible</h6>
+                          <FaAngleDown className="Permissions62" />
+                        </div>
+                      </span>
+                      <Threeline7
+                        isOpen={modalStates[i.id] || false}
+                        onClose={() => handleModalClose(i.id)}
+                      />
+                    </span>{" "}
                   </td>
                   <td>
                     <span className="cursor_class">

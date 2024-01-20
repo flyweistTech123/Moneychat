@@ -898,3 +898,104 @@ export const Threeline6 = ({ isOpen, onClose }) => {
 
 
 
+
+
+
+export const Threeline7 = ({ isOpen, onClose }) => {
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isOpen &&
+        modalRef.current &&
+        !modalRef.current.contains(event.target)
+      ) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen, onClose]);
+
+
+  return (
+    <motion.div
+      ref={modalRef}
+      initial={{
+        height: 0,
+        opacity: 0,
+        display: "none",
+        zIndex: -100,
+      }}
+      animate={{
+        height: isOpen ? "auto" : 0,
+        opacity: isOpen ? 1 : 0,
+        zIndex: isOpen ? 200 : -100,
+      }}
+      transition={{ duration: 0.3 }}
+      exit={{
+        height: 0,
+        opacity: 0,
+        display: "none",
+        zIndex: -100,
+      }}
+      className={`payment_custom_modal Sender_custom_Modal ThreeLine_custom_Modal`}
+    >
+      <div className="threeline7_content">
+        <h6>Permissions</h6>
+        <div className="heading">
+          <input
+            type="checkbox"
+            id="myCheckbox"
+          />
+          <div>
+            <span className="description" >
+              <span className="name">Super-Admin</span>
+            </span>
+          </div>
+        </div>
+        <div className="heading">
+          <input
+            type="checkbox"
+            id="myCheckbox"
+          />
+          <div>
+            <span className="description" >
+              <span className="name">Admin</span>
+            </span>
+          </div>
+        </div>
+        <div className="heading">
+          <input
+            type="checkbox"
+            id="myCheckbox"
+          />
+          <div>
+            <span className="description" >
+              <span className="name">Head</span>
+            </span>
+          </div>
+        </div>
+        <div className="heading">
+          <input
+            type="checkbox"
+            id="myCheckbox"
+          />
+          <div>
+            <span className="description" >
+              <span className="name">Manager</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+
+
+

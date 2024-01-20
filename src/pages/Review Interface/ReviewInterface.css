@@ -82,7 +82,7 @@
 
 .reviewtable{
   width: 100%;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 
@@ -101,7 +101,6 @@
   color: #000000B2;
   text-align: center;
   cursor: pointer;
-  /* padding: 20px; */
 }
 
 .profilediv {
@@ -135,5 +134,17 @@
 .options {
   font-weight: 500;
   font-size: 16px;
+  color: #000000B2;
+}
+
+
+.action51{
+  margin-top: 10px;
+}
+
+.action52{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21.09px;
   color: #000000B2;
 }

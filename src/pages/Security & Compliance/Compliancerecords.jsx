@@ -16,6 +16,8 @@ import text from '../../Images/text.png'
 import uplbtn from '../../Images/uploadbtn.png'
 import { Threeline3 } from "../../Component/TransactionModal";
 import searchicon from '../../Images/searchicon.png'
+import chanage from '../../Images/change1.png'
+import save from '../../Images/SAVE.png'
 
 
 
@@ -89,14 +91,16 @@ const Compliancerecords = () => {
     document.getElementById('fileInput').click();
   };
   const navigate = useNavigate()
+
+  const [showSave, setShowSave] = useState(false)
   return (
     <>
       <section className="pages">
-      <h5 className="head123head"><span  className="head123head1" onClick={() => navigate('/gallery')}>Security & Compliance<IoIosArrowForward style={{ width: '25px' }} /></span>Compliance Records</h5>
+        <h5 className="head123head"><span className="head123head1" onClick={() => navigate('/gallery')}>Security & Compliance<IoIosArrowForward style={{ width: '25px' }} /></span>Compliance Records</h5>
         <div className="Headingall">
           <div className="search">
             <div>
-            <i> <img src={searchicon} alt="" /></i>
+              <i> <img src={searchicon} alt="" /></i>
               <input type="search" placeholder="Search" />
             </div>
           </div>
@@ -189,6 +193,25 @@ const Compliancerecords = () => {
                 <div className="searchbar" style={{ width: '660px' }}>
                   <i><img style={{ width: '30px', height: '30px', color: '#00000080' }} src={text}></img></i>
                   <input type="text" placeholder="Add Title" />
+                  {showSave ? (
+                    <i>
+                      <img
+                        style={{ width: '25px', height: '25px' }}
+                        src={chanage}
+                        onClick={() => setShowSave(!showSave)}
+                        alt="Change"
+                      />
+                    </i>
+                  ) : (
+                    <i>
+                      <img
+                        style={{ width: '39px', height: '25px' }}
+                        src={save}
+                        onClick={() => setShowSave(!showSave)}
+                        alt="Save"
+                      />
+                    </i>
+                  )}
                 </div>
               </div>
               <div className="repostselect">

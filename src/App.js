@@ -36,8 +36,15 @@ import NotificationsAlerts from "./pages/Setting/NotificationsAlerts";
 import ReportSettings from "./pages/Setting/ReportSettings";
 import AccountDetails from "./pages/AccountDetails/AccountDetails";
 import HelpDesk from "./pages/Support & Help Desk/HelpDesk";
+import PieChart1 from './pages/Analytics/chart'
 
 function App() {
+  const data = [
+    { value: 30, color: '#ff0000' },
+    { value: 20, color: '#00ff00' },
+    { value: 25, color: '#0000ff' },
+    // Add more data points as needed
+  ];
   return (
     <>
       <ToastContainer
@@ -58,22 +65,23 @@ function App() {
         <Route path="/need_help" element={<NeedHelp />} />
         <Route path="/forget_password" element={<ForgetPassword />} />
         <Route path="/transaction" element={<Transaction />} /> 
-        <Route path ='/Product'element={<Analytics/>}/>
-        <Route path ='/service'element={<Resources/>}/>
-        <Route path="/gallery" element={<Security/>} />
-        <Route path="/getblog" element={<Financial/>} />
+        <Route path ='/analytics'element={<Analytics/>}/>
+        <Route path ='/documentation&resources'element={<Resources/>}/>
+        <Route path="/security&scompliance" element={<Security/>} />
+        <Route path="/financial_overview" element={<Financial/>} />
         <Route path="/role-basedaccesscontrol" element={<AccessControl/>} />
         <Route path="/flaggedtransactions" element={<Flaggedtransactions/>} />
         <Route path="/flaggedtransactions" element={<Flaggedtransactions/>} />
         <Route path="/compliancerecords" element={<Compliancerecords/>} />
-        <Route path="/privacy-policy" element={<RecipientSManagement/>} />
-        <Route path="/brand" element={<ReviewInterface/>} />
-        <Route path="/terms" element={<CommunicationTools/>} />
+        <Route path="/recipient_management" element={<RecipientSManagement/>} />
+        <Route path="/review_interface" element={<ReviewInterface/>} />
+        <Route path="/communication_tools" element={<CommunicationTools/>} />
         <Route path="/setting" element={<Setting/>} />
         <Route path="/notification" element={<NotificationsAlerts/>} />
         <Route path="/reportSettings" element={<ReportSettings/>} />
         <Route path="/accountdetails" element={<AccountDetails/>} />
         <Route path="/helpdesk" element={<HelpDesk/>} />
+        <Route path="/pie" element={<PieChart1 />} />
       </Routes> 
     </>
   );

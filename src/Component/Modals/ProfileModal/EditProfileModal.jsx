@@ -242,7 +242,7 @@ const Editprofile = ({ onClose, isProfileModalopen, }) => {
                         <div className='edit-Note-profile'>
                             <div className='employeer_detailsss'>
                                 <img src={employee} alt="" />
-                                <span><span style={{ color: '#000000B2' }}>EMPLOYEE ID  - </span> 012345</span>
+                                <span><span style={{ color: '#000000B2' }}>RECIPIENT ID - </span> 012345</span>
                             </div>
 
                             <div className='employeer_detailsss'>

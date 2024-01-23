@@ -15,6 +15,11 @@ import ibtn from '../../Images/ibtnnn.png'
 import { useNavigate } from 'react-router-dom';
 import Imodel from '../../Component/Modals/FilterModals/Imodel';
 import person from '../../Images/pesons.png'
+import indian from '../../Images/Indian.png'
+import Us from '../../Images/U.S.png'
+import british from '../../Images/British.png'
+
+
 
 
 
@@ -151,6 +156,7 @@ const Analytics = () => {
         setorder(false);
     }
 
+
     return (
         <>
             <FullScreenLoader show={show} handleClose={handleClose} />
@@ -185,7 +191,7 @@ const Analytics = () => {
                         {/* <div className="transaction-details">THIS WEEK</div> */}
                         <div className="transaction-details">5,000 <span>TRANSACTIONS PROCESSED</span></div>
                         <div className="transaction-details1 increase"> <img src={increase} alt="" /> +10% INCREASE  <span> IN TRANSACTIONS</span></div>
-                        <div className="transaction-details2">AVERAGE TRANSACTIONAL AMOUNT - <br /><span> 2400 <img src={ibtn} alt="" style={{cursor:'pointer'}} onClick={() => openOrderModal()} /></span></div>
+                        <div className="transaction-details2">AVERAGE TRANSACTIONAL AMOUNT - <br /><span> 2400 <img src={ibtn} alt="" style={{ cursor: 'pointer' }} onClick={() => openOrderModal()} /></span></div>
                     </div>
                     <div className='transaction-box'>
                         <div className='transactionheader'>
@@ -247,9 +253,66 @@ const Analytics = () => {
                                     </select>
                                 </div>
                             </div>
-                            <div className='widht'>
-                                <Chart options={piestate.options} series={piestate.series} type="pie" />
+                            <div className='colorchart'>
+                                <div className="two-color-circle">
+                                    <div className="color1">
+                                        <div className='color3'>
+                                            <img src={british} alt="" />
+                                            <p>60%</p>
+                                        </div>
+                                        <div className='color4'>
+                                            <img src={Us} alt="" />
+                                            <p>60%</p>
+                                        </div>
+                                    </div>
+                                    <div className="color2">
+                                        <img src={indian} alt="" />
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+
+                                <div className='colorchart1'>
+                                    <div className='colorchart2'>
+                                        <div className='colorchart3'>
+
+                                        </div>
+                                    </div>
+                                    <div className='colorchart2'>
+                                        <div className='colorchart4'>
+
+                                        </div>
+                                    </div>
+                                    <div className='colorchart2'>
+                                        <div className='colorchart5'>
+
+                                        </div>
+                                    </div>
+                                    <div className='colorchart2'>
+                                        <div className='colorchart6'>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className='colorchart1'>
+                                    <div className='colorchart2'>
+                                        <h6>INDIA</h6>
+                                    </div>
+                                    <div className='colorchart2'>
+                                        <h6>USA</h6>
+
+                                    </div>
+                                    <div className='colorchart2'>
+                                        <h6>UNITED KINGDOM</h6>
+
+                                    </div>
+                                    <div className='colorchart2'>
+                                        <h6>OTHERS</h6>
+                                    </div>
+                                </div>
                             </div>
+
+
                             <div className='VIEW_DETAILS1'>
                                 <button className='VIEW_DETAILS1'>VIEW DETAILS</button>
                             </div>
@@ -278,13 +341,13 @@ const Analytics = () => {
 
                     </div>
                 </div>
-            
+
                 {isOrder && (
                     <Imodel onClose={closeOrderModal}>
 
                         <div className='a1212'>
-                        <img src={ibtn} alt="" />
-                            <h5>Average Transaction Amount is calculated by dividing <span style={{color:'#000000'}}>Total Transactional Volume</span> by the <span>Total Number of Senders</span> within a specific time period</h5>
+                            <img src={ibtn} alt="" />
+                            <h5>Average Transaction Amount is calculated by dividing <span style={{ color: '#000000' }}>Total Transactional Volume</span> by the <span>Total Number of Senders</span> within a specific time period</h5>
                         </div>
 
                         <div className='a12121'>
@@ -292,7 +355,7 @@ const Analytics = () => {
                             <h5>SENDERS -</h5>
                             <h6>760</h6>
                         </div>
-                    
+
                     </Imodel>
                 )}
 

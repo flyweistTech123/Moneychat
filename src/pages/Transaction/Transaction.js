@@ -19,7 +19,6 @@ import senderprofile from '../../Images/profilesender.png'
 import Us from '../../Images/U.S.png'
 import India from '../../Images/Indian.png'
 import British from '../../Images/British.png'
-import ascending from '../../Images/Ascending.png'
 import Repost from "../../Component/Modals/TransactionRepost/Repost";
 import smallcross from '../../Images/smallcross.png'
 import Ascending from '../../Images/asending.png'

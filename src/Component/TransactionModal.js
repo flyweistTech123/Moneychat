@@ -15,7 +15,6 @@ import AddNote from "./Modals/TransactionRepost/AddNote";
 import Repost from "./Modals/TransactionRepost/Repost";
 import smallcross from '../Images/smallcross.png'
 import arrowbtn from '../Images/arrowbtn.png'
-import flag from '../Images/falg.png'
 import btnlearn from '../Images/btnlearnmore.png'
 import uplbtn from '../Images/uploadbtn.png'
 import text from '../Images/text.png'
@@ -116,14 +115,19 @@ export const TransactionModal = ({ isOpen, onClose }) => {
           <div className="dashed_line"></div>
 
           <div className="three_sec">
+            <p className="text_title">Lorem Ipsum</p>
+            <div className="empty"></div>
+            <p className="text_title12">£500</p>
+          </div>
+          <div className="three_sec">
             <p className="text_title">Fees & Charges</p>
             <div className="empty"></div>
-            <p>£500</p>
+            <p className="text_title12">£500</p>
           </div>
           <div className="three_sec">
             <p className="text_title">Exchange Rate</p>
             <div className="empty"></div>
-            <p>£500</p>
+            <p className="text_title12">£500</p>
           </div>
 
           <div className="dashed_line"></div>
@@ -218,8 +222,9 @@ export const SenderModal = ({ isOpen, onClose }) => {
           <div>
             <h6>Lorem Ipsum</h6>
             <span className="description">
-              <span className="name">Lorem Ipsum</span>
-              <span>£500 </span>
+              <span className="name">SENDER</span>
+              <div className="namecircle"></div>
+              <span className="namename">£500 </span>
             </span>
           </div>
         </div>
@@ -236,7 +241,8 @@ export const SenderModal = ({ isOpen, onClose }) => {
             <img src="./Image/23.png" alt="" />
             <span>
               <p className="head">TRANSACTION LOCATION</p>
-              <p>******0956</p>
+              <p>Lorem Ipsum City</p>
+              <p className="head">AT 6:30 AM</p>
             </span>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 .VIEW_DETAILS1{
   text-align: center;
+  margin-top: 10px;
 }
 .VIEW_DETAILS1 button{
   width: 221px;
@@ -346,4 +347,156 @@ select {
   .transaction-details2 span {
     font-size: 14px;
   }
+}
+
+
+
+
+
+.colorchart{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.two-color-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+.color1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.color2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #B1E1B7; /* Green */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.color3{
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #FD575B; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.color3 p{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #FFFFFF;
+  padding-top: 10px;
+}
+
+.color3 img{
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.color4{
+  position: absolute;
+  top: 0%;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #FEA82F; /* Green */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.color4 p{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #FFFFFF;
+  padding-top: 10px;
+}
+
+.color4 img{
+  padding-right: 30px;
+  padding-top: 20px;
+}
+
+
+.color2 p{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #FFFFFF;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.color2 img{
+  padding-left: 5px;
+  padding-top: 20px;
+}
+
+
+.colorchart1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.colorchart2{
+}
+
+.colorchart2 .colorchart3{
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background-color: #B1E1B7;
+}
+
+.colorchart2 .colorchart4{
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background-color: #FEA82F;
+}
+.colorchart2 .colorchart5{
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background-color: #FD575B;
+}
+.colorchart2 .colorchart6{
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background-color: #FEA82F;
+}
+
+.colorchart2 h6{
+  height: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #1E1E1E99;
 }

@@ -1,7 +1,6 @@
 /** @format */
 * {
   font-family: 'Roboto', sans-serif !important;
-  /* overflow: hidden; */
 }
 
 
@@ -536,7 +535,6 @@
   height: 100%;
   margin:  0 auto;
   margin-top: 40px;
-  overflow-x: scroll;
 }
 
 .child_component_full {
@@ -946,15 +944,33 @@ table tbody tr:last-child td:first-child {
 }
 
 .payment_custom_modal .content .Table .three_sec .text_title {
-  color: rgba(0, 0, 0, 0.7);
+  color: #000000B2;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18.75px;
+
 }
+.payment_custom_modal .content .Table .three_sec .text_title12 {
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18.75px;
+
+}
+
 
 .payment_custom_modal .content .Table .three_sec .text_total {
   color: #0070bc;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18.75px;
 }
 
 .payment_custom_modal .content .Table .three_sec .price_total {
+  font-weight: 600;
   font-size: 24px;
+  line-height: 28.13px;
+  color: #000000;
 }
 
 .payment_custom_modal .content .additional {
@@ -962,8 +978,11 @@ table tbody tr:last-child td:first-child {
 }
 
 .payment_custom_modal .content .additional .note {
-  color: #fd575b;
+  color: #FD575B;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 16.41px;
+  text-align: start;
 }
 
 .payment_custom_modal .content .additional div {
@@ -973,13 +992,17 @@ table tbody tr:last-child td:first-child {
 }
 
 .payment_custom_modal .content .additional div img {
-  width: 60px;
+  width: 30px;
+  height: 30px;
 }
 
 .payment_custom_modal .content .additional div p {
   margin: 0;
+  color: #00000099;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  line-height: 14.06px;
+  text-align: start;
 }
 
 /* --------------------- */
@@ -1031,11 +1054,11 @@ table tbody tr:last-child td:first-child {
 
 .payment_custom_modal.Sender_custom_Modal .sender_content .heading div h6 {
   color: #000;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
-  margin: 0;
+  line-height: 21.09px;
+  text-align: start;
 }
 
 .payment_custom_modal.Sender_custom_Modal .sender_content .heading span.description {
@@ -1046,13 +1069,26 @@ table tbody tr:last-child td:first-child {
 }
 
 .payment_custom_modal.Sender_custom_Modal .sender_content .heading span.description span.name {
-  color: rgba(0, 0, 0, 0.7);
+  color: #000000B2;
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  font-weight: 600;
+  line-height: 16.41px;
+}
+.payment_custom_modal.Sender_custom_Modal .sender_content .heading span.description span.namename {
+  color: #000000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23.44px;
 }
 
+.payment_custom_modal.Sender_custom_Modal .sender_content .heading span.description .namecircle {
+  width: 11px;
+  height: 11px;
+  background: #00000099;
+  border-radius: 50%;
+}
 .payment_custom_modal.Sender_custom_Modal .sender_content .details {
   margin-top: 20px;
 }
@@ -1072,11 +1108,16 @@ table tbody tr:last-child td:first-child {
 .payment_custom_modal.Sender_custom_Modal .sender_content .details .items p.head {
   color: #0070bc;
   font-size: 14px;
+  font-weight: 700;
+  line-height: 16.41px;
 }
 
 .payment_custom_modal.Sender_custom_Modal .sender_content .details .items p {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 12px;
+  color: #000000B2;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.75px;
+  padding-top: 10px;
 }
 
 /* --------- */
@@ -1219,7 +1260,7 @@ table tbody tr:last-child td:first-child {
   position: absolute;
   right: 0 !important;
   top: 50px;
-  left: -250px;
+  left: -100px;
 }
 
 .payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal .Inffo_content {
@@ -1239,8 +1280,8 @@ table tbody tr:last-child td:first-child {
 }
 
 .payment_custom_modal.Sender_custom_Modal.Inffo_cutom_modal .Inffo_content .heading img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin-right: 5px;
 }
 

@@ -6,7 +6,6 @@
 
 body {
   margin: 0;
-  font-family: Quicksand !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: auto;

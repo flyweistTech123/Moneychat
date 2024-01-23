@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import info from '../../Images/information.png'
 import { useState } from "react";
 import TransactionsFilter from "../../Component/Modals/FilterModals/TransactionsFilter";
-import { Inffo, Threeline4, Threeline5 } from "../../Component/TransactionModal";
+import { Inffo, Threeline4 } from "../../Component/TransactionModal";
 import Infffo from "../../Component/Modals/InfforModal/InfoModal"
 import closeicon from '../../Images/closeicon.png'
 import smallgreentick from '../../Images/smallgreentick.png'
@@ -318,7 +318,7 @@ const RecipientSManagement = () => {
                                     <td>
                                         <span className="cursor_class">
                                             <span onClick={() => handleThreeModal(i.id)}>
-                                                <img src={lines} alt="" />
+                                                <img src={lines} alt="" style={{width:"20px" , height:'20px'}} />
                                             </span>
                                             <Threeline4
                                                 isOpen={modalStates2[i.id] || false}

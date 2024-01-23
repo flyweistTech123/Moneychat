@@ -31,44 +31,44 @@ const Sidebar = ( {isMenuOpen, toggleMenu,show }) => {
     {
       img: "./Image/Analytics.svg",
       activeImg: "./Image/Analyticsactive.svg",
-      link: "/Product",
+      link: "/analytics",
       name: "Analytics ",
     },
 
     {
       img: icon1,
       activeImg: activeicon1,
-      link: "/service",
+      link: "/documentation&resources",
       name: "Documentation & Resources",
     },
     {
       img: icon2,
       activeImg: activeicon2,
-      link: "/gallery",
+      link: "/security&scompliance",
       name: "Security & Compliance",
     },
     {
       img: icon3,
       activeImg: activeicon3,
-      link: "/getblog",
+      link: "/financial_overview",
       name: "Financial Overview",
     },
     {
       img: icon4,
       activeImg: activeicon4,
-      link: "/privacy-policy",
+      link: "/recipient_management",
       name: "Recipient’s Management",
     },
     {
       img: icon5,
       activeImg: activeicon5,
-      link: "/terms",
+      link: "/communication_tools",
       name: "Communication Tools",
     },
     {
       img: icon6,
       activeImg: "./Image/Monitoring.svg",
-      link: "/brand",
+      link: "/review_interface",
       name: "Review Interface",
     },
   ];

@@ -173,13 +173,13 @@ const Editprofile = ({ onClose, isProfileModalopen, }) => {
                                 <div className='status-acc'>
                                     <span>ACCOUNT STATUS  - </span>
                                     {verifyed ? (
-                                        <div style={{ display: 'flex', gap: "20px" }}>
+                                        <div className='greenveri'>
                                             <img src={greentag} alt="" />
                                             <span style={{ color: '#3BB54A' }}>VERIFIED</span>
                                         </div>
 
                                     ) : (
-                                        <div onClick={() => setVerifyed(true)} style={{ display: 'flex', gap: "20px" }} >
+                                        <div onClick={() => setVerifyed(true)}  className='greenveri' >
                                             <img src={info} alt="" />
                                             <span style={{ color: '#FD575B' }}>NOT VERIFIED</span>
                                         </div>

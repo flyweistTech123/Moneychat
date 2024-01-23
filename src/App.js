@@ -36,15 +36,8 @@ import NotificationsAlerts from "./pages/Setting/NotificationsAlerts";
 import ReportSettings from "./pages/Setting/ReportSettings";
 import AccountDetails from "./pages/AccountDetails/AccountDetails";
 import HelpDesk from "./pages/Support & Help Desk/HelpDesk";
-import PieChart1 from './pages/Analytics/chart'
 
 function App() {
-  const data = [
-    { value: 30, color: '#ff0000' },
-    { value: 20, color: '#00ff00' },
-    { value: 25, color: '#0000ff' },
-    // Add more data points as needed
-  ];
   return (
     <>
       <ToastContainer
@@ -81,7 +74,6 @@ function App() {
         <Route path="/reportSettings" element={<ReportSettings/>} />
         <Route path="/accountdetails" element={<AccountDetails/>} />
         <Route path="/helpdesk" element={<HelpDesk/>} />
-        <Route path="/pie" element={<PieChart1 />} />
       </Routes> 
     </>
   );

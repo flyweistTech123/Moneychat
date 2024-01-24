@@ -1,9 +1,10 @@
 /** @format */
 
 import React, { useEffect } from "react";
+import { Offcanvas } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const Verify = () => {
+const Verify = ({ show, handleClose }) => {
   const navigate = useNavigate();
   const time = 3000;
 
@@ -14,14 +15,15 @@ const Verify = () => {
   }, [navigate]);
 
   return (
-    <div className="verify">
-      <img src="./Image/success.gif" alt="" />
-      <p className="colored">
-        Your Account has been sent for{" "}
-        <span style={{ color: "#0070BC" }}>Verification !</span>{" "}
-      </p>
-      <p>Our Executives will review your Account and notify accordingly!</p>
-    </div>
+    <Offcanvas show={show} onHide={handleClose} className="VerifyCanvas">
+      <Offcanvas.Body className="Verify_Body">
+        <div>
+        <img src="./Image/success-unscreen.gif" alt="" />
+          <h6>Your Account has been sent for <span>Verification!</span></h6>
+          <p>Our Executives will review your Account and notify accordingly!</p>
+        </div>
+      </Offcanvas.Body>
+    </Offcanvas>
   );
 };
 

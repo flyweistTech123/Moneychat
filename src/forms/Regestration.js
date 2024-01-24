@@ -3,16 +3,27 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../Images/logo.png";
+import Verify from "./Verify";
 
 const Regestration = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const [step, setStep] = useState(1);
   const navigate = useNavigate()
+  const triggerFileInput = () => {
+    document.getElementById('fileInput').click();
+  };
 
   let RegComponent;
   if (step === 1) {
     const Component = () => {
       return (
+
         <>
+          
           <div className="progress_bar">
             <div className="colored"></div>
           </div>
@@ -76,33 +87,37 @@ const Regestration = () => {
 
             <div className="whole_button_container">
               <p>Business License</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
 
             <div className="whole_button_container">
               <p>Certificate of Incorporation</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
 
             <p className="heading">IDENTITY VERIFICATION</p>
             <div className="whole_button_container">
               <p>Owner/Operator ID</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
             <div className="whole_button_container">
               <p>Proof of Address</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
 
@@ -143,9 +158,10 @@ const Regestration = () => {
 
             <div className="whole_button_container">
               <p>Financial Statements</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
 
@@ -154,16 +170,18 @@ const Regestration = () => {
             </p>
             <div className="whole_button_container">
               <p>AML Policy</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
             <div className="whole_button_container">
               <p>AML Training Periods</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
 
@@ -172,32 +190,36 @@ const Regestration = () => {
             </p>
             <div className="whole_button_container">
               <p>KYC Policy</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
             <div className="whole_button_container">
               <p>Sample KYC Records</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
 
             <p className="heading">DATA PROTECTION & PRIVACY DOCUMENT</p>
             <div className="whole_button_container">
               <p>Data Protection Policy</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
             <div className="whole_button_container">
               <p>Data Processing Agreements</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
 
@@ -205,16 +227,18 @@ const Regestration = () => {
             <p className="heading">OPERATIONAL & COMPLIANCE AUDITS DOCUMENT</p>
             <div className="whole_button_container">
               <p>Audit Reports</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
             <div className="whole_button_container">
               <p>Compliance Certifications</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
 
@@ -222,32 +246,35 @@ const Regestration = () => {
             <p className="heading">OPERATIONAL & COMPLIANCE AUDITS DOCUMENT</p>
             <div className="whole_button_container">
               <p>Liability Insurance</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
-            
+
 
             <p className="heading">REFERENCE DOCUMENT</p>
             <div className="whole_button_container">
               <p>Business References</p>
-              <button>
+              <button onClick={triggerFileInput}>
                 <img src="./Image/10.png" alt="" />
                 <span>UPLOAD</span>
+                <input type="file" id="fileInput" style={{ display: 'none' }} />
               </button>
             </div>
-            
+
 
           </div>
 
           <div className="button_container">
-            <button onClick={() => navigate('/verify')}>REGISTER</button>
+            <button onClick={() => handleShow()}>REGISTER</button>
             <div className="cancel">
               <img src="./Image/9.png" alt="" />
               <Link to="/">Cancel</Link>
             </div>
           </div>
+          <Verify show={show} handleClose={handleClose} />
         </>
       );
     };

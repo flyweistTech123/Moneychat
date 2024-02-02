@@ -1,6 +1,6 @@
 /** @format */
 import { useState } from "react";
-import logo from "../Images/logo.png";
+import logo from "../Images/output.png";
 import ProfileModal from "../Component/Modals/ProfileModal/ProfileModal";
 import profile from '../Images/profilmodal.png'
 import signout from '../Images/signout.png'
